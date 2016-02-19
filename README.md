@@ -1,45 +1,8 @@
-I/O Doctor
-==========
-
-You can now use I/O Doctor as a hosted application via [iodoctor.net](http://www.iodoctor.net).
-
-I/O Doctor is a GUI for creating and editing JSON config files that are used with [I/O Docs](https://github.com/mashery/iodocs), an interactive API documentation system from [Mashery](http://www.mashery.com).
-
-Description
------------
-### How It Works
-
-Select an existing I/O Docs config to upload, or create a new config and start adding Endpoints, Methods, and Parameters. When an existing config is used, it is parsed and forms for editing each Endpoint, Method, and Parameter will be created. 
-
-Click an item from the menu on the left to begin editing. View the JSON output at any time by hitting the "output" tab. When finished, click "Save File" to download the JSON file. I/O Doctor does not store any data. Make sure you save your JSON output.
-
-### Technology
-
-I/O Doctor is built on [Sinatra](http://www.sinatrarb.com), Twitter Bootstrap 2.0, and jQuery, and uses [form2js](https://github.com/maxatwork/form2js) for structured, hierarchical HTML form data. 
-
-TODO
-----
-
-* Refactor to use a Javascript MVC framework
-* Highlight selected Endpoint in the menu
-* Wire up the Method links in the menu
-* Add validation on form fields
-* Ability to reorder nodes
-* Ability to edit JSON directly on output tab - GUI v Source view
-* Ability to copy a node
-* Add Parameter buttons both above and below the list of parameters
-* Default the paramater data type to be custom: string
-* 
-
-
-----------
-
 ### CountriesController
 
 #### GetCountriesAsync
 
 > Get all countries
-> ``` Skips Authentication ```  ``` Streaming ``` 
 ```csharp
 Task<string> GetCountriesAsync()
 ```
@@ -51,8 +14,8 @@ Task<string> GetCountriesAsync()
 
 #### SendSmsAsync
 
+> Tags:  ``` Streaming ``` 
 > TODO: Add a method description
-> ``` Streaming ``` 
 ```csharp
 Task<string> SendSmsAsync(
                 List<Test> messages)
@@ -66,8 +29,8 @@ Task<string> SendSmsAsync(
 
 #### CalculatePriceAsync
 
+> Tags:  ``` Streaming ``` 
 > Calculate sms price
-> ``` Streaming ``` 
 ```csharp
 Task<string> CalculatePriceAsync(
                 List<string> messages)
@@ -81,8 +44,8 @@ Task<string> CalculatePriceAsync(
 
 #### GetSmsHistoryAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all sms history
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSmsHistoryAsync(
                 int? dateFrom = null,
@@ -97,8 +60,8 @@ Task<string> GetSmsHistoryAsync(
 
 #### ExportHistoryAsync
 
+> Tags:  ``` Streaming ``` 
 > Export all sms history
-> ``` Streaming ``` 
 ```csharp
 Task<string> ExportHistoryAsync(
                 string filename)
@@ -112,8 +75,8 @@ Task<string> ExportHistoryAsync(
 
 #### CreateReceiptAsync
 
+> Tags:  ``` Streaming ``` 
 > Add a delivery receipt
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateReceiptAsync(
                 string url)
@@ -127,8 +90,8 @@ Task<string> CreateReceiptAsync(
 
 #### MarkReceiptsAsReadAsync
 
+> Tags:  ``` Streaming ``` 
 > Marked delivery receipts as read
-> ``` Streaming ``` 
 ```csharp
 Task<string> MarkReceiptsAsReadAsync(
                 int? dateBefore = null)
@@ -142,8 +105,8 @@ Task<string> MarkReceiptsAsReadAsync(
 
 #### GetInboundSmsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all inbound sms
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetInboundSmsAsync()
 ```
@@ -151,8 +114,8 @@ Task<string> GetInboundSmsAsync()
 
 #### CreateInboundSmsAsync
 
+> Tags:  ``` Streaming ``` 
 > Create inbound sms
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateInboundSmsAsync(
                 string url)
@@ -166,8 +129,8 @@ Task<string> CreateInboundSmsAsync(
 
 #### MarkInboundSmsAsReadAsync
 
+> Tags:  ``` Streaming ``` 
 > Marked all inbound sms as read
-> ``` Streaming ``` 
 ```csharp
 Task<string> MarkInboundSmsAsReadAsync(
                 int dateBefore)
@@ -181,8 +144,8 @@ Task<string> MarkInboundSmsAsReadAsync(
 
 #### CancelScheduledSmsAsync
 
+> Tags:  ``` Streaming ``` 
 > Update scheduled message as cancel
-> ``` Streaming ``` 
 ```csharp
 Task<string> CancelScheduledSmsAsync(
                 string messageId)
@@ -196,8 +159,8 @@ Task<string> CancelScheduledSmsAsync(
 
 #### CancelAllScheduledSmsAsync
 
+> Tags:  ``` Streaming ``` 
 > Update all scheduled message as cancelled
-> ``` Streaming ``` 
 ```csharp
 Task<string> CancelAllScheduledSmsAsync()
 ```
@@ -205,8 +168,8 @@ Task<string> CancelAllScheduledSmsAsync()
 
 #### CreateSmsTemplateAsync
 
+> Tags:  ``` Streaming ``` 
 > Create sms template
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateSmsTemplateAsync(
                 string templateName,
@@ -221,8 +184,8 @@ Task<string> CreateSmsTemplateAsync(
 
 #### DeleteSmsTemplateAsync
 
+> Tags:  ``` Streaming ``` 
 > Delete sms template
-> ``` Streaming ``` 
 ```csharp
 Task<string> DeleteSmsTemplateAsync(
                 string templateId)
@@ -236,8 +199,8 @@ Task<string> DeleteSmsTemplateAsync(
 
 #### UpdateSmsTemplateAsync
 
+> Tags:  ``` Streaming ``` 
 > Update sms template
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateSmsTemplateAsync(
                 int templateId,
@@ -253,8 +216,8 @@ Task<string> UpdateSmsTemplateAsync(
 
 #### GetDeliveryReceiptsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all delivery receipts
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetDeliveryReceiptsAsync()
 ```
@@ -262,8 +225,8 @@ Task<string> GetDeliveryReceiptsAsync()
 
 #### GetSmsTemplatesAsync
 
+> Tags:  ``` Streaming ``` 
 > Get lists of all sms templates
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSmsTemplatesAsync()
 ```
@@ -275,8 +238,8 @@ Task<string> GetSmsTemplatesAsync()
 
 #### SendVoiceAsync
 
+> Tags:  ``` Streaming ``` 
 > TODO: Add a method description
-> ``` Streaming ``` 
 ```csharp
 Task<string> SendVoiceAsync(
                 List<string> messages)
@@ -290,8 +253,8 @@ Task<string> SendVoiceAsync(
 
 #### CalculatePriceAsync
 
+> Tags:  ``` Streaming ``` 
 > Calculate voice price
-> ``` Streaming ``` 
 ```csharp
 Task<string> CalculatePriceAsync(
                 List<string> messages)
@@ -305,8 +268,8 @@ Task<string> CalculatePriceAsync(
 
 #### GetVoiceLanguagesAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all voice languages
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetVoiceLanguagesAsync()
 ```
@@ -314,8 +277,8 @@ Task<string> GetVoiceLanguagesAsync()
 
 #### GetVoiceHistoryAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all voice history
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetVoiceHistoryAsync(
                 int? dateFrom = null,
@@ -330,8 +293,8 @@ Task<string> GetVoiceHistoryAsync(
 
 #### GetVoiceReceiptsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all voice receipts
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetVoiceReceiptsAsync()
 ```
@@ -339,8 +302,8 @@ Task<string> GetVoiceReceiptsAsync()
 
 #### CancelVoiceMessageAsync
 
+> Tags:  ``` Streaming ``` 
 > Update voice message status as cancelled
-> ``` Streaming ``` 
 ```csharp
 Task<string> CancelVoiceMessageAsync(
                 string messageId)
@@ -354,8 +317,8 @@ Task<string> CancelVoiceMessageAsync(
 
 #### CancelVoiceMessagesAsync
 
+> Tags:  ``` Streaming ``` 
 > Update all voice messages as cancelled
-> ``` Streaming ``` 
 ```csharp
 Task<string> CancelVoiceMessagesAsync()
 ```
@@ -363,8 +326,8 @@ Task<string> CancelVoiceMessagesAsync()
 
 #### ExportVoiceHistoryAsync
 
+> Tags:  ``` Streaming ``` 
 > Export voice history
-> ``` Streaming ``` 
 ```csharp
 Task<string> ExportVoiceHistoryAsync(
                 string filename)
@@ -382,8 +345,8 @@ Task<string> ExportVoiceHistoryAsync(
 
 #### GetAccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Get account details
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetAccountAsync()
 ```
@@ -391,8 +354,8 @@ Task<string> GetAccountAsync()
 
 #### CreateAccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Create An Account
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateAccountAsync(
                 string username,
@@ -413,8 +376,8 @@ Task<string> CreateAccountAsync(
 
 #### ActivationTokenAsync
 
+> Tags:  ``` Streaming ``` 
 > Send account activation token
-> ``` Streaming ``` 
 ```csharp
 Task<string> ActivationTokenAsync(
                 string userPhone,
@@ -430,8 +393,8 @@ Task<string> ActivationTokenAsync(
 
 #### VerifyAccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Verify new account
-> ``` Streaming ``` 
 ```csharp
 Task<string> VerifyAccountAsync(
                 string activationToken)
@@ -446,7 +409,6 @@ Task<string> VerifyAccountAsync(
 #### ForgotUsernameAsync
 
 > Forgot username
-> ``` Skips Authentication ```  ``` Streaming ``` 
 ```csharp
 Task<string> ForgotUsernameAsync(
                 string email = null,
@@ -462,8 +424,8 @@ Task<string> ForgotUsernameAsync(
 
 #### ForgotPasswordAsync
 
+> Tags:  ``` Streaming ``` 
 > Forgot password
-> ``` Streaming ``` 
 ```csharp
 Task<string> ForgotPasswordAsync(
                 string username)
@@ -477,8 +439,8 @@ Task<string> ForgotPasswordAsync(
 
 #### VerifyForgotPasswordAsync
 
+> Tags:  ``` Streaming ``` 
 > Verify forgot password
-> ``` Streaming ``` 
 ```csharp
 Task<string> VerifyForgotPasswordAsync(
                 int subaccountId,
@@ -498,8 +460,8 @@ Task<string> VerifyForgotPasswordAsync(
 
 #### GetSubaccountsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all subaccounts
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSubaccountsAsync()
 ```
@@ -507,8 +469,8 @@ Task<string> GetSubaccountsAsync()
 
 #### CreateSubaccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Create new subaccount
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateSubaccountAsync(
                 List<string> apiUsername,
@@ -532,8 +494,8 @@ Task<string> CreateSubaccountAsync(
 
 #### GetSubaccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Get specific subaccount
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSubaccountAsync(
                 int subaccountId)
@@ -547,8 +509,8 @@ Task<string> GetSubaccountAsync(
 
 #### DeleteSubaccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Delete a subaccount
-> ``` Streaming ``` 
 ```csharp
 Task<string> DeleteSubaccountAsync(
                 int subaccountId)
@@ -562,8 +524,8 @@ Task<string> DeleteSubaccountAsync(
 
 #### RegenerateApiKeyAsync
 
+> Tags:  ``` Streaming ``` 
 > Regenerate an API Key
-> ``` Streaming ``` 
 ```csharp
 Task<string> RegenerateApiKeyAsync(
                 int subaccountId)
@@ -577,8 +539,8 @@ Task<string> RegenerateApiKeyAsync(
 
 #### UpdateSubaccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Update subaccount
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateSubaccountAsync(
                 int subaccountId,
@@ -606,8 +568,8 @@ Task<string> UpdateSubaccountAsync(
 
 #### GetContactListsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all contact lists
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetContactListsAsync()
 ```
@@ -615,8 +577,8 @@ Task<string> GetContactListsAsync()
 
 #### CreateContactListAsync
 
+> Tags:  ``` Streaming ``` 
 > Create new contact list
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateContactListAsync(
                 string listName)
@@ -630,8 +592,8 @@ Task<string> CreateContactListAsync(
 
 #### GetContactListAsync
 
+> Tags:  ``` Streaming ``` 
 > Get specific contact list
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetContactListAsync(
                 int listId)
@@ -645,8 +607,8 @@ Task<string> GetContactListAsync(
 
 #### UpdateContactListAsync
 
+> Tags:  ``` Streaming ``` 
 > Update specific contact list
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateContactListAsync(
                 int listId,
@@ -661,8 +623,8 @@ Task<string> UpdateContactListAsync(
 
 #### DeleteContactListAsync
 
+> Tags:  ``` Streaming ``` 
 > Delete a specific contact list
-> ``` Streaming ``` 
 ```csharp
 Task<string> DeleteContactListAsync(
                 int listId)
@@ -676,8 +638,8 @@ Task<string> DeleteContactListAsync(
 
 #### RemoveDuplicateContactsAsync
 
+> Tags:  ``` Streaming ``` 
 > Remove duplicate contacts
-> ``` Streaming ``` 
 ```csharp
 Task<string> RemoveDuplicateContactsAsync(
                 int listId)
@@ -691,8 +653,8 @@ Task<string> RemoveDuplicateContactsAsync(
 
 #### ImportContactsToListAsync
 
+> Tags:  ``` Streaming ``` 
 > Import contacts to list
-> ``` Streaming ``` 
 ```csharp
 Task<string> ImportContactsToListAsync(
                 int listId,
@@ -711,8 +673,8 @@ Task<string> ImportContactsToListAsync(
 
 #### GetContactsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all contacts in a list
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetContactsAsync(
                 int listId)
@@ -726,8 +688,8 @@ Task<string> GetContactsAsync(
 
 #### CreateContactAsync
 
+> Tags:  ``` Streaming ``` 
 > Create new contact
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateContactAsync(
                 int listId,
@@ -757,8 +719,8 @@ Task<string> CreateContactAsync(
 
 #### GetContactAsync
 
+> Tags:  ``` Streaming ``` 
 > Get a specific contact
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetContactAsync(
                 int listId,
@@ -773,8 +735,8 @@ Task<string> GetContactAsync(
 
 #### UpdateContactAsync
 
+> Tags:  ``` Streaming ``` 
 > Update contact
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateContactAsync(
                 int listId,
@@ -805,8 +767,8 @@ Task<string> UpdateContactAsync(
 
 #### DeleteContactAsync
 
+> Tags:  ``` Streaming ``` 
 > Delete a contact
-> ``` Streaming ``` 
 ```csharp
 Task<string> DeleteContactAsync(
                 int listId,
@@ -821,8 +783,8 @@ Task<string> DeleteContactAsync(
 
 #### RemoveOptedOutContactsAsync
 
+> Tags:  ``` Streaming ``` 
 > Remove all opted out contacts
-> ``` Streaming ``` 
 ```csharp
 Task<string> RemoveOptedOutContactsAsync(
                 int listId,
@@ -841,8 +803,8 @@ Task<string> RemoveOptedOutContactsAsync(
 
 #### GetDedicatedNumbersAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all dedicated numbers
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetDedicatedNumbersAsync()
 ```
@@ -850,8 +812,8 @@ Task<string> GetDedicatedNumbersAsync()
 
 #### PurchaseDedicatedNumberAsync
 
+> Tags:  ``` Streaming ``` 
 > Buy dedicated number
-> ``` Streaming ``` 
 ```csharp
 Task<string> PurchaseDedicatedNumberAsync(
                 string dedicatedNumber)
@@ -865,8 +827,8 @@ Task<string> PurchaseDedicatedNumberAsync(
 
 #### GetDedicatedNumbersByCountryAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all dedicated numbers by country
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetDedicatedNumbersByCountryAsync(
                 string country,
@@ -886,8 +848,8 @@ Task<string> GetDedicatedNumbersByCountryAsync(
 
 #### GetVoiceStatisticsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get voice statistics
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetVoiceStatisticsAsync()
 ```
@@ -895,8 +857,8 @@ Task<string> GetVoiceStatisticsAsync()
 
 #### GetSmsStatisticsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get sms statistics
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSmsStatisticsAsync()
 ```
@@ -908,8 +870,8 @@ Task<string> GetSmsStatisticsAsync()
 
 #### CreateAllowedAddressAsync
 
+> Tags:  ``` Streaming ``` 
 > Create email to sms allowed address
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateAllowedAddressAsync(
                 string emailAddress,
@@ -924,8 +886,8 @@ Task<string> CreateAllowedAddressAsync(
 
 #### GetAllowedAddressAsync
 
+> Tags:  ``` Streaming ``` 
 > Get list of email to sms allowed addresses
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetAllowedAddressAsync()
 ```
@@ -937,8 +899,8 @@ Task<string> GetAllowedAddressAsync()
 
 #### SearchContactListAsync
 
+> Tags:  ``` Streaming ``` 
 > Get list of searched contact list
-> ``` Streaming ``` 
 ```csharp
 Task<string> SearchContactListAsync(
                 string q)
@@ -956,8 +918,8 @@ Task<string> SearchContactListAsync(
 
 #### GetReferralAccountsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all referral accounts
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetReferralAccountsAsync()
 ```
@@ -969,8 +931,8 @@ Task<string> GetReferralAccountsAsync()
 
 #### GetResellerAccountsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get list of reseller accounts
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetResellerAccountsAsync()
 ```
@@ -978,8 +940,8 @@ Task<string> GetResellerAccountsAsync()
 
 #### CreateResellerAccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Create reseller account
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateResellerAccountAsync(
                 string username,
@@ -1000,8 +962,8 @@ Task<string> CreateResellerAccountAsync(
 
 #### GetResellerAccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Get Reseller Account
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetResellerAccountAsync(
                 string clientUserId)
@@ -1015,8 +977,8 @@ Task<string> GetResellerAccountAsync(
 
 #### UpdateResellerAccountAsync
 
+> Tags:  ``` Streaming ``` 
 > Reseller Account
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateResellerAccountAsync(
                 string clientUserId,
@@ -1042,8 +1004,8 @@ Task<string> UpdateResellerAccountAsync(
 
 #### TransferCreditAsync
 
+> Tags:  ``` Streaming ``` 
 > Transfer Credit
-> ``` Streaming ``` 
 ```csharp
 Task<string> TransferCreditAsync(
                 string clientUserId,
@@ -1063,8 +1025,8 @@ Task<string> TransferCreditAsync(
 
 #### GetFaxReceiptsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all fax receipts
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetFaxReceiptsAsync()
 ```
@@ -1076,8 +1038,8 @@ Task<string> GetFaxReceiptsAsync()
 
 #### GetCreditCardInfoAsync
 
+> Tags:  ``` Streaming ``` 
 > Get Credit Card info
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetCreditCardInfoAsync()
 ```
@@ -1085,8 +1047,8 @@ Task<string> GetCreditCardInfoAsync()
 
 #### UpdateCreditCardInfoAsync
 
+> Tags:  ``` Streaming ``` 
 > Update credit card info
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateCreditCardInfoAsync(
                 string number,
@@ -1104,8 +1066,8 @@ Task<string> UpdateCreditCardInfoAsync(
 
 #### GetPackagesListAsync
 
+> Tags:  ``` Streaming ``` 
 > Get list of all packages
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetPackagesListAsync(
                 string country = null)
@@ -1119,8 +1081,8 @@ Task<string> GetPackagesListAsync(
 
 #### PurchasePackageAsync
 
+> Tags:  ``` Streaming ``` 
 > Purchase a package
-> ``` Streaming ``` 
 ```csharp
 Task<string> PurchasePackageAsync(
                 int packageId)
@@ -1134,8 +1096,8 @@ Task<string> PurchasePackageAsync(
 
 #### GetTransactionsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all transactions
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetTransactionsAsync()
 ```
@@ -1143,8 +1105,8 @@ Task<string> GetTransactionsAsync()
 
 #### GetTransactionAsync
 
+> Tags:  ``` Streaming ``` 
 > Get specific Transaction
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetTransactionAsync(
                 string transactionId)
@@ -1162,8 +1124,8 @@ Task<string> GetTransactionAsync(
 
 #### CreateSmsCampaignAsync
 
+> Tags:  ``` Streaming ``` 
 > Create sms campaign
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreateSmsCampaignAsync(
                 int listId,
@@ -1181,8 +1143,8 @@ Task<string> CreateSmsCampaignAsync(
 
 #### CalculatePriceAsync
 
+> Tags:  ``` Streaming ``` 
 > Calculate price for sms campaign
-> ``` Streaming ``` 
 ```csharp
 Task<string> CalculatePriceAsync(
                 int listId,
@@ -1199,8 +1161,8 @@ Task<string> CalculatePriceAsync(
 
 #### UpdateSmsCampaignAsync
 
+> Tags:  ``` Streaming ``` 
 > Update sms campaign
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdateSmsCampaignAsync(
                 int smsCampaignId,
@@ -1219,8 +1181,8 @@ Task<string> UpdateSmsCampaignAsync(
 
 #### CancelSmsCampaignAsync
 
+> Tags:  ``` Streaming ``` 
 > Cancel sms campaign
-> ``` Streaming ``` 
 ```csharp
 Task<string> CancelSmsCampaignAsync(
                 int smsCampaignId)
@@ -1234,8 +1196,8 @@ Task<string> CancelSmsCampaignAsync(
 
 #### GetSmsCampaignsAsync
 
+> Tags:  ``` Streaming ``` 
 > Get list of sms campaigns
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSmsCampaignsAsync()
 ```
@@ -1243,8 +1205,8 @@ Task<string> GetSmsCampaignsAsync()
 
 #### GetSmsCampaignAsync
 
+> Tags:  ``` Streaming ``` 
 > Get specific sms campaign
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetSmsCampaignAsync(
                 int smsCampaignId)
@@ -1262,8 +1224,8 @@ Task<string> GetSmsCampaignAsync(
 
 #### SendPostLetterAsync
 
+> Tags:  ``` Streaming ``` 
 > Send post letter
-> ``` Streaming ``` 
 ```csharp
 Task<string> SendPostLetterAsync(
                 List<string> attributes)
@@ -1277,8 +1239,8 @@ Task<string> SendPostLetterAsync(
 
 #### CalculatePriceAsync
 
+> Tags:  ``` Streaming ``` 
 > Calculate post letter price
-> ``` Streaming ``` 
 ```csharp
 Task<string> CalculatePriceAsync(
                 List<string> attributes)
@@ -1292,8 +1254,8 @@ Task<string> CalculatePriceAsync(
 
 #### GetPostLetterHistoryAsync
 
+> Tags:  ``` Streaming ``` 
 > Get all post letter history
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetPostLetterHistoryAsync()
 ```
@@ -1301,8 +1263,8 @@ Task<string> GetPostLetterHistoryAsync()
 
 #### ExportPostLetterHistoryAsync
 
+> Tags:  ``` Streaming ``` 
 > export post letter history
-> ``` Streaming ``` 
 ```csharp
 Task<string> ExportPostLetterHistoryAsync(
                 string filename)
@@ -1320,8 +1282,8 @@ Task<string> ExportPostLetterHistoryAsync(
 
 #### CreatePostReturnAddressAsync
 
+> Tags:  ``` Streaming ``` 
 > Create post return address
-> ``` Streaming ``` 
 ```csharp
 Task<string> CreatePostReturnAddressAsync(
                 string addressName,
@@ -1341,8 +1303,8 @@ Task<string> CreatePostReturnAddressAsync(
 
 #### GetPostReturnAddressesAsync
 
+> Tags:  ``` Streaming ``` 
 > Get list of post return addresses
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetPostReturnAddressesAsync()
 ```
@@ -1350,8 +1312,8 @@ Task<string> GetPostReturnAddressesAsync()
 
 #### GetPostReturnAddressAsync
 
+> Tags:  ``` Streaming ``` 
 > Get specific post return address
-> ``` Streaming ``` 
 ```csharp
 Task<string> GetPostReturnAddressAsync(
                 int returnAddressId)
@@ -1365,8 +1327,8 @@ Task<string> GetPostReturnAddressAsync(
 
 #### UpdatePostReturnAddressAsync
 
+> Tags:  ``` Streaming ``` 
 > Update post return address
-> ``` Streaming ``` 
 ```csharp
 Task<string> UpdatePostReturnAddressAsync(
                 int returnAddressId,
@@ -1387,8 +1349,8 @@ Task<string> UpdatePostReturnAddressAsync(
 
 #### DeletePostReturnAddressAsync
 
+> Tags:  ``` Streaming ``` 
 > Delete specific post return address
-> ``` Streaming ``` 
 ```csharp
 Task<string> DeletePostReturnAddressAsync(
                 int returnAddressId)
@@ -1406,8 +1368,8 @@ Task<string> DeletePostReturnAddressAsync(
 
 #### UploadFileAsync
 
+> Tags:  ``` Streaming ``` 
 > Upload a file
-> ``` Streaming ``` 
 ```csharp
 Task<string> UploadFileAsync(
                 FileStreamInfo filename)
