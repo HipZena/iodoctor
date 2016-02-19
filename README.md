@@ -7,6 +7,11 @@
 Task<string> GetCountriesAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 
 
@@ -22,9 +27,16 @@ Task<string> SendSmsAsync(
                 List<Test> messages)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -38,9 +50,16 @@ Task<string> CalculatePriceAsync(
                 List<string> messages)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -55,9 +74,16 @@ Task<string> GetSmsHistoryAsync(
                 int? dateTo = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | dateFrom |  ``` Optional ```  | Start date || dateTo |  ``` Optional ```  | End date |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -71,9 +97,16 @@ Task<string> ExportHistoryAsync(
                 string filename)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | filename |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -87,9 +120,16 @@ Task<string> CreateReceiptAsync(
                 string url)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | url |  ``` Required ```  | Your url |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -103,9 +143,16 @@ Task<string> MarkReceiptsAsReadAsync(
                 int? dateBefore = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | dateBefore |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -118,6 +165,11 @@ Task<string> MarkReceiptsAsReadAsync(
 Task<string> GetInboundSmsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### CreateInboundSmsAsync
 
@@ -129,9 +181,16 @@ Task<string> CreateInboundSmsAsync(
                 string url)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | url |  ``` Required ```  | Your url |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -145,9 +204,16 @@ Task<string> MarkInboundSmsAsReadAsync(
                 int dateBefore)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | dateBefore |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -161,9 +227,16 @@ Task<string> CancelScheduledSmsAsync(
                 string messageId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messageId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -175,6 +248,11 @@ Task<string> CancelScheduledSmsAsync(
 ```csharp
 Task<string> CancelAllScheduledSmsAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 #### CreateSmsTemplateAsync
@@ -188,9 +266,16 @@ Task<string> CreateSmsTemplateAsync(
                 string body)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | templateName |  ``` Required ```  | Your template name || body |  ``` Required ```  | Your template body |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -204,9 +289,16 @@ Task<string> DeleteSmsTemplateAsync(
                 string templateId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | templateId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -222,9 +314,16 @@ Task<string> UpdateSmsTemplateAsync(
                 string body)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | templateId |  ``` Required ```  | TODO: Add a parameter description || templateName |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -237,6 +336,11 @@ Task<string> UpdateSmsTemplateAsync(
 Task<string> GetDeliveryReceiptsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### GetSmsTemplatesAsync
 
@@ -246,6 +350,11 @@ Task<string> GetDeliveryReceiptsAsync()
 ```csharp
 Task<string> GetSmsTemplatesAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 
@@ -262,9 +371,16 @@ Task<string> SendVoiceAsync(
                 List<string> messages)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -278,9 +394,16 @@ Task<string> CalculatePriceAsync(
                 List<string> messages)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -292,6 +415,11 @@ Task<string> CalculatePriceAsync(
 ```csharp
 Task<string> GetVoiceLanguagesAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 #### GetVoiceHistoryAsync
@@ -305,9 +433,16 @@ Task<string> GetVoiceHistoryAsync(
                 int? dateTo = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | dateFrom |  ``` Optional ```  | TODO: Add a parameter description || dateTo |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -320,6 +455,11 @@ Task<string> GetVoiceHistoryAsync(
 Task<string> GetVoiceReceiptsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### CancelVoiceMessageAsync
 
@@ -331,9 +471,16 @@ Task<string> CancelVoiceMessageAsync(
                 string messageId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messageId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -346,6 +493,11 @@ Task<string> CancelVoiceMessageAsync(
 Task<string> CancelVoiceMessagesAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### ExportVoiceHistoryAsync
 
@@ -357,9 +509,16 @@ Task<string> ExportVoiceHistoryAsync(
                 string filename)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | filename |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -375,6 +534,11 @@ Task<string> ExportVoiceHistoryAsync(
 ```csharp
 Task<string> GetAccountAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 #### CreateAccountAsync
@@ -394,9 +558,16 @@ Task<string> CreateAccountAsync(
                 string country)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | username |  ``` Required ```  | Your username || password |  ``` Required ```  | Your password || userPhone |  ``` Required ```  | Your phone number in E.164 format. || userEmail |  ``` Required ```  | Your email || userFirstName |  ``` Required ```  | Your firstname || userLastName |  ``` Required ```  | Your lastname || accountName |  ``` Required ```  | Your delivery to value. || country |  ``` Required ```  | Your country |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -412,9 +583,16 @@ Task<string> ActivationTokenAsync(
                 string country)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | userPhone |  ``` Required ```  | Your phone number || type |  ``` Required ```  | Activation type || country |  ``` Required ```  | Your country |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -428,9 +606,16 @@ Task<string> VerifyAccountAsync(
                 string activationToken)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | activationToken |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -444,9 +629,16 @@ Task<string> ForgotUsernameAsync(
                 string country = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | email |  ``` Optional ```  | TODO: Add a parameter description || phoneNumber |  ``` Optional ```  | TODO: Add a parameter description || country |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -460,9 +652,16 @@ Task<string> ForgotPasswordAsync(
                 string username)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | username |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -478,9 +677,16 @@ Task<string> VerifyForgotPasswordAsync(
                 string password)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | subaccountId |  ``` Required ```  | Your subaccount id. || activationToken |  ``` Required ```  | Your email activation token. || password |  ``` Required ```  | Your new password. |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -496,6 +702,11 @@ Task<string> VerifyForgotPasswordAsync(
 ```csharp
 Task<string> GetSubaccountsAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 #### CreateSubaccountAsync
@@ -518,9 +729,16 @@ Task<string> CreateSubaccountAsync(
                 bool? accessSettings = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | apiUsername |  ``` Required ```  ``` Collection ```  | Your new api username. || password |  ``` Required ```  | Your new password || email |  ``` Required ```  | Your new email. || phoneNumber |  ``` Required ```  | Your phone number in E.164 format. || firstName |  ``` Required ```  | Your firstname || lastName |  ``` Required ```  | Your lastname || accessUsers |  ``` Optional ```  ``` DefaultValue ```  | Your access users flag value, must be 1 or 0. || accessBilling |  ``` Optional ```  ``` DefaultValue ```  | Your access billing flag value, must be 1 or 0. || accessReporting |  ``` Optional ```  ``` DefaultValue ```  | Your access reporting flag value, must be 1 or 0. || accessContacts |  ``` Optional ```  ``` DefaultValue ```  | Your access contacts flag value, must be 1 or 0. || accessSettings |  ``` Optional ```  ``` DefaultValue ```  | Your access settings flag value, must be 1 or 0. |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -534,9 +752,16 @@ Task<string> GetSubaccountAsync(
                 int subaccountId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | subaccountId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -550,9 +775,16 @@ Task<string> DeleteSubaccountAsync(
                 int subaccountId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | subaccountId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -566,9 +798,16 @@ Task<string> RegenerateApiKeyAsync(
                 int subaccountId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | subaccountId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -592,9 +831,16 @@ Task<string> UpdateSubaccountAsync(
                 bool? accessSettings = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | subaccountId |  ``` Required ```  | TODO: Add a parameter description || password |  ``` Optional ```  | TODO: Add a parameter description || email |  ``` Optional ```  | TODO: Add a parameter description || phoneNumber |  ``` Optional ```  | TODO: Add a parameter description || firstName |  ``` Optional ```  | TODO: Add a parameter description || lastName |  ``` Optional ```  | TODO: Add a parameter description || accessUsers |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessBilling |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessReporting |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessContacts |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessSettings |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -611,6 +857,11 @@ Task<string> UpdateSubaccountAsync(
 Task<string> GetContactListsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### CreateContactListAsync
 
@@ -622,9 +873,16 @@ Task<string> CreateContactListAsync(
                 string listName)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listName |  ``` Required ```  | Your contact list name |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -638,9 +896,16 @@ Task<string> GetContactListAsync(
                 int listId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -655,9 +920,16 @@ Task<string> UpdateContactListAsync(
                 string listName)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your list id || listName |  ``` Required ```  | Your new list name |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -671,9 +943,16 @@ Task<string> DeleteContactListAsync(
                 int listId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -687,9 +966,16 @@ Task<string> RemoveDuplicateContactsAsync(
                 int listId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your list id |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -704,9 +990,16 @@ Task<string> ImportContactsToListAsync(
                 FileStreamInfo file)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your contact list id you want to access. || file |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -724,9 +1017,16 @@ Task<string> GetContactsAsync(
                 int listId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -756,9 +1056,16 @@ Task<string> CreateContactAsync(
                 string custom4 = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your list_id || phoneNumber |  ``` Optional ```  | Your phone number in E.164 format. Must be provided if no fax number or email. || email |  ``` Optional ```  | Your email. Must be provided if no phone number or fax number. || faxNumber |  ``` Optional ```  | You fax number. Must be provided if no phone number or email. || firstName |  ``` Optional ```  | Your firstname. || lastName |  ``` Optional ```  | Your lastname. || addressLine1 |  ``` Optional ```  | TODO: Add a parameter description || addressLine2 |  ``` Optional ```  | TODO: Add a parameter description || addressCity |  ``` Optional ```  | TODO: Add a parameter description || addressState |  ``` Optional ```  | TODO: Add a parameter description || addressPostalCode |  ``` Optional ```  | TODO: Add a parameter description || addressCountry |  ``` Optional ```  | TODO: Add a parameter description || organizationName |  ``` Optional ```  | TODO: Add a parameter description || custom1 |  ``` Optional ```  | TODO: Add a parameter description || custom2 |  ``` Optional ```  | TODO: Add a parameter description || custom3 |  ``` Optional ```  | TODO: Add a parameter description || custom4 |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -773,9 +1080,16 @@ Task<string> GetContactAsync(
                 int contactId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your contact list id you want to access. || contactId |  ``` Required ```  | Your contact id you want to access. |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -806,9 +1120,16 @@ Task<string> UpdateContactAsync(
                 string custom4 = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your list id || contactId |  ``` Required ```  | Your contact id || phoneNumber |  ``` Optional ```  | Your phone number in E.164 format. || email |  ``` Optional ```  | Your email. Must be provided if no phone number or fax number. || faxNumber |  ``` Optional ```  | You fax number. Must be provided if no phone number or email. || firstName |  ``` Optional ```  | Your firstname || lastName |  ``` Optional ```  | Your lastname || addressLine1 |  ``` Optional ```  | TODO: Add a parameter description || addressLine2 |  ``` Optional ```  | TODO: Add a parameter description || addressCity |  ``` Optional ```  | TODO: Add a parameter description || addressState |  ``` Optional ```  | TODO: Add a parameter description || addressPostalCode |  ``` Optional ```  | TODO: Add a parameter description || addressCountry |  ``` Optional ```  | TODO: Add a parameter description || organizationName |  ``` Optional ```  | TODO: Add a parameter description || custom1 |  ``` Optional ```  | TODO: Add a parameter description || custom2 |  ``` Optional ```  | TODO: Add a parameter description || custom3 |  ``` Optional ```  | TODO: Add a parameter description || custom4 |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -823,9 +1144,16 @@ Task<string> DeleteContactAsync(
                 string contactId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | TODO: Add a parameter description || contactId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -840,9 +1168,16 @@ Task<string> RemoveOptedOutContactsAsync(
                 int optOutListId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | Your list id || optOutListId |  ``` Required ```  | Your opt out list id |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -859,6 +1194,11 @@ Task<string> RemoveOptedOutContactsAsync(
 Task<string> GetDedicatedNumbersAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### PurchaseDedicatedNumberAsync
 
@@ -870,9 +1210,16 @@ Task<string> PurchaseDedicatedNumberAsync(
                 string dedicatedNumber)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | dedicatedNumber |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -888,9 +1235,16 @@ Task<string> GetDedicatedNumbersByCountryAsync(
                 int? searchType = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | country |  ``` Required ```  | TODO: Add a parameter description || search |  ``` Optional ```  | Your search pattern or query. || searchType |  ``` Optional ```  | Your strategy for searching, 0 = starts with, 1 = anywhere, 2 = ends with. |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -907,6 +1261,11 @@ Task<string> GetDedicatedNumbersByCountryAsync(
 Task<string> GetVoiceStatisticsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### GetSmsStatisticsAsync
 
@@ -916,6 +1275,11 @@ Task<string> GetVoiceStatisticsAsync()
 ```csharp
 Task<string> GetSmsStatisticsAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 
@@ -933,9 +1297,16 @@ Task<string> CreateAllowedAddressAsync(
                 string mfrom)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | emailAddress |  ``` Required ```  | Your email address. || mfrom |  ``` Required ```  | Your phone number in E.164 format. |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -947,6 +1318,11 @@ Task<string> CreateAllowedAddressAsync(
 ```csharp
 Task<string> GetAllowedAddressAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 
@@ -963,9 +1339,16 @@ Task<string> SearchContactListAsync(
                 string q)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | q |  ``` Required ```  |  Your keyword or query. |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -982,6 +1365,11 @@ Task<string> SearchContactListAsync(
 Task<string> GetReferralAccountsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 
 
@@ -995,6 +1383,11 @@ Task<string> GetReferralAccountsAsync()
 ```csharp
 Task<string> GetResellerAccountsAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 #### CreateResellerAccountAsync
@@ -1014,9 +1407,16 @@ Task<string> CreateResellerAccountAsync(
                 string country)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | username |  ``` Required ```  | TODO: Add a parameter description || password |  ``` Required ```  | TODO: Add a parameter description || userEmail |  ``` Required ```  | TODO: Add a parameter description || userPhone |  ``` Required ```  | TODO: Add a parameter description || userFirstName |  ``` Required ```  | TODO: Add a parameter description || userLastName |  ``` Required ```  | TODO: Add a parameter description || accountName |  ``` Required ```  | TODO: Add a parameter description || country |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1030,9 +1430,16 @@ Task<string> GetResellerAccountAsync(
                 string clientUserId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | clientUserId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1054,9 +1461,16 @@ Task<string> UpdateResellerAccountAsync(
                 string country)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | clientUserId |  ``` Required ```  | TODO: Add a parameter description || username |  ``` Required ```  | TODO: Add a parameter description || password |  ``` Required ```  | TODO: Add a parameter description || userEmail |  ``` Required ```  | TODO: Add a parameter description || userPhone |  ``` Required ```  | TODO: Add a parameter description || userFirstName |  ``` Required ```  | TODO: Add a parameter description || userLastName |  ``` Required ```  | TODO: Add a parameter description || accountName |  ``` Required ```  | TODO: Add a parameter description || country |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1076,9 +1490,16 @@ Task<string> TransferCreditAsync(
                 string currency)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | clientUserId |  ``` Required ```  | TODO: Add a parameter description || balance |  ``` Required ```  | TODO: Add a parameter description || currency |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1095,6 +1516,11 @@ Task<string> TransferCreditAsync(
 Task<string> GetFaxReceiptsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 
 
@@ -1108,6 +1534,11 @@ Task<string> GetFaxReceiptsAsync()
 ```csharp
 Task<string> GetCreditCardInfoAsync()
 ```
+
+##### Usage: 
+Will add later
+
+
 
 
 #### UpdateCreditCardInfoAsync
@@ -1124,9 +1555,16 @@ Task<string> UpdateCreditCardInfoAsync(
                 string name)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | number |  ``` Required ```  | TODO: Add a parameter description || expiryMonth |  ``` Required ```  | TODO: Add a parameter description || expiryYear |  ``` Required ```  | TODO: Add a parameter description || cvc |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1140,9 +1578,16 @@ Task<string> GetPackagesListAsync(
                 string country = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | country |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1156,9 +1601,16 @@ Task<string> PurchasePackageAsync(
                 int packageId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | packageId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1171,6 +1623,11 @@ Task<string> PurchasePackageAsync(
 Task<string> GetTransactionsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### GetTransactionAsync
 
@@ -1182,9 +1639,16 @@ Task<string> GetTransactionAsync(
                 string transactionId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | transactionId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1206,9 +1670,16 @@ Task<string> CreateSmsCampaignAsync(
                 int? schedule = null)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description || mfrom |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description || schedule |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1225,9 +1696,16 @@ Task<string> CalculatePriceAsync(
                 string body)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | listId |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description || mfrom |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1246,9 +1724,16 @@ Task<string> UpdateSmsCampaignAsync(
                 string schedule)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | smsCampaignId |  ``` Required ```  | TODO: Add a parameter description || listId |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description || mfrom |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description || schedule |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1262,9 +1747,16 @@ Task<string> CancelSmsCampaignAsync(
                 int smsCampaignId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | smsCampaignId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1277,6 +1769,11 @@ Task<string> CancelSmsCampaignAsync(
 Task<string> GetSmsCampaignsAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### GetSmsCampaignAsync
 
@@ -1288,9 +1785,16 @@ Task<string> GetSmsCampaignAsync(
                 int smsCampaignId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | smsCampaignId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1308,9 +1812,16 @@ Task<string> SendPostLetterAsync(
                 List<string> attributes)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | attributes |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1324,9 +1835,16 @@ Task<string> CalculatePriceAsync(
                 List<string> attributes)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | attributes |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1339,6 +1857,11 @@ Task<string> CalculatePriceAsync(
 Task<string> GetPostLetterHistoryAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### ExportPostLetterHistoryAsync
 
@@ -1350,9 +1873,16 @@ Task<string> ExportPostLetterHistoryAsync(
                 string filename)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | filename |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1376,9 +1906,16 @@ Task<string> CreatePostReturnAddressAsync(
                 string addressCountry)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | addressName |  ``` Required ```  | TODO: Add a parameter description || addressLine1 |  ``` Required ```  | TODO: Add a parameter description || addressLine2 |  ``` Required ```  | TODO: Add a parameter description || addressCity |  ``` Required ```  | TODO: Add a parameter description || addressState |  ``` Required ```  | TODO: Add a parameter description || addressPostalCode |  ``` Required ```  | TODO: Add a parameter description || addressCountry |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1391,6 +1928,11 @@ Task<string> CreatePostReturnAddressAsync(
 Task<string> GetPostReturnAddressesAsync()
 ```
 
+##### Usage: 
+Will add later
+
+
+
 
 #### GetPostReturnAddressAsync
 
@@ -1402,9 +1944,16 @@ Task<string> GetPostReturnAddressAsync(
                 int returnAddressId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | returnAddressId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1425,9 +1974,16 @@ Task<string> UpdatePostReturnAddressAsync(
                 string addressCountry)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | returnAddressId |  ``` Required ```  | TODO: Add a parameter description || addressName |  ``` Required ```  | TODO: Add a parameter description || addressLine1 |  ``` Required ```  | TODO: Add a parameter description || addressLine2 |  ``` Required ```  | TODO: Add a parameter description || addressCity |  ``` Required ```  | TODO: Add a parameter description || addressState |  ``` Required ```  | TODO: Add a parameter description || addressPostalCode |  ``` Required ```  | TODO: Add a parameter description || addressCountry |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1441,9 +1997,16 @@ Task<string> DeletePostReturnAddressAsync(
                 int returnAddressId)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | returnAddressId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
@@ -1461,9 +2024,16 @@ Task<string> UploadFileAsync(
                 FileStreamInfo filename)
 ```
 
+##### Parameters: 
+
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | filename |  ``` Required ```  | TODO: Add a parameter description |
+
+
+##### Usage: 
+Will add later
+
 
 
 
