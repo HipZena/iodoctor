@@ -32,26 +32,20 @@ TODO
 * 
 
 
-
-
-
-
-
 ----------
+
+
+
+
 ## CountriesController
 
 ### GetCountriesAsync
 
 > Get all countries
-
 ```csharp
 Task<string> GetCountriesAsync()
 ```
-| Item     | Value |
-|----------|-------|
-| Computer | $1600 |
-| Phone    | $12   |
-| Pipe     | $1    |
+
 
 
 ## SMSController
@@ -67,7 +61,6 @@ Task<string> SendSmsAsync(
 ### CalculatePriceAsync
 
 > Calculate sms price
-
 ```csharp
 Task<string> CalculatePriceAsync(
                 List<string> messages)
@@ -76,7 +69,6 @@ Task<string> CalculatePriceAsync(
 ### GetSmsHistoryAsync
 
 > Get all sms history
-
 ```csharp
 Task<string> GetSmsHistoryAsync(
                 int? dateFrom = null,
@@ -86,7 +78,6 @@ Task<string> GetSmsHistoryAsync(
 ### ExportHistoryAsync
 
 > Export all sms history
-
 ```csharp
 Task<string> ExportHistoryAsync(
                 string filename)
@@ -95,7 +86,6 @@ Task<string> ExportHistoryAsync(
 ### CreateReceiptAsync
 
 > Add a delivery receipt
-
 ```csharp
 Task<string> CreateReceiptAsync(
                 string url)
@@ -104,7 +94,6 @@ Task<string> CreateReceiptAsync(
 ### MarkReceiptsAsReadAsync
 
 > Marked delivery receipts as read
-
 ```csharp
 Task<string> MarkReceiptsAsReadAsync(
                 int? dateBefore = null)
@@ -113,7 +102,6 @@ Task<string> MarkReceiptsAsReadAsync(
 ### GetInboundSmsAsync
 
 > Get all inbound sms
-
 ```csharp
 Task<string> GetInboundSmsAsync()
 ```
@@ -121,7 +109,6 @@ Task<string> GetInboundSmsAsync()
 ### CreateInboundSmsAsync
 
 > Create inbound sms
-
 ```csharp
 Task<string> CreateInboundSmsAsync(
                 string url)
@@ -130,7 +117,6 @@ Task<string> CreateInboundSmsAsync(
 ### MarkInboundSmsAsReadAsync
 
 > Marked all inbound sms as read
-
 ```csharp
 Task<string> MarkInboundSmsAsReadAsync(
                 int dateBefore)
@@ -139,7 +125,6 @@ Task<string> MarkInboundSmsAsReadAsync(
 ### CancelScheduledSmsAsync
 
 > Update scheduled message as cancel
-
 ```csharp
 Task<string> CancelScheduledSmsAsync(
                 string messageId)
@@ -148,7 +133,6 @@ Task<string> CancelScheduledSmsAsync(
 ### CancelAllScheduledSmsAsync
 
 > Update all scheduled message as cancelled
-
 ```csharp
 Task<string> CancelAllScheduledSmsAsync()
 ```
@@ -156,7 +140,6 @@ Task<string> CancelAllScheduledSmsAsync()
 ### CreateSmsTemplateAsync
 
 > Create sms template
-
 ```csharp
 Task<string> CreateSmsTemplateAsync(
                 string templateName,
@@ -166,7 +149,6 @@ Task<string> CreateSmsTemplateAsync(
 ### DeleteSmsTemplateAsync
 
 > Delete sms template
-
 ```csharp
 Task<string> DeleteSmsTemplateAsync(
                 string templateId)
@@ -175,7 +157,6 @@ Task<string> DeleteSmsTemplateAsync(
 ### UpdateSmsTemplateAsync
 
 > Update sms template
-
 ```csharp
 Task<string> UpdateSmsTemplateAsync(
                 int templateId,
@@ -186,7 +167,6 @@ Task<string> UpdateSmsTemplateAsync(
 ### GetDeliveryReceiptsAsync
 
 > Get all delivery receipts
-
 ```csharp
 Task<string> GetDeliveryReceiptsAsync()
 ```
@@ -194,7 +174,6 @@ Task<string> GetDeliveryReceiptsAsync()
 ### GetSmsTemplatesAsync
 
 > Get lists of all sms templates
-
 ```csharp
 Task<string> GetSmsTemplatesAsync()
 ```
@@ -214,7 +193,6 @@ Task<string> SendVoiceAsync(
 ### CalculatePriceAsync
 
 > Calculate voice price
-
 ```csharp
 Task<string> CalculatePriceAsync(
                 List<string> messages)
@@ -223,7 +201,6 @@ Task<string> CalculatePriceAsync(
 ### GetVoiceLanguagesAsync
 
 > Get all voice languages
-
 ```csharp
 Task<string> GetVoiceLanguagesAsync()
 ```
@@ -231,7 +208,6 @@ Task<string> GetVoiceLanguagesAsync()
 ### GetVoiceHistoryAsync
 
 > Get all voice history
-
 ```csharp
 Task<string> GetVoiceHistoryAsync(
                 int? dateFrom = null,
@@ -241,7 +217,6 @@ Task<string> GetVoiceHistoryAsync(
 ### GetVoiceReceiptsAsync
 
 > Get all voice receipts
-
 ```csharp
 Task<string> GetVoiceReceiptsAsync()
 ```
@@ -249,7 +224,6 @@ Task<string> GetVoiceReceiptsAsync()
 ### CancelVoiceMessageAsync
 
 > Update voice message status as cancelled
-
 ```csharp
 Task<string> CancelVoiceMessageAsync(
                 string messageId)
@@ -258,7 +232,6 @@ Task<string> CancelVoiceMessageAsync(
 ### CancelVoiceMessagesAsync
 
 > Update all voice messages as cancelled
-
 ```csharp
 Task<string> CancelVoiceMessagesAsync()
 ```
@@ -266,7 +239,6 @@ Task<string> CancelVoiceMessagesAsync()
 ### ExportVoiceHistoryAsync
 
 > Export voice history
-
 ```csharp
 Task<string> ExportVoiceHistoryAsync(
                 string filename)
@@ -279,7 +251,6 @@ Task<string> ExportVoiceHistoryAsync(
 ### GetAccountAsync
 
 > Get account details
-
 ```csharp
 Task<string> GetAccountAsync()
 ```
@@ -287,7 +258,6 @@ Task<string> GetAccountAsync()
 ### CreateAccountAsync
 
 > Create An Account
-
 ```csharp
 Task<string> CreateAccountAsync(
                 string username,
@@ -303,7 +273,6 @@ Task<string> CreateAccountAsync(
 ### ActivationTokenAsync
 
 > Send account activation token
-
 ```csharp
 Task<string> ActivationTokenAsync(
                 string userPhone,
@@ -314,7 +283,6 @@ Task<string> ActivationTokenAsync(
 ### VerifyAccountAsync
 
 > Verify new account
-
 ```csharp
 Task<string> VerifyAccountAsync(
                 string activationToken)
@@ -323,7 +291,6 @@ Task<string> VerifyAccountAsync(
 ### ForgotUsernameAsync
 
 > Forgot username
-
 ```csharp
 Task<string> ForgotUsernameAsync(
                 string email = null,
@@ -334,7 +301,6 @@ Task<string> ForgotUsernameAsync(
 ### ForgotPasswordAsync
 
 > Forgot password
-
 ```csharp
 Task<string> ForgotPasswordAsync(
                 string username)
@@ -343,7 +309,6 @@ Task<string> ForgotPasswordAsync(
 ### VerifyForgotPasswordAsync
 
 > Verify forgot password
-
 ```csharp
 Task<string> VerifyForgotPasswordAsync(
                 int subaccountId,
@@ -358,7 +323,6 @@ Task<string> VerifyForgotPasswordAsync(
 ### GetSubaccountsAsync
 
 > Get all subaccounts
-
 ```csharp
 Task<string> GetSubaccountsAsync()
 ```
@@ -366,7 +330,6 @@ Task<string> GetSubaccountsAsync()
 ### CreateSubaccountAsync
 
 > Create new subaccount
-
 ```csharp
 Task<string> CreateSubaccountAsync(
                 List<string> apiUsername,
@@ -385,7 +348,6 @@ Task<string> CreateSubaccountAsync(
 ### GetSubaccountAsync
 
 > Get specific subaccount
-
 ```csharp
 Task<string> GetSubaccountAsync(
                 int subaccountId)
@@ -394,7 +356,6 @@ Task<string> GetSubaccountAsync(
 ### DeleteSubaccountAsync
 
 > Delete a subaccount
-
 ```csharp
 Task<string> DeleteSubaccountAsync(
                 int subaccountId)
@@ -403,7 +364,6 @@ Task<string> DeleteSubaccountAsync(
 ### RegenerateApiKeyAsync
 
 > Regenerate an API Key
-
 ```csharp
 Task<string> RegenerateApiKeyAsync(
                 int subaccountId)
@@ -412,7 +372,6 @@ Task<string> RegenerateApiKeyAsync(
 ### UpdateSubaccountAsync
 
 > Update subaccount
-
 ```csharp
 Task<string> UpdateSubaccountAsync(
                 int subaccountId,
@@ -435,7 +394,6 @@ Task<string> UpdateSubaccountAsync(
 ### GetContactListsAsync
 
 > Get all contact lists
-
 ```csharp
 Task<string> GetContactListsAsync()
 ```
@@ -443,7 +401,6 @@ Task<string> GetContactListsAsync()
 ### CreateContactListAsync
 
 > Create new contact list
-
 ```csharp
 Task<string> CreateContactListAsync(
                 string listName)
@@ -452,7 +409,6 @@ Task<string> CreateContactListAsync(
 ### GetContactListAsync
 
 > Get specific contact list
-
 ```csharp
 Task<string> GetContactListAsync(
                 int listId)
@@ -461,7 +417,6 @@ Task<string> GetContactListAsync(
 ### UpdateContactListAsync
 
 > Update specific contact list
-
 ```csharp
 Task<string> UpdateContactListAsync(
                 int listId,
@@ -471,7 +426,6 @@ Task<string> UpdateContactListAsync(
 ### DeleteContactListAsync
 
 > Delete a specific contact list
-
 ```csharp
 Task<string> DeleteContactListAsync(
                 int listId)
@@ -480,7 +434,6 @@ Task<string> DeleteContactListAsync(
 ### RemoveDuplicateContactsAsync
 
 > Remove duplicate contacts
-
 ```csharp
 Task<string> RemoveDuplicateContactsAsync(
                 int listId)
@@ -489,7 +442,6 @@ Task<string> RemoveDuplicateContactsAsync(
 ### ImportContactsToListAsync
 
 > Import contacts to list
-
 ```csharp
 Task<string> ImportContactsToListAsync(
                 int listId,
@@ -503,7 +455,6 @@ Task<string> ImportContactsToListAsync(
 ### GetContactsAsync
 
 > Get all contacts in a list
-
 ```csharp
 Task<string> GetContactsAsync(
                 int listId)
@@ -512,7 +463,6 @@ Task<string> GetContactsAsync(
 ### CreateContactAsync
 
 > Create new contact
-
 ```csharp
 Task<string> CreateContactAsync(
                 int listId,
@@ -537,7 +487,6 @@ Task<string> CreateContactAsync(
 ### GetContactAsync
 
 > Get a specific contact
-
 ```csharp
 Task<string> GetContactAsync(
                 int listId,
@@ -547,7 +496,6 @@ Task<string> GetContactAsync(
 ### UpdateContactAsync
 
 > Update contact
-
 ```csharp
 Task<string> UpdateContactAsync(
                 int listId,
@@ -573,7 +521,6 @@ Task<string> UpdateContactAsync(
 ### DeleteContactAsync
 
 > Delete a contact
-
 ```csharp
 Task<string> DeleteContactAsync(
                 int listId,
@@ -583,7 +530,6 @@ Task<string> DeleteContactAsync(
 ### RemoveOptedOutContactsAsync
 
 > Remove all opted out contacts
-
 ```csharp
 Task<string> RemoveOptedOutContactsAsync(
                 int listId,
@@ -597,7 +543,6 @@ Task<string> RemoveOptedOutContactsAsync(
 ### GetDedicatedNumbersAsync
 
 > Get all dedicated numbers
-
 ```csharp
 Task<string> GetDedicatedNumbersAsync()
 ```
@@ -605,7 +550,6 @@ Task<string> GetDedicatedNumbersAsync()
 ### PurchaseDedicatedNumberAsync
 
 > Buy dedicated number
-
 ```csharp
 Task<string> PurchaseDedicatedNumberAsync(
                 string dedicatedNumber)
@@ -614,7 +558,6 @@ Task<string> PurchaseDedicatedNumberAsync(
 ### GetDedicatedNumbersByCountryAsync
 
 > Get all dedicated numbers by country
-
 ```csharp
 Task<string> GetDedicatedNumbersByCountryAsync(
                 string country,
@@ -629,7 +572,6 @@ Task<string> GetDedicatedNumbersByCountryAsync(
 ### GetVoiceStatisticsAsync
 
 > Get voice statistics
-
 ```csharp
 Task<string> GetVoiceStatisticsAsync()
 ```
@@ -637,7 +579,6 @@ Task<string> GetVoiceStatisticsAsync()
 ### GetSmsStatisticsAsync
 
 > Get sms statistics
-
 ```csharp
 Task<string> GetSmsStatisticsAsync()
 ```
@@ -649,7 +590,6 @@ Task<string> GetSmsStatisticsAsync()
 ### CreateAllowedAddressAsync
 
 > Create email to sms allowed address
-
 ```csharp
 Task<string> CreateAllowedAddressAsync(
                 string emailAddress,
@@ -659,7 +599,6 @@ Task<string> CreateAllowedAddressAsync(
 ### GetAllowedAddressAsync
 
 > Get list of email to sms allowed addresses
-
 ```csharp
 Task<string> GetAllowedAddressAsync()
 ```
@@ -671,7 +610,6 @@ Task<string> GetAllowedAddressAsync()
 ### SearchContactListAsync
 
 > Get list of searched contact list
-
 ```csharp
 Task<string> SearchContactListAsync(
                 string q)
@@ -684,7 +622,6 @@ Task<string> SearchContactListAsync(
 ### GetReferralAccountsAsync
 
 > Get all referral accounts
-
 ```csharp
 Task<string> GetReferralAccountsAsync()
 ```
@@ -696,7 +633,6 @@ Task<string> GetReferralAccountsAsync()
 ### GetResellerAccountsAsync
 
 > Get list of reseller accounts
-
 ```csharp
 Task<string> GetResellerAccountsAsync()
 ```
@@ -704,7 +640,6 @@ Task<string> GetResellerAccountsAsync()
 ### CreateResellerAccountAsync
 
 > Create reseller account
-
 ```csharp
 Task<string> CreateResellerAccountAsync(
                 string username,
@@ -720,7 +655,6 @@ Task<string> CreateResellerAccountAsync(
 ### GetResellerAccountAsync
 
 > Get Reseller Account
-
 ```csharp
 Task<string> GetResellerAccountAsync(
                 string clientUserId)
@@ -729,7 +663,6 @@ Task<string> GetResellerAccountAsync(
 ### UpdateResellerAccountAsync
 
 > Reseller Account
-
 ```csharp
 Task<string> UpdateResellerAccountAsync(
                 string clientUserId,
@@ -750,7 +683,6 @@ Task<string> UpdateResellerAccountAsync(
 ### TransferCreditAsync
 
 > Transfer Credit
-
 ```csharp
 Task<string> TransferCreditAsync(
                 string clientUserId,
@@ -765,7 +697,6 @@ Task<string> TransferCreditAsync(
 ### GetFaxReceiptsAsync
 
 > Get all fax receipts
-
 ```csharp
 Task<string> GetFaxReceiptsAsync()
 ```
@@ -777,7 +708,6 @@ Task<string> GetFaxReceiptsAsync()
 ### GetCreditCardInfoAsync
 
 > Get Credit Card info
-
 ```csharp
 Task<string> GetCreditCardInfoAsync()
 ```
@@ -785,7 +715,6 @@ Task<string> GetCreditCardInfoAsync()
 ### UpdateCreditCardInfoAsync
 
 > Update credit card info
-
 ```csharp
 Task<string> UpdateCreditCardInfoAsync(
                 string number,
@@ -798,7 +727,6 @@ Task<string> UpdateCreditCardInfoAsync(
 ### GetPackagesListAsync
 
 > Get list of all packages
-
 ```csharp
 Task<string> GetPackagesListAsync(
                 string country = null)
@@ -807,7 +735,6 @@ Task<string> GetPackagesListAsync(
 ### PurchasePackageAsync
 
 > Purchase a package
-
 ```csharp
 Task<string> PurchasePackageAsync(
                 int packageId)
@@ -816,7 +743,6 @@ Task<string> PurchasePackageAsync(
 ### GetTransactionsAsync
 
 > Get all transactions
-
 ```csharp
 Task<string> GetTransactionsAsync()
 ```
@@ -824,7 +750,6 @@ Task<string> GetTransactionsAsync()
 ### GetTransactionAsync
 
 > Get specific Transaction
-
 ```csharp
 Task<string> GetTransactionAsync(
                 string transactionId)
@@ -837,7 +762,6 @@ Task<string> GetTransactionAsync(
 ### CreateSmsCampaignAsync
 
 > Create sms campaign
-
 ```csharp
 Task<string> CreateSmsCampaignAsync(
                 int listId,
@@ -850,7 +774,6 @@ Task<string> CreateSmsCampaignAsync(
 ### CalculatePriceAsync
 
 > Calculate price for sms campaign
-
 ```csharp
 Task<string> CalculatePriceAsync(
                 int listId,
@@ -862,7 +785,6 @@ Task<string> CalculatePriceAsync(
 ### UpdateSmsCampaignAsync
 
 > Update sms campaign
-
 ```csharp
 Task<string> UpdateSmsCampaignAsync(
                 int smsCampaignId,
@@ -876,7 +798,6 @@ Task<string> UpdateSmsCampaignAsync(
 ### CancelSmsCampaignAsync
 
 > Cancel sms campaign
-
 ```csharp
 Task<string> CancelSmsCampaignAsync(
                 int smsCampaignId)
@@ -885,7 +806,6 @@ Task<string> CancelSmsCampaignAsync(
 ### GetSmsCampaignsAsync
 
 > Get list of sms campaigns
-
 ```csharp
 Task<string> GetSmsCampaignsAsync()
 ```
@@ -893,7 +813,6 @@ Task<string> GetSmsCampaignsAsync()
 ### GetSmsCampaignAsync
 
 > Get specific sms campaign
-
 ```csharp
 Task<string> GetSmsCampaignAsync(
                 int smsCampaignId)
@@ -906,7 +825,6 @@ Task<string> GetSmsCampaignAsync(
 ### SendPostLetterAsync
 
 > Send post letter
-
 ```csharp
 Task<string> SendPostLetterAsync(
                 List<string> attributes)
@@ -915,7 +833,6 @@ Task<string> SendPostLetterAsync(
 ### CalculatePriceAsync
 
 > Calculate post letter price
-
 ```csharp
 Task<string> CalculatePriceAsync(
                 List<string> attributes)
@@ -924,7 +841,6 @@ Task<string> CalculatePriceAsync(
 ### GetPostLetterHistoryAsync
 
 > Get all post letter history
-
 ```csharp
 Task<string> GetPostLetterHistoryAsync()
 ```
@@ -932,7 +848,6 @@ Task<string> GetPostLetterHistoryAsync()
 ### ExportPostLetterHistoryAsync
 
 > export post letter history
-
 ```csharp
 Task<string> ExportPostLetterHistoryAsync(
                 string filename)
@@ -945,7 +860,6 @@ Task<string> ExportPostLetterHistoryAsync(
 ### CreatePostReturnAddressAsync
 
 > Create post return address
-
 ```csharp
 Task<string> CreatePostReturnAddressAsync(
                 string addressName,
@@ -960,7 +874,6 @@ Task<string> CreatePostReturnAddressAsync(
 ### GetPostReturnAddressesAsync
 
 > Get list of post return addresses
-
 ```csharp
 Task<string> GetPostReturnAddressesAsync()
 ```
@@ -968,7 +881,6 @@ Task<string> GetPostReturnAddressesAsync()
 ### GetPostReturnAddressAsync
 
 > Get specific post return address
-
 ```csharp
 Task<string> GetPostReturnAddressAsync(
                 int returnAddressId)
@@ -977,7 +889,6 @@ Task<string> GetPostReturnAddressAsync(
 ### UpdatePostReturnAddressAsync
 
 > Update post return address
-
 ```csharp
 Task<string> UpdatePostReturnAddressAsync(
                 int returnAddressId,
@@ -993,7 +904,6 @@ Task<string> UpdatePostReturnAddressAsync(
 ### DeletePostReturnAddressAsync
 
 > Delete specific post return address
-
 ```csharp
 Task<string> DeletePostReturnAddressAsync(
                 int returnAddressId)
@@ -1006,7 +916,6 @@ Task<string> DeletePostReturnAddressAsync(
 ### UploadFileAsync
 
 > Upload a file
-
 ```csharp
 Task<string> UploadFileAsync(
                 FileStreamInfo filename)
