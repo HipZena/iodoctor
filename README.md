@@ -39,7 +39,7 @@ TODO
 
 ## CountriesController
 
-### GetCountriesAsync
+#### GetCountriesAsync
 
 > Get all countries
 ```csharp
@@ -50,7 +50,7 @@ Task<string> GetCountriesAsync()
 
 ## SMSController
 
-### SendSmsAsync
+##### SendSmsAsync
 
 > TODO: Add a method description
 ```csharp
