@@ -34,7 +34,6 @@ TODO
 
 ----------
 
-
 ### CountriesController
 
 #### GetCountriesAsync
@@ -61,7 +60,7 @@ Task<string> SendSmsAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messages |  ``` Required ```  ``` Collection ```  |  |
+| messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
 
 
 
@@ -76,7 +75,7 @@ Task<string> CalculatePriceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messages |  ``` Required ```  ``` Collection ```  |  |
+| messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
 
 
 
@@ -107,7 +106,7 @@ Task<string> ExportHistoryAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| filename |  ``` Required ```  |  |
+| filename |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -137,7 +136,7 @@ Task<string> MarkReceiptsAsReadAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| dateBefore |  ``` Optional ```  |  |
+| dateBefore |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -176,7 +175,7 @@ Task<string> MarkInboundSmsAsReadAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| dateBefore |  ``` Required ```  |  |
+| dateBefore |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -191,7 +190,7 @@ Task<string> CancelScheduledSmsAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messageId |  ``` Required ```  |  |
+| messageId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -231,7 +230,7 @@ Task<string> DeleteSmsTemplateAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| templateId |  ``` Required ```  |  |
+| templateId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -248,7 +247,7 @@ Task<string> UpdateSmsTemplateAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| templateId |  ``` Required ```  |  || templateName |  ``` Required ```  |  || body |  ``` Required ```  |  |
+| templateId |  ``` Required ```  | TODO: Add a parameter description || templateName |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -285,7 +284,7 @@ Task<string> SendVoiceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messages |  ``` Required ```  ``` Collection ```  |  |
+| messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
 
 
 
@@ -300,7 +299,7 @@ Task<string> CalculatePriceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messages |  ``` Required ```  ``` Collection ```  |  |
+| messages |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
 
 
 
@@ -325,7 +324,7 @@ Task<string> GetVoiceHistoryAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| dateFrom |  ``` Optional ```  |  || dateTo |  ``` Optional ```  |  |
+| dateFrom |  ``` Optional ```  | TODO: Add a parameter description || dateTo |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -349,7 +348,7 @@ Task<string> CancelVoiceMessageAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messageId |  ``` Required ```  |  |
+| messageId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -373,7 +372,7 @@ Task<string> ExportVoiceHistoryAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| filename |  ``` Required ```  |  |
+| filename |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -440,7 +439,7 @@ Task<string> VerifyAccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| activationToken |  ``` Required ```  |  |
+| activationToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -457,7 +456,7 @@ Task<string> ForgotUsernameAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Optional ```  |  || phoneNumber |  ``` Optional ```  |  || country |  ``` Optional ```  |  |
+| email |  ``` Optional ```  | TODO: Add a parameter description || phoneNumber |  ``` Optional ```  | TODO: Add a parameter description || country |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -472,7 +471,7 @@ Task<string> ForgotPasswordAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| username |  ``` Required ```  |  |
+| username |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -542,7 +541,7 @@ Task<string> GetSubaccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| subaccountId |  ``` Required ```  |  |
+| subaccountId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -557,7 +556,7 @@ Task<string> DeleteSubaccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| subaccountId |  ``` Required ```  |  |
+| subaccountId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -572,7 +571,7 @@ Task<string> RegenerateApiKeyAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| subaccountId |  ``` Required ```  |  |
+| subaccountId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -597,7 +596,7 @@ Task<string> UpdateSubaccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| subaccountId |  ``` Required ```  |  || password |  ``` Optional ```  |  || email |  ``` Optional ```  |  || phoneNumber |  ``` Optional ```  |  || firstName |  ``` Optional ```  |  || lastName |  ``` Optional ```  |  || accessUsers |  ``` Optional ```  ``` DefaultValue ```  |  || accessBilling |  ``` Optional ```  ``` DefaultValue ```  |  || accessReporting |  ``` Optional ```  ``` DefaultValue ```  |  || accessContacts |  ``` Optional ```  ``` DefaultValue ```  |  || accessSettings |  ``` Optional ```  ``` DefaultValue ```  |  |
+| subaccountId |  ``` Required ```  | TODO: Add a parameter description || password |  ``` Optional ```  | TODO: Add a parameter description || email |  ``` Optional ```  | TODO: Add a parameter description || phoneNumber |  ``` Optional ```  | TODO: Add a parameter description || firstName |  ``` Optional ```  | TODO: Add a parameter description || lastName |  ``` Optional ```  | TODO: Add a parameter description || accessUsers |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessBilling |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessReporting |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessContacts |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description || accessSettings |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description |
 
 
 
@@ -640,7 +639,7 @@ Task<string> GetContactListAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  |  |
+| listId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -671,7 +670,7 @@ Task<string> DeleteContactListAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  |  |
+| listId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -702,7 +701,7 @@ Task<string> ImportContactsToListAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  | Your contact list id you want to access. || file |  ``` Required ```  |  |
+| listId |  ``` Required ```  | Your contact list id you want to access. || file |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -721,7 +720,7 @@ Task<string> GetContactsAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  |  |
+| listId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -752,7 +751,7 @@ Task<string> CreateContactAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  | Your list_id || phoneNumber |  ``` Optional ```  | Your phone number in E.164 format. Must be provided if no fax number or email. || email |  ``` Optional ```  | Your email. Must be provided if no phone number or fax number. || faxNumber |  ``` Optional ```  | You fax number. Must be provided if no phone number or email. || firstName |  ``` Optional ```  | Your firstname. || lastName |  ``` Optional ```  | Your lastname. || addressLine1 |  ``` Optional ```  |  || addressLine2 |  ``` Optional ```  |  || addressCity |  ``` Optional ```  |  || addressState |  ``` Optional ```  |  || addressPostalCode |  ``` Optional ```  |  || addressCountry |  ``` Optional ```  |  || organizationName |  ``` Optional ```  |  || custom1 |  ``` Optional ```  |  || custom2 |  ``` Optional ```  |  || custom3 |  ``` Optional ```  |  || custom4 |  ``` Optional ```  |  |
+| listId |  ``` Required ```  | Your list_id || phoneNumber |  ``` Optional ```  | Your phone number in E.164 format. Must be provided if no fax number or email. || email |  ``` Optional ```  | Your email. Must be provided if no phone number or fax number. || faxNumber |  ``` Optional ```  | You fax number. Must be provided if no phone number or email. || firstName |  ``` Optional ```  | Your firstname. || lastName |  ``` Optional ```  | Your lastname. || addressLine1 |  ``` Optional ```  | TODO: Add a parameter description || addressLine2 |  ``` Optional ```  | TODO: Add a parameter description || addressCity |  ``` Optional ```  | TODO: Add a parameter description || addressState |  ``` Optional ```  | TODO: Add a parameter description || addressPostalCode |  ``` Optional ```  | TODO: Add a parameter description || addressCountry |  ``` Optional ```  | TODO: Add a parameter description || organizationName |  ``` Optional ```  | TODO: Add a parameter description || custom1 |  ``` Optional ```  | TODO: Add a parameter description || custom2 |  ``` Optional ```  | TODO: Add a parameter description || custom3 |  ``` Optional ```  | TODO: Add a parameter description || custom4 |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -800,7 +799,7 @@ Task<string> UpdateContactAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  | Your list id || contactId |  ``` Required ```  | Your contact id || phoneNumber |  ``` Optional ```  | Your phone number in E.164 format. || email |  ``` Optional ```  | Your email. Must be provided if no phone number or fax number. || faxNumber |  ``` Optional ```  | You fax number. Must be provided if no phone number or email. || firstName |  ``` Optional ```  | Your firstname || lastName |  ``` Optional ```  | Your lastname || addressLine1 |  ``` Optional ```  |  || addressLine2 |  ``` Optional ```  |  || addressCity |  ``` Optional ```  |  || addressState |  ``` Optional ```  |  || addressPostalCode |  ``` Optional ```  |  || addressCountry |  ``` Optional ```  |  || organizationName |  ``` Optional ```  |  || custom1 |  ``` Optional ```  |  || custom2 |  ``` Optional ```  |  || custom3 |  ``` Optional ```  |  || custom4 |  ``` Optional ```  |  |
+| listId |  ``` Required ```  | Your list id || contactId |  ``` Required ```  | Your contact id || phoneNumber |  ``` Optional ```  | Your phone number in E.164 format. || email |  ``` Optional ```  | Your email. Must be provided if no phone number or fax number. || faxNumber |  ``` Optional ```  | You fax number. Must be provided if no phone number or email. || firstName |  ``` Optional ```  | Your firstname || lastName |  ``` Optional ```  | Your lastname || addressLine1 |  ``` Optional ```  | TODO: Add a parameter description || addressLine2 |  ``` Optional ```  | TODO: Add a parameter description || addressCity |  ``` Optional ```  | TODO: Add a parameter description || addressState |  ``` Optional ```  | TODO: Add a parameter description || addressPostalCode |  ``` Optional ```  | TODO: Add a parameter description || addressCountry |  ``` Optional ```  | TODO: Add a parameter description || organizationName |  ``` Optional ```  | TODO: Add a parameter description || custom1 |  ``` Optional ```  | TODO: Add a parameter description || custom2 |  ``` Optional ```  | TODO: Add a parameter description || custom3 |  ``` Optional ```  | TODO: Add a parameter description || custom4 |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -816,7 +815,7 @@ Task<string> DeleteContactAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  |  || contactId |  ``` Required ```  |  |
+| listId |  ``` Required ```  | TODO: Add a parameter description || contactId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -860,7 +859,7 @@ Task<string> PurchaseDedicatedNumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| dedicatedNumber |  ``` Required ```  |  |
+| dedicatedNumber |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -877,7 +876,7 @@ Task<string> GetDedicatedNumbersByCountryAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| country |  ``` Required ```  |  || search |  ``` Optional ```  | Your search pattern or query. || searchType |  ``` Optional ```  | Your strategy for searching, 0 = starts with, 1 = anywhere, 2 = ends with. |
+| country |  ``` Required ```  | TODO: Add a parameter description || search |  ``` Optional ```  | Your search pattern or query. || searchType |  ``` Optional ```  | Your strategy for searching, 0 = starts with, 1 = anywhere, 2 = ends with. |
 
 
 
@@ -995,7 +994,7 @@ Task<string> CreateResellerAccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| username |  ``` Required ```  |  || password |  ``` Required ```  |  || userEmail |  ``` Required ```  |  || userPhone |  ``` Required ```  |  || userFirstName |  ``` Required ```  |  || userLastName |  ``` Required ```  |  || accountName |  ``` Required ```  |  || country |  ``` Required ```  |  |
+| username |  ``` Required ```  | TODO: Add a parameter description || password |  ``` Required ```  | TODO: Add a parameter description || userEmail |  ``` Required ```  | TODO: Add a parameter description || userPhone |  ``` Required ```  | TODO: Add a parameter description || userFirstName |  ``` Required ```  | TODO: Add a parameter description || userLastName |  ``` Required ```  | TODO: Add a parameter description || accountName |  ``` Required ```  | TODO: Add a parameter description || country |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1010,7 +1009,7 @@ Task<string> GetResellerAccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| clientUserId |  ``` Required ```  |  |
+| clientUserId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1033,7 +1032,7 @@ Task<string> UpdateResellerAccountAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| clientUserId |  ``` Required ```  |  || username |  ``` Required ```  |  || password |  ``` Required ```  |  || userEmail |  ``` Required ```  |  || userPhone |  ``` Required ```  |  || userFirstName |  ``` Required ```  |  || userLastName |  ``` Required ```  |  || accountName |  ``` Required ```  |  || country |  ``` Required ```  |  |
+| clientUserId |  ``` Required ```  | TODO: Add a parameter description || username |  ``` Required ```  | TODO: Add a parameter description || password |  ``` Required ```  | TODO: Add a parameter description || userEmail |  ``` Required ```  | TODO: Add a parameter description || userPhone |  ``` Required ```  | TODO: Add a parameter description || userFirstName |  ``` Required ```  | TODO: Add a parameter description || userLastName |  ``` Required ```  | TODO: Add a parameter description || accountName |  ``` Required ```  | TODO: Add a parameter description || country |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1054,7 +1053,7 @@ Task<string> TransferCreditAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| clientUserId |  ``` Required ```  |  || balance |  ``` Required ```  |  || currency |  ``` Required ```  |  |
+| clientUserId |  ``` Required ```  | TODO: Add a parameter description || balance |  ``` Required ```  | TODO: Add a parameter description || currency |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1099,7 +1098,7 @@ Task<string> UpdateCreditCardInfoAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| number |  ``` Required ```  |  || expiryMonth |  ``` Required ```  |  || expiryYear |  ``` Required ```  |  || cvc |  ``` Required ```  |  || name |  ``` Required ```  |  |
+| number |  ``` Required ```  | TODO: Add a parameter description || expiryMonth |  ``` Required ```  | TODO: Add a parameter description || expiryYear |  ``` Required ```  | TODO: Add a parameter description || cvc |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1114,7 +1113,7 @@ Task<string> GetPackagesListAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| country |  ``` Optional ```  |  |
+| country |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -1129,7 +1128,7 @@ Task<string> PurchasePackageAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| packageId |  ``` Required ```  |  |
+| packageId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1153,7 +1152,7 @@ Task<string> GetTransactionAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| transactionId |  ``` Required ```  |  |
+| transactionId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1176,7 +1175,7 @@ Task<string> CreateSmsCampaignAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  |  || name |  ``` Required ```  |  || mfrom |  ``` Required ```  |  || body |  ``` Required ```  |  || schedule |  ``` Optional ```  |  |
+| listId |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description || mfrom |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description || schedule |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -1194,7 +1193,7 @@ Task<string> CalculatePriceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| listId |  ``` Required ```  |  || name |  ``` Required ```  |  || mfrom |  ``` Required ```  |  || body |  ``` Required ```  |  |
+| listId |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description || mfrom |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1214,7 +1213,7 @@ Task<string> UpdateSmsCampaignAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| smsCampaignId |  ``` Required ```  |  || listId |  ``` Required ```  |  || name |  ``` Required ```  |  || mfrom |  ``` Required ```  |  || body |  ``` Required ```  |  || schedule |  ``` Required ```  |  |
+| smsCampaignId |  ``` Required ```  | TODO: Add a parameter description || listId |  ``` Required ```  | TODO: Add a parameter description || name |  ``` Required ```  | TODO: Add a parameter description || mfrom |  ``` Required ```  | TODO: Add a parameter description || body |  ``` Required ```  | TODO: Add a parameter description || schedule |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1229,7 +1228,7 @@ Task<string> CancelSmsCampaignAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| smsCampaignId |  ``` Required ```  |  |
+| smsCampaignId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1253,7 +1252,7 @@ Task<string> GetSmsCampaignAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| smsCampaignId |  ``` Required ```  |  |
+| smsCampaignId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1272,7 +1271,7 @@ Task<string> SendPostLetterAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| attributes |  ``` Required ```  ``` Collection ```  |  |
+| attributes |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
 
 
 
@@ -1287,7 +1286,7 @@ Task<string> CalculatePriceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| attributes |  ``` Required ```  ``` Collection ```  |  |
+| attributes |  ``` Required ```  ``` Collection ```  | TODO: Add a parameter description |
 
 
 
@@ -1311,7 +1310,7 @@ Task<string> ExportPostLetterHistoryAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| filename |  ``` Required ```  |  |
+| filename |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1336,7 +1335,7 @@ Task<string> CreatePostReturnAddressAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| addressName |  ``` Required ```  |  || addressLine1 |  ``` Required ```  |  || addressLine2 |  ``` Required ```  |  || addressCity |  ``` Required ```  |  || addressState |  ``` Required ```  |  || addressPostalCode |  ``` Required ```  |  || addressCountry |  ``` Required ```  |  |
+| addressName |  ``` Required ```  | TODO: Add a parameter description || addressLine1 |  ``` Required ```  | TODO: Add a parameter description || addressLine2 |  ``` Required ```  | TODO: Add a parameter description || addressCity |  ``` Required ```  | TODO: Add a parameter description || addressState |  ``` Required ```  | TODO: Add a parameter description || addressPostalCode |  ``` Required ```  | TODO: Add a parameter description || addressCountry |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1360,7 +1359,7 @@ Task<string> GetPostReturnAddressAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| returnAddressId |  ``` Required ```  |  |
+| returnAddressId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1382,7 +1381,7 @@ Task<string> UpdatePostReturnAddressAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| returnAddressId |  ``` Required ```  |  || addressName |  ``` Required ```  |  || addressLine1 |  ``` Required ```  |  || addressLine2 |  ``` Required ```  |  || addressCity |  ``` Required ```  |  || addressState |  ``` Required ```  |  || addressPostalCode |  ``` Required ```  |  || addressCountry |  ``` Required ```  |  |
+| returnAddressId |  ``` Required ```  | TODO: Add a parameter description || addressName |  ``` Required ```  | TODO: Add a parameter description || addressLine1 |  ``` Required ```  | TODO: Add a parameter description || addressLine2 |  ``` Required ```  | TODO: Add a parameter description || addressCity |  ``` Required ```  | TODO: Add a parameter description || addressState |  ``` Required ```  | TODO: Add a parameter description || addressPostalCode |  ``` Required ```  | TODO: Add a parameter description || addressCountry |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1397,7 +1396,7 @@ Task<string> DeletePostReturnAddressAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| returnAddressId |  ``` Required ```  |  |
+| returnAddressId |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1416,7 +1415,7 @@ Task<string> UploadFileAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| filename |  ``` Required ```  |  |
+| filename |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
