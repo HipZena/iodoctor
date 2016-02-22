@@ -2,8 +2,6 @@
 
 #### GetCalculateAsync
 
-> *Tags:* 
-
 > Calculates the expression using the specified operation.
 ```csharp
 Task<string> GetCalculateAsync(
@@ -23,7 +21,7 @@ Task<string> GetCalculateAsync(
 ```csharp
 var operationType = OperationTypeEnum.SUM;
 
-var result = SimpleCalculatorController.GetCalculateAsync (operationType, 10.1, 10.1);
+Task<string> result = await SimpleCalculatorController.GetCalculateAsync(operationType, 10.1, 10.1);
 
 ```
 
