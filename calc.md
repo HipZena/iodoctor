@@ -19,7 +19,16 @@ Task<string> GetCalculateAsync(
 | operation |  ``` Required ```  | The operator to apply on the variables || x |  ``` Required ```  | The LHS value || y |  ``` Required ```  | The RHS value |
 
 
-##### Usage: 
+##### Usage:
+```csharp
 var operationType = OperationTypeEnum.SUM;
 
 var result = SimpleCalculatorController.GetCalculateAsync (operationType, 10.1, 10.1);
+
+```
+
+
+
+
+
+
