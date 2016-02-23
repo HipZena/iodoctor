@@ -14,7 +14,7 @@ IApidocController apidoc = client.Apidoc;
 Task<Link> GetAsync()
 ```
 
-##### Usage:
+#### Usage:
 ```csharp
 
 Link result = await apidoc.GetAsync();
@@ -31,7 +31,7 @@ Link result = await apidoc.GetAsync();
 Task GetApiDocAsync()
 ```
 
-##### Usage:
+#### Usage:
 ```csharp
 
 void result = await apidoc.GetApiDocAsync();
@@ -48,7 +48,7 @@ void result = await apidoc.GetApiDocAsync();
 Task GetSwaggerAsync()
 ```
 
-##### Usage:
+#### Usage:
 ```csharp
 
 void result = await apidoc.GetSwaggerAsync();
@@ -74,7 +74,7 @@ IAppendixController appendix = client.Appendix;
 Task<AppendixCode> GetValuesAsync()
 ```
 
-##### Usage:
+#### Usage:
 ```csharp
 
 AppendixCode result = await appendix.GetValuesAsync();
@@ -92,14 +92,14 @@ Task<AppendixCode> GetAsync(
                 int mvalue)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | mvalue |  ``` Required ```  | calue |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 
 AppendixCode result = await appendix.GetAsync(99);
@@ -127,14 +127,14 @@ Task FindAllAsync(
                 int? pageSize = null)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | page |  ``` Optional ```  ``` DefaultValue ```  | Page number to be returned, default 1, 0 for all items || pageSize |  ``` Optional ```  ``` DefaultValue ```  | Page size, default 5, 0 for all items |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 
 void result = await companies.FindAllAsync(1, 5);
@@ -142,7 +142,7 @@ void result = await companies.FindAllAsync(1, 5);
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 500 | Internal server error |
@@ -158,14 +158,14 @@ Task<Company> GetAsync(
                 string companyId)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | companyId |  ``` Required ```  | Company ID |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 
 Company result = await companies.GetAsync("some string");
@@ -173,7 +173,7 @@ Company result = await companies.GetAsync("some string");
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 400 | Bad Request parameter || 404 | Not Found || 500 | Internal server error |
@@ -190,14 +190,14 @@ Task<Company> UpdateAsync(
                 string companyId)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | Company data || companyId |  ``` Required ```  | Company ID |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 var company = new Company();
 
@@ -206,7 +206,7 @@ Company result = await companies.UpdateAsync(company, "some string");
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 400 | Bad Request parameter || 404 | Not Found || 500 | Internal server error |
@@ -223,14 +223,14 @@ Task<Company> UpdatePartialAsync(
                 string companyId)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | mDefinitionsCompany |  ``` Required ```  | MergePatch company.json || companyId |  ``` Required ```  | Company ID |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 
 Company result = await companies.UpdatePartialAsync("some string", "some string");
@@ -238,7 +238,7 @@ Company result = await companies.UpdatePartialAsync("some string", "some string"
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 400 | Bad Request || 404 | Not Found || 500 | Internal server error |
@@ -262,7 +262,7 @@ IEmployersController employers = client.Employers;
 Task FindAllAsync()
 ```
 
-##### Usage:
+#### Usage:
 ```csharp
 
 void result = await employers.FindAllAsync();
@@ -270,7 +270,7 @@ void result = await employers.FindAllAsync();
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 500 | Internal server error |
@@ -286,14 +286,14 @@ Task AddAsync(
                 Employer body)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | Employer data |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 var employer = new Employer();
 
@@ -302,7 +302,7 @@ void result = await employers.AddAsync(employer);
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 400 | Bad Request parameter || 500 | Internal server error |
@@ -318,14 +318,14 @@ Task<Employer> GetAsync(
                 string companyId)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | companyId |  ``` Required ```  | Company ID |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 
 Employer result = await employers.GetAsync("some string");
@@ -333,7 +333,7 @@ Employer result = await employers.GetAsync("some string");
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 400 | Bad Request parameter || 404 | Not Found || 500 | Internal server error |
@@ -349,14 +349,14 @@ Task DeleteAsync(
                 string companyId)
 ```
 
-##### Parameters: 
+#### Parameters: 
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | companyId |  ``` Required ```  | Company ID |
 
 
-##### Usage:
+#### Usage:
 ```csharp
 
 void result = await employers.DeleteAsync("some string");
@@ -364,7 +364,7 @@ void result = await employers.DeleteAsync("some string");
 ```
 
 
-##### Errors: 
+#### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
 | 404 | Not Found || 500 | Internal server error |
