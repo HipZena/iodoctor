@@ -17,7 +17,7 @@ Task<Link> GetAsync()
 ##### Usage:
 ```csharp
 
-Task<Link> result = await apidoc.GetAsync();
+Link result = await apidoc.GetAsync();
 
 ```
 
@@ -34,7 +34,7 @@ Task GetApiDocAsync()
 ##### Usage:
 ```csharp
 
-Task result = await apidoc.GetApiDocAsync();
+void result = await apidoc.GetApiDocAsync();
 
 ```
 
@@ -51,7 +51,7 @@ Task GetSwaggerAsync()
 ##### Usage:
 ```csharp
 
-Task result = await apidoc.GetSwaggerAsync();
+void result = await apidoc.GetSwaggerAsync();
 
 ```
 
@@ -77,7 +77,7 @@ Task<AppendixCode> GetValuesAsync()
 ##### Usage:
 ```csharp
 
-Task<AppendixCode> result = await appendix.GetValuesAsync();
+AppendixCode result = await appendix.GetValuesAsync();
 
 ```
 
@@ -102,7 +102,7 @@ Task<AppendixCode> GetAsync(
 ##### Usage:
 ```csharp
 
-Task<AppendixCode> result = await appendix.GetAsync(99);
+AppendixCode result = await appendix.GetAsync(99);
 
 ```
 
@@ -137,7 +137,7 @@ Task FindAllAsync(
 ##### Usage:
 ```csharp
 
-Task result = await companies.FindAllAsync(1, 5);
+void result = await companies.FindAllAsync(1, 5);
 
 ```
 
@@ -168,7 +168,7 @@ Task<Company> GetAsync(
 ##### Usage:
 ```csharp
 
-Task<Company> result = await companies.GetAsync("some string");
+Company result = await companies.GetAsync("some string");
 
 ```
 
@@ -201,7 +201,7 @@ Task<Company> UpdateAsync(
 ```csharp
 var company = new Company();
 
-Task<Company> result = await companies.UpdateAsync(company, "some string");
+Company result = await companies.UpdateAsync(company, "some string");
 
 ```
 
@@ -233,7 +233,7 @@ Task<Company> UpdatePartialAsync(
 ##### Usage:
 ```csharp
 
-Task<Company> result = await companies.UpdatePartialAsync("some string", "some string");
+Company result = await companies.UpdatePartialAsync("some string", "some string");
 
 ```
 
@@ -265,7 +265,7 @@ Task FindAllAsync()
 ##### Usage:
 ```csharp
 
-Task result = await employers.FindAllAsync();
+void result = await employers.FindAllAsync();
 
 ```
 
@@ -297,7 +297,7 @@ Task AddAsync(
 ```csharp
 var employer = new Employer();
 
-Task result = await employers.AddAsync(employer);
+void result = await employers.AddAsync(employer);
 
 ```
 
@@ -328,7 +328,7 @@ Task<Employer> GetAsync(
 ##### Usage:
 ```csharp
 
-Task<Employer> result = await employers.GetAsync("some string");
+Employer result = await employers.GetAsync("some string");
 
 ```
 
@@ -359,7 +359,7 @@ Task DeleteAsync(
 ##### Usage:
 ```csharp
 
-Task result = await employers.DeleteAsync("some string");
+void result = await employers.DeleteAsync("some string");
 
 ```
 
