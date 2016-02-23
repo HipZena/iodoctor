@@ -10,6 +10,7 @@ IApidocController apidoc = client.Apidoc;
 ### GetAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<Link> GetAsync()
 ```
@@ -27,6 +28,7 @@ Link result = await apidoc.GetAsync();
 ### GetApiDocAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task GetApiDocAsync()
 ```
@@ -44,6 +46,7 @@ void result = await apidoc.GetApiDocAsync();
 ### GetSwaggerAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task GetSwaggerAsync()
 ```
@@ -70,6 +73,7 @@ IAppendixController appendix = client.Appendix;
 ### GetValuesAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<AppendixCode> GetValuesAsync()
 ```
@@ -87,6 +91,7 @@ AppendixCode result = await appendix.GetValuesAsync();
 ### GetAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<AppendixCode> GetAsync(
                 int mvalue)
@@ -121,6 +126,7 @@ ICompaniesController companies = client.Companies;
 ### FindAllAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task FindAllAsync(
                 int? page = null,
@@ -153,6 +159,7 @@ void result = await companies.FindAllAsync(1, 5);
 ### GetAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<Company> GetAsync(
                 string companyId)
@@ -184,6 +191,7 @@ Company result = await companies.GetAsync("some string");
 ### UpdateAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<Company> UpdateAsync(
                 Company body,
@@ -217,6 +225,7 @@ Company result = await companies.UpdateAsync(company, "some string");
 ### UpdatePartialAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<Company> UpdatePartialAsync(
                 string mDefinitionsCompany,
@@ -258,6 +267,7 @@ IEmployersController employers = client.Employers;
 ### FindAllAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task FindAllAsync()
 ```
@@ -281,6 +291,7 @@ void result = await employers.FindAllAsync();
 ### AddAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task AddAsync(
                 Employer body)
@@ -313,6 +324,7 @@ void result = await employers.AddAsync(employer);
 ### GetAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task<Employer> GetAsync(
                 string companyId)
@@ -344,6 +356,7 @@ Employer result = await employers.GetAsync("some string");
 ### DeleteAsync
 
 > TODO: Add a method description
+
 ```csharp
 Task DeleteAsync(
                 string companyId)
