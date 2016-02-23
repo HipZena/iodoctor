@@ -106,9 +106,9 @@ Task<AppendixCode> GetAsync(
 
 #### Usage:
 ```csharp
-int number = 99;
+int mvalue = 99;
 
-AppendixCode result = await appendix.GetAsync(number);
+AppendixCode result = await appendix.GetAsync(mvalue);
 
 ```
 
@@ -143,10 +143,10 @@ Task FindAllAsync(
 
 #### Usage:
 ```csharp
-int? number = 1;
-int? number1 = 5;
+int? page = 1;
+int? pageSize = 5;
 
-await companies.FindAllAsync(number, number1);
+await companies.FindAllAsync(page, pageSize);
 
 ```
 
@@ -177,9 +177,9 @@ Task<Company> GetAsync(
 
 #### Usage:
 ```csharp
-string mstring = "some string";
+string companyId = "some string";
 
-Company result = await companies.GetAsync(mstring);
+Company result = await companies.GetAsync(companyId);
 
 ```
 
@@ -211,10 +211,10 @@ Task<Company> UpdateAsync(
 
 #### Usage:
 ```csharp
-var company = new Company();
-string mstring = "some string";
+var body = new Company();
+string companyId = "some string";
 
-Company result = await companies.UpdateAsync(company, mstring);
+Company result = await companies.UpdateAsync(body, companyId);
 
 ```
 
@@ -246,10 +246,10 @@ Task<Company> UpdatePartialAsync(
 
 #### Usage:
 ```csharp
-var company = new Company();
-string mstring = "some string";
+var companyDefinition = new Company();
+string companyId = "some string";
 
-Company result = await companies.UpdatePartialAsync(company, mstring);
+Company result = await companies.UpdatePartialAsync(companyDefinition, companyId);
 
 ```
 
@@ -313,9 +313,9 @@ Task AddAsync(
 
 #### Usage:
 ```csharp
-var employer = new Employer();
+var body = new Employer();
 
-await employers.AddAsync(employer);
+await employers.AddAsync(body);
 
 ```
 
@@ -346,9 +346,9 @@ Task<Employer> GetAsync(
 
 #### Usage:
 ```csharp
-string mstring = "some string";
+string companyId = "some string";
 
-Employer result = await employers.GetAsync(mstring);
+Employer result = await employers.GetAsync(companyId);
 
 ```
 
@@ -379,9 +379,9 @@ Task DeleteAsync(
 
 #### Usage:
 ```csharp
-string mstring = "some string";
+string companyId = "some string";
 
-await employers.DeleteAsync(mstring);
+await employers.DeleteAsync(companyId);
 
 ```
 
