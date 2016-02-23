@@ -1,71 +1,3 @@
-## ProductsController
-
-#### Get singleton instance
-The singleton instance of the ``` ProductsController ``` class can be accessed from the API Client.
-```csharp
-SmalsClient client = new SmalsClient();
-IProductsController products = client.Products;
-```
-
-### GetProductsByProductIdAsync
-
-> Returns information about the Uber product.
-
-```csharp
-Task<ProductsResponse> GetProductsByProductIdAsync(
-                string productId)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| productId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Usage:
-```csharp
-string productId = "some string";
-
-ProductsResponse result = await products.GetProductsByProductIdAsync(productId);
-
-```
-
-
-
-
-### GetProductsAsync
-
-> The Products endpoint returns information about the Uber products offered at a given location. The response includes the display name and other details about each product, and lists the products in the proper display order.
-> 
-> Some Products, such as experiments or promotions such as UberPOOL and UberFRESH, will not be returned by this endpoint.
-> 
-
-```csharp
-Task<ProductsResponse2> GetProductsAsync(
-                int latitude,
-                int longitude)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| latitude |  ``` Required ```  | Latitude component of location. || longitude |  ``` Required ```  | Longitude component of location. |
-
-
-#### Usage:
-```csharp
-int latitude = 99;
-int longitude = 99;
-
-ProductsResponse2 result = await products.GetProductsAsync(latitude, longitude);
-
-```
-
-
-
-
 ## EstimatesController
 
 #### Get singleton instance
@@ -77,17 +9,22 @@ IEstimatesController estimates = client.Estimates;
 
 ### GetEstimatesPriceAsync
 
-> The Price Estimates endpoint returns an estimated price range for each product offered at a given location. The price estimate is provided as a formatted string with the full price range and the localized currency symbol.
-> 
-> The response also includes low and high estimates, and the ISO 4217 currency code for situations requiring currency conversion. When surge is active for a particular product, its surge_multiplier will be greater than 1, but the price estimate already factors in this multiplier.
+> The Price Estimates endpoint returns an estimated price range
+> for each product offered at a given location. The price estimate is
+> provided as a formatted string with the full price range and the localized
+> currency symbol.<br><br>The response also includes low and high estimates,
+> and the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code for
+> situations requiring currency conversion. When surge is active for a particular
+> product, its surge_multiplier will be greater than 1, but the price estimate
+> already factors in this multiplier.
 > 
 
 ```csharp
-Task<EstimatesPriceResponse> GetEstimatesPriceAsync(
-                string endLatitude,
-                string endLongitude,
-                string startLatitude,
-                string startLongitude)
+Task<List<PriceEstimate>> GetEstimatesPriceAsync(
+                double endLatitude,
+                double endLongitude,
+                double startLatitude,
+                double startLongitude)
 ```
 
 #### Parameters: 
@@ -99,14 +36,20 @@ Task<EstimatesPriceResponse> GetEstimatesPriceAsync(
 
 #### Usage:
 ```csharp
-string endLatitude = "some string";
-string endLongitude = "some string";
-string startLatitude = "some string";
-string startLongitude = "some string";
+double endLatitude = 10.1;
+double endLongitude = 10.1;
+double startLatitude = 10.1;
+double startLongitude = 10.1;
 
-EstimatesPriceResponse result = await estimates.GetEstimatesPriceAsync(endLatitude, endLongitude, startLatitude, startLongitude);
+List<PriceEstimate> result = await estimates.GetEstimatesPriceAsync(endLatitude, endLongitude, startLatitude, startLongitude);
 
 ```
+
+
+#### Errors: 
+| Error Code | Error Description |
+|------------|-------------------|
+| 500 | Unexpected error |
 
 
 
@@ -116,10 +59,10 @@ EstimatesPriceResponse result = await estimates.GetEstimatesPriceAsync(endLatitu
 > The Time Estimates endpoint returns ETAs for all products offered at a given location, with the responses expressed as integers in seconds. We recommend that this endpoint be called every minute to provide the most accurate, up-to-date ETAs.
 
 ```csharp
-Task<EstimatesTimeResponse> GetEstimatesTimeAsync(
-                int startLatitude,
-                int startLongitude,
-                string customerUuid = null,
+Task<List<Product>> GetEstimatesTimeAsync(
+                double startLatitude,
+                double startLongitude,
+                Guid? customerUuid = null,
                 string productId = null)
 ```
 
@@ -127,278 +70,17 @@ Task<EstimatesTimeResponse> GetEstimatesTimeAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| startLatitude |  ``` Required ```  | Latitude component. || startLongitude |  ``` Required ```  | Longitude component. || customerUuid |  ``` Optional ```  | Unique customer identifier to be used for experience customization. || productId |  ``` Optional ```  | Unique identifier representing a specific product for a given latitude & longitude. |
+| startLatitude |  ``` Required ```  | Latitude component of start location. || startLongitude |  ``` Required ```  | Longitude component of start location. || customerUuid |  ``` Optional ```  | Unique customer identifier to be used for experience customization. || productId |  ``` Optional ```  | Unique identifier representing a specific product for a given latitude & longitude. |
 
 
 #### Usage:
 ```csharp
-int startLatitude = 99;
-int startLongitude = 99;
-string customerUuid = "some string";
+double startLatitude = 10.1;
+double startLongitude = 10.1;
+Guid? customerUuid = Guid.NewGuid();
 string productId = "some string";
 
-EstimatesTimeResponse result = await estimates.GetEstimatesTimeAsync(startLatitude, startLongitude, customerUuid, productId);
-
-```
-
-
-
-
-## PromotionsController
-
-#### Get singleton instance
-The singleton instance of the ``` PromotionsController ``` class can be accessed from the API Client.
-```csharp
-SmalsClient client = new SmalsClient();
-IPromotionsController promotions = client.Promotions;
-```
-
-### GetPromotionsAsync
-
-> The Promotions endpoint returns information about the promotion that will be available to a new user based on their activity's location. These promotions do not apply for existing users.
-
-```csharp
-Task<PromotionsResponse> GetPromotionsAsync(
-                string endLatitude,
-                string endLongitude,
-                string startLatitude,
-                string startLongitude)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| endLatitude |  ``` Required ```  | Latitude component of end location. || endLongitude |  ``` Required ```  | Longitude component of end location. || startLatitude |  ``` Required ```  | Latitude component of start location. || startLongitude |  ``` Required ```  | Longitude component of start location. |
-
-
-#### Usage:
-```csharp
-string endLatitude = "some string";
-string endLongitude = "some string";
-string startLatitude = "some string";
-string startLongitude = "some string";
-
-PromotionsResponse result = await promotions.GetPromotionsAsync(endLatitude, endLongitude, startLatitude, startLongitude);
-
-```
-
-
-
-
-## MeController
-
-#### Get singleton instance
-The singleton instance of the ``` MeController ``` class can be accessed from the API Client.
-```csharp
-SmalsClient client = new SmalsClient();
-IMeController me = client.Me;
-```
-
-### GetMeAsync
-
-> The User Profile endpoint returns information about the Uber user that has authorized with the application.
-
-```csharp
-Task<MeResponse> GetMeAsync()
-```
-
-#### Usage:
-```csharp
-
-MeResponse result = await me.GetMeAsync();
-
-```
-
-
-
-
-## RequestsController
-
-#### Get singleton instance
-The singleton instance of the ``` RequestsController ``` class can be accessed from the API Client.
-```csharp
-SmalsClient client = new SmalsClient();
-IRequestsController requests = client.Requests;
-```
-
-### GetRequestsReceiptByRequestIdAsync
-
-> Get the receipt information of the completed request.
-
-```csharp
-Task<RequestsReceiptResponse> GetRequestsReceiptByRequestIdAsync(
-                string requestId)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| requestId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Usage:
-```csharp
-string requestId = "some string";
-
-RequestsReceiptResponse result = await requests.GetRequestsReceiptByRequestIdAsync(requestId);
-
-```
-
-
-
-
-### GetRequestsMapByRequestIdAsync
-
-> Get a map with a visual representation of a Request.
-
-```csharp
-Task<RequestsMapResponse> GetRequestsMapByRequestIdAsync(
-                string requestId)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| requestId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Usage:
-```csharp
-string requestId = "some string";
-
-RequestsMapResponse result = await requests.GetRequestsMapByRequestIdAsync(requestId);
-
-```
-
-
-
-
-### GetRequestsByRequestIdAsync
-
-> Get the real time status of an ongoing trip that was created using the Ride Request endpoint.
-
-```csharp
-Task<RequestsResponse> GetRequestsByRequestIdAsync(
-                string requestId)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| requestId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Usage:
-```csharp
-string requestId = "some string";
-
-RequestsResponse result = await requests.GetRequestsByRequestIdAsync(requestId);
-
-```
-
-
-
-
-### DeleteRequestsByRequestIdAsync
-
-> Cancel an ongoing Request on behalf of a rider.
-
-```csharp
-Task DeleteRequestsByRequestIdAsync(
-                string requestId)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| requestId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Usage:
-```csharp
-string requestId = "some string";
-
-await requests.DeleteRequestsByRequestIdAsync(requestId);
-
-```
-
-
-
-
-### CreateRequestsEstimateAsync
-
-> The Request Estimate endpoint allows a ride to be estimated given the desired product, start, and end locations. If the end location is not provided, only the pickup ETA and details of surge pricing information are provided. If the pickup ETA is null, there are no cars available, but an estimate may still be given to the user.
-> 
-> You can use this endpoint to determine if surge pricing is in effect. Do this before attempting to make a request so that you can preemptively have a user confirm surge by sending them to the surge_confirmation_href provided in the response.
-> 
-
-```csharp
-Task<RequestsEstimateResponse> CreateRequestsEstimateAsync(
-                string productId,
-                int startLatitude,
-                int startLongitude,
-                int? endLatitude = null,
-                int? endLongitude = null)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| productId |  ``` Required ```  | The unique ID of the product being requested. || startLatitude |  ``` Required ```  | The beginning or "pickup" latitude. || startLongitude |  ``` Required ```  | The beginning or "pickup" longitude. || endLatitude |  ``` Optional ```  | The final or destination latitude. If not included, only the pickup ETA and details of surge pricing will be included. || endLongitude |  ``` Optional ```  | The final or destination longitude. If not included, only the pickup ETA and details of surge pricing will be included. |
-
-
-#### Usage:
-```csharp
-string productId = "some string";
-int startLatitude = 99;
-int startLongitude = 99;
-int? endLatitude = 99;
-int? endLongitude = 99;
-
-RequestsEstimateResponse result = await requests.CreateRequestsEstimateAsync(productId, startLatitude, startLongitude, endLatitude, endLongitude);
-
-```
-
-
-
-
-### CreateRequestsAsync
-
-> The Request endpoint allows a ride to be requested on behalf of an Uber user given their desired product, start, and end locations.
-
-```csharp
-Task<RequestsResponse> CreateRequestsAsync(
-                string endLatitude,
-                string endLongitude,
-                string productId,
-                string startLatitude,
-                string startLongitude,
-                string surgeConfirmationId = null)
-```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| endLatitude |  ``` Required ```  | Latitude component of end location. || endLongitude |  ``` Required ```  | Longitude component of end location. || productId |  ``` Required ```  | The unique ID of the product being requested. || startLatitude |  ``` Required ```  | Latitude component of start location. || startLongitude |  ``` Required ```  | Longitude component of start location. || surgeConfirmationId |  ``` Optional ```  | The unique identifier of the surge session for a user. Required when returned from a 409 Conflict response on previous POST attempt. |
-
-
-#### Usage:
-```csharp
-string endLatitude = "some string";
-string endLongitude = "some string";
-string productId = "some string";
-string startLatitude = "some string";
-string startLongitude = "some string";
-string surgeConfirmationId = "some string";
-
-RequestsResponse result = await requests.CreateRequestsAsync(endLatitude, endLongitude, productId, startLatitude, startLongitude, surgeConfirmationId);
+List<Product> result = await estimates.GetEstimatesTimeAsync(startLatitude, startLongitude, customerUuid, productId);
 
 ```
 
@@ -406,7 +88,123 @@ RequestsResponse result = await requests.CreateRequestsAsync(endLatitude, endLon
 #### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
-| 209 | TODO: Add error message |
+| 500 | Unexpected error |
+
+
+
+
+## UserController
+
+#### Get singleton instance
+The singleton instance of the ``` UserController ``` class can be accessed from the API Client.
+```csharp
+SmalsClient client = new SmalsClient();
+IUserController user = client.User;
+```
+
+### GetHistoryAsync
+
+> The User Activity endpoint returns data about a user's lifetime activity with Uber. The response will include pickup locations and times, dropoff locations and times, the distance of past requests, and information about which products were requested.<br><br>The history array in the response will have a maximum length based on the limit parameter. The response value count may exceed limit, therefore subsequent API requests may be necessary.
+
+```csharp
+Task<Activities> GetHistoryAsync(
+                int? limit = null,
+                int? offset = null)
+```
+
+#### Parameters: 
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| limit |  ``` Optional ```  | Number of items to retrieve. Default is 5, maximum is 100. || offset |  ``` Optional ```  | Offset the list of returned results by this amount. Default is zero. |
+
+
+#### Usage:
+```csharp
+int? limit = 99;
+int? offset = 99;
+
+Activities result = await user.GetHistoryAsync(limit, offset);
+
+```
+
+
+#### Errors: 
+| Error Code | Error Description |
+|------------|-------------------|
+| 500 | Unexpected error |
+
+
+
+
+### GetMeAsync
+
+> The User Profile endpoint returns information about the Uber user that has authorized with the application.
+
+```csharp
+Task<Profile> GetMeAsync()
+```
+
+#### Usage:
+```csharp
+
+Profile result = await user.GetMeAsync();
+
+```
+
+
+#### Errors: 
+| Error Code | Error Description |
+|------------|-------------------|
+| 500 | Unexpected error |
+
+
+
+
+## ProductsController
+
+#### Get singleton instance
+The singleton instance of the ``` ProductsController ``` class can be accessed from the API Client.
+```csharp
+SmalsClient client = new SmalsClient();
+IProductsController products = client.Products;
+```
+
+### GetProductsAsync
+
+> The Products endpoint returns information about the *Uber* products
+> offered at a given location. The response includes the display name
+> and other details about each product, and lists the products in the
+> proper display order.
+> 
+
+```csharp
+Task<List<Product>> GetProductsAsync(
+                double latitude,
+                double longitude)
+```
+
+#### Parameters: 
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| latitude |  ``` Required ```  | Latitude component of location. || longitude |  ``` Required ```  | Longitude component of location. |
+
+
+#### Usage:
+```csharp
+double latitude = 10.1;
+double longitude = 10.1;
+
+List<Product> result = await products.GetProductsAsync(latitude, longitude);
+
+```
+
+
+#### Errors: 
+| Error Code | Error Description |
+|------------|-------------------|
+| 500 | Unexpected error |
 
 
 
