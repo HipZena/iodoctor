@@ -228,7 +228,7 @@ Company result = await companies.UpdateAsync(company, "some string");
 
 ```csharp
 Task<Company> UpdatePartialAsync(
-                string mDefinitionsCompany,
+                Company companyDefinition,
                 string companyId)
 ```
 
@@ -236,13 +236,14 @@ Task<Company> UpdatePartialAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| mDefinitionsCompany |  ``` Required ```  | MergePatch company.json || companyId |  ``` Required ```  | Company ID |
+| companyDefinition |  ``` Required ```  | MergePatch company.json || companyId |  ``` Required ```  | Company ID |
 
 
 #### Usage:
 ```csharp
+var company = new Company();
 
-Company result = await companies.UpdatePartialAsync("some string", "some string");
+Company result = await companies.UpdatePartialAsync(company, "some string");
 
 ```
 
