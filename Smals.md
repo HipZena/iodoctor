@@ -36,7 +36,7 @@ Task GetApiDocAsync()
 #### Usage:
 ```csharp
 
-void result = await apidoc.GetApiDocAsync();
+await apidoc.GetApiDocAsync();
 
 ```
 
@@ -54,7 +54,7 @@ Task GetSwaggerAsync()
 #### Usage:
 ```csharp
 
-void result = await apidoc.GetSwaggerAsync();
+await apidoc.GetSwaggerAsync();
 
 ```
 
@@ -143,7 +143,7 @@ Task FindAllAsync(
 #### Usage:
 ```csharp
 
-void result = await companies.FindAllAsync(1, 5);
+await companies.FindAllAsync(1, 5);
 
 ```
 
@@ -276,7 +276,7 @@ Task FindAllAsync()
 #### Usage:
 ```csharp
 
-void result = await employers.FindAllAsync();
+await employers.FindAllAsync();
 
 ```
 
@@ -309,7 +309,7 @@ Task AddAsync(
 ```csharp
 var employer = new Employer();
 
-void result = await employers.AddAsync(employer);
+await employers.AddAsync(employer);
 
 ```
 
@@ -373,7 +373,7 @@ Task DeleteAsync(
 #### Usage:
 ```csharp
 
-void result = await employers.DeleteAsync("some string");
+await employers.DeleteAsync("some string");
 
 ```
 
