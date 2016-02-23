@@ -1,4 +1,4 @@
-### ApidocController
+## ApidocController
 
 #### Get singleton instance
 The singleton instance of the ``` ApidocController ``` class can be accessed from the API Client.
@@ -7,7 +7,7 @@ SmalsClient client = new SmalsClient();
 IApidocController apidoc = client.Apidoc;
 ```
 
-#### GetAsync
+### GetAsync
 
 > TODO: Add a method description
 ```csharp
@@ -24,7 +24,7 @@ Link result = await apidoc.GetAsync();
 
 
 
-#### GetApiDocAsync
+### GetApiDocAsync
 
 > TODO: Add a method description
 ```csharp
@@ -41,7 +41,7 @@ void result = await apidoc.GetApiDocAsync();
 
 
 
-#### GetSwaggerAsync
+### GetSwaggerAsync
 
 > TODO: Add a method description
 ```csharp
@@ -58,7 +58,7 @@ void result = await apidoc.GetSwaggerAsync();
 
 
 
-### AppendixController
+## AppendixController
 
 #### Get singleton instance
 The singleton instance of the ``` AppendixController ``` class can be accessed from the API Client.
@@ -67,7 +67,7 @@ SmalsClient client = new SmalsClient();
 IAppendixController appendix = client.Appendix;
 ```
 
-#### GetValuesAsync
+### GetValuesAsync
 
 > TODO: Add a method description
 ```csharp
@@ -84,7 +84,7 @@ AppendixCode result = await appendix.GetValuesAsync();
 
 
 
-#### GetAsync
+### GetAsync
 
 > TODO: Add a method description
 ```csharp
@@ -109,7 +109,7 @@ AppendixCode result = await appendix.GetAsync(99);
 
 
 
-### CompaniesController
+## CompaniesController
 
 #### Get singleton instance
 The singleton instance of the ``` CompaniesController ``` class can be accessed from the API Client.
@@ -118,7 +118,7 @@ SmalsClient client = new SmalsClient();
 ICompaniesController companies = client.Companies;
 ```
 
-#### FindAllAsync
+### FindAllAsync
 
 > TODO: Add a method description
 ```csharp
@@ -141,7 +141,7 @@ void result = await companies.FindAllAsync(1, 5);
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -150,7 +150,7 @@ void result = await companies.FindAllAsync(1, 5);
 
 
 
-#### GetAsync
+### GetAsync
 
 > TODO: Add a method description
 ```csharp
@@ -172,7 +172,7 @@ Company result = await companies.GetAsync("some string");
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -181,7 +181,7 @@ Company result = await companies.GetAsync("some string");
 
 
 
-#### UpdateAsync
+### UpdateAsync
 
 > TODO: Add a method description
 ```csharp
@@ -205,7 +205,7 @@ Company result = await companies.UpdateAsync(company, "some string");
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -214,7 +214,7 @@ Company result = await companies.UpdateAsync(company, "some string");
 
 
 
-#### UpdatePartialAsync
+### UpdatePartialAsync
 
 > TODO: Add a method description
 ```csharp
@@ -237,7 +237,7 @@ Company result = await companies.UpdatePartialAsync("some string", "some string"
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -246,7 +246,7 @@ Company result = await companies.UpdatePartialAsync("some string", "some string"
 
 
 
-### EmployersController
+## EmployersController
 
 #### Get singleton instance
 The singleton instance of the ``` EmployersController ``` class can be accessed from the API Client.
@@ -255,7 +255,7 @@ SmalsClient client = new SmalsClient();
 IEmployersController employers = client.Employers;
 ```
 
-#### FindAllAsync
+### FindAllAsync
 
 > TODO: Add a method description
 ```csharp
@@ -269,7 +269,7 @@ void result = await employers.FindAllAsync();
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -278,7 +278,7 @@ void result = await employers.FindAllAsync();
 
 
 
-#### AddAsync
+### AddAsync
 
 > TODO: Add a method description
 ```csharp
@@ -301,7 +301,7 @@ void result = await employers.AddAsync(employer);
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -310,7 +310,7 @@ void result = await employers.AddAsync(employer);
 
 
 
-#### GetAsync
+### GetAsync
 
 > TODO: Add a method description
 ```csharp
@@ -332,7 +332,7 @@ Employer result = await employers.GetAsync("some string");
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
@@ -341,7 +341,7 @@ Employer result = await employers.GetAsync("some string");
 
 
 
-#### DeleteAsync
+### DeleteAsync
 
 > TODO: Add a method description
 ```csharp
@@ -363,7 +363,7 @@ void result = await employers.DeleteAsync("some string");
 
 ```
 
-            {
+
 ##### Errors: 
 | Error Code | Error Description |
 |------------|-------------------|
