@@ -31,7 +31,11 @@ Task<List<PriceEstimate>> GetEstimatesPriceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| endLatitude |  ``` Required ```  | Latitude component of end location. || endLongitude |  ``` Required ```  | Longitude component of end location. || startLatitude |  ``` Required ```  | Latitude component of start location. || startLongitude |  ``` Required ```  | Longitude component of start location. |
+| endLatitude |  ``` Required ```  | Latitude component of end location. |
+| endLongitude |  ``` Required ```  | Longitude component of end location. |
+| startLatitude |  ``` Required ```  | Latitude component of start location. |
+| startLongitude |  ``` Required ```  | Longitude component of start location. |
+
 
 
 #### Usage:
@@ -54,6 +58,7 @@ List<PriceEstimate> result = await estimates.GetEstimatesPriceAsync(endLatitude,
 
 
 
+
 ### GetEstimatesTimeAsync
 
 > The Time Estimates endpoint returns ETAs for all products offered at a given location, with the responses expressed as integers in seconds. We recommend that this endpoint be called every minute to provide the most accurate, up-to-date ETAs.
@@ -70,7 +75,11 @@ Task<List<Product>> GetEstimatesTimeAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| startLatitude |  ``` Required ```  | Latitude component of start location. || startLongitude |  ``` Required ```  | Longitude component of start location. || customerUuid |  ``` Optional ```  | Unique customer identifier to be used for experience customization. || productId |  ``` Optional ```  | Unique identifier representing a specific product for a given latitude & longitude. |
+| startLatitude |  ``` Required ```  | Latitude component of start location. |
+| startLongitude |  ``` Required ```  | Longitude component of start location. |
+| customerUuid |  ``` Optional ```  | Unique customer identifier to be used for experience customization. |
+| productId |  ``` Optional ```  | Unique identifier representing a specific product for a given latitude & longitude. |
+
 
 
 #### Usage:
@@ -89,6 +98,7 @@ List<Product> result = await estimates.GetEstimatesTimeAsync(startLatitude, star
 | Error Code | Error Description |
 |------------|-------------------|
 | 500 | Unexpected error |
+
 
 
 
@@ -116,7 +126,9 @@ Task<Activities> GetHistoryAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| limit |  ``` Optional ```  | Number of items to retrieve. Default is 5, maximum is 100. || offset |  ``` Optional ```  | Offset the list of returned results by this amount. Default is zero. |
+| limit |  ``` Optional ```  | Number of items to retrieve. Default is 5, maximum is 100. |
+| offset |  ``` Optional ```  | Offset the list of returned results by this amount. Default is zero. |
+
 
 
 #### Usage:
@@ -133,6 +145,7 @@ Activities result = await user.GetHistoryAsync(limit, offset);
 | Error Code | Error Description |
 |------------|-------------------|
 | 500 | Unexpected error |
+
 
 
 
@@ -157,6 +170,7 @@ Profile result = await user.GetMeAsync();
 | Error Code | Error Description |
 |------------|-------------------|
 | 500 | Unexpected error |
+
 
 
 
@@ -188,7 +202,9 @@ Task<List<Product>> GetProductsAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| latitude |  ``` Required ```  | Latitude component of location. || longitude |  ``` Required ```  | Longitude component of location. |
+| latitude |  ``` Required ```  | Latitude component of location. |
+| longitude |  ``` Required ```  | Longitude component of location. |
+
 
 
 #### Usage:
@@ -205,6 +221,7 @@ List<Product> result = await products.GetProductsAsync(latitude, longitude);
 | Error Code | Error Description |
 |------------|-------------------|
 | 500 | Unexpected error |
+
 
 
 
