@@ -77,7 +77,7 @@ Task<AppendixCode> GetValuesAsync()
 ##### Usage:
 ```csharp
 
-Task<AppendixCode> result = await appendix.GetValuesAsync("employerclass");
+Task<AppendixCode> result = await appendix.GetValuesAsync();
 
 ```
 
@@ -102,7 +102,7 @@ Task<AppendixCode> GetAsync(
 ##### Usage:
 ```csharp
 
-Task<AppendixCode> result = await appendix.GetAsync("employerclass", 99);
+Task<AppendixCode> result = await appendix.GetAsync(99);
 
 ```
 
