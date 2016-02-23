@@ -106,8 +106,9 @@ Task<AppendixCode> GetAsync(
 
 #### Usage:
 ```csharp
+int number = 99;
 
-AppendixCode result = await appendix.GetAsync(99);
+AppendixCode result = await appendix.GetAsync(number);
 
 ```
 
@@ -142,8 +143,10 @@ Task FindAllAsync(
 
 #### Usage:
 ```csharp
+int? number = 1;
+int? number1 = 5;
 
-await companies.FindAllAsync(1, 5);
+await companies.FindAllAsync(number, number1);
 
 ```
 
@@ -174,8 +177,9 @@ Task<Company> GetAsync(
 
 #### Usage:
 ```csharp
+string mstring = "some string";
 
-Company result = await companies.GetAsync("some string");
+Company result = await companies.GetAsync(mstring);
 
 ```
 
@@ -208,8 +212,9 @@ Task<Company> UpdateAsync(
 #### Usage:
 ```csharp
 var company = new Company();
+string mstring = "some string";
 
-Company result = await companies.UpdateAsync(company, "some string");
+Company result = await companies.UpdateAsync(company, mstring);
 
 ```
 
@@ -242,8 +247,9 @@ Task<Company> UpdatePartialAsync(
 #### Usage:
 ```csharp
 var company = new Company();
+string mstring = "some string";
 
-Company result = await companies.UpdatePartialAsync(company, "some string");
+Company result = await companies.UpdatePartialAsync(company, mstring);
 
 ```
 
@@ -340,8 +346,9 @@ Task<Employer> GetAsync(
 
 #### Usage:
 ```csharp
+string mstring = "some string";
 
-Employer result = await employers.GetAsync("some string");
+Employer result = await employers.GetAsync(mstring);
 
 ```
 
@@ -372,8 +379,9 @@ Task DeleteAsync(
 
 #### Usage:
 ```csharp
+string mstring = "some string";
 
-await employers.DeleteAsync("some string");
+await employers.DeleteAsync(mstring);
 
 ```
 
