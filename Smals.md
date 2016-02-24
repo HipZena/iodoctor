@@ -28,7 +28,7 @@ Task GetSampleStatusesAsync()
 
 sampleStatuses.DataArrivalEvent += SampleStatuses_DataArrivalEvent;
 sampleStatuses.StreamClosedEvent += SampleStatuses_StreamClosedEvent;
-dynamic result = await sampleStatuses.GetSampleStatusesAsync();
+await sampleStatuses.GetSampleStatusesAsync();
 
 ```
 
