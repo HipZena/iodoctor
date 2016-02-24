@@ -449,8 +449,10 @@ string productId = "product_id";
 productsByProductId.DataArrivalEvent += ProductsByProductId_DataArrivalEvent;
 productsByProductId.StreamClosedEvent += ProductsByProductId_StreamClosedEvent;
 ProductsResponse result = await productsByProductId.GetProductsByProductIdAsync(productId);
+```
 
-
+Stream events can be hooked as follows.
+```csharp
 /// <summary>
 /// Data arrival event handler
 /// </summary>
