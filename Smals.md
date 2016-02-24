@@ -1,4 +1,4 @@
-# Initializing API Client
+## Initialization
 
 #### Initialize API Client
 The API client can be initialized as follows.
