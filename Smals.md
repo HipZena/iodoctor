@@ -1,15 +1,23 @@
+# Initializing API Client
+
+#### Initialize API Client
+The API client can be initialized as follows.
+
+```csharp
+// Configuration parameters and credentials
+string oAuthToken = "oAuthToken"; // The OAuth token to be set before API calls
+string oAuthTokenSecret = "oAuthTokenSecret"; // The OAuth token secret to be set before API calls
+string oAuthClientId = "oAuthClientId"; // The OAuth client id to be set before API calls
+string oAuthClientSecret = "oAuthClientSecret"; // The OAuth client secret to be set before API calls
+
+TwitterClient client = new TwitterClient(oAuthToken, oAuthTokenSecret, oAuthClientId, oAuthClientSecret);
+```
+
 ## SampleStatusesController
 
 #### Get singleton instance
 The singleton instance of the ``` SampleStatusesController ``` class can be accessed from the API Client.
 ```csharp
-// Configuration parameters and credentials
-string oAuthToken = "oAuthToken";
-string oAuthTokenSecret = "oAuthTokenSecret";
-string oAuthClientId = "oAuthClientId";
-string oAuthClientSecret = "oAuthClientSecret";
-
-TwitterClient client = new TwitterClient(oAuthToken, oAuthTokenSecret, oAuthClientId, oAuthClientSecret);
 ISampleStatusesController sampleStatuses = client.SampleStatuses;
 ```
 
