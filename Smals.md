@@ -3,6 +3,7 @@
 #### Get singleton instance
 The singleton instance of the ``` ProductsController ``` class can be accessed from the API Client.
 ```csharp
+
 UberClient client = new UberClient();
 IProductsController products = client.Products;
 ```
@@ -29,14 +30,15 @@ Task<ProductsResponse2> GetProductsAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
-int latitude = 102;
-int longitude = 102;
+int latitude = 218;
+int longitude = 218;
 
 ProductsResponse2 result = await products.GetProductsAsync(latitude, longitude);
 
 ```
+
 
 
 
@@ -46,6 +48,7 @@ ProductsResponse2 result = await products.GetProductsAsync(latitude, longitude);
 #### Get singleton instance
 The singleton instance of the ``` EstimatesController ``` class can be accessed from the API Client.
 ```csharp
+
 UberClient client = new UberClient();
 IEstimatesController estimates = client.Estimates;
 ```
@@ -76,7 +79,7 @@ Task<EstimatesPriceResponse> GetEstimatesPriceAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string endLatitude = "end_latitude";
 string endLongitude = "end_longitude";
@@ -86,6 +89,7 @@ string startLongitude = "start_longitude";
 EstimatesPriceResponse result = await estimates.GetEstimatesPriceAsync(endLatitude, endLongitude, startLatitude, startLongitude);
 
 ```
+
 
 
 
@@ -113,10 +117,10 @@ Task<EstimatesTimeResponse> GetEstimatesTimeAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
-int startLatitude = 102;
-int startLongitude = 102;
+int startLatitude = 218;
+int startLongitude = 218;
 string customerUuid = "customer_uuid ";
 string productId = "product_id ";
 
@@ -127,11 +131,13 @@ EstimatesTimeResponse result = await estimates.GetEstimatesTimeAsync(startLatitu
 
 
 
+
 ## PromotionsController
 
 #### Get singleton instance
 The singleton instance of the ``` PromotionsController ``` class can be accessed from the API Client.
 ```csharp
+
 UberClient client = new UberClient();
 IPromotionsController promotions = client.Promotions;
 ```
@@ -159,7 +165,7 @@ Task<PromotionsResponse> GetPromotionsAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string endLatitude = "end_latitude";
 string endLongitude = "end_longitude";
@@ -173,11 +179,13 @@ PromotionsResponse result = await promotions.GetPromotionsAsync(endLatitude, end
 
 
 
+
 ## MeController
 
 #### Get singleton instance
 The singleton instance of the ``` MeController ``` class can be accessed from the API Client.
 ```csharp
+
 UberClient client = new UberClient();
 IMeController me = client.Me;
 ```
@@ -190,7 +198,7 @@ IMeController me = client.Me;
 Task<MeResponse> GetMeAsync()
 ```
 
-#### Usage:
+#### Example Usage:
 ```csharp
 
 MeResponse result = await me.GetMeAsync();
@@ -200,11 +208,13 @@ MeResponse result = await me.GetMeAsync();
 
 
 
+
 ## RequestsController
 
 #### Get singleton instance
 The singleton instance of the ``` RequestsController ``` class can be accessed from the API Client.
 ```csharp
+
 UberClient client = new UberClient();
 IRequestsController requests = client.Requests;
 ```
@@ -226,13 +236,14 @@ Task<RequestsReceiptResponse> GetRequestsReceiptByRequestIdAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string requestId = "request_id";
 
 RequestsReceiptResponse result = await requests.GetRequestsReceiptByRequestIdAsync(requestId);
 
 ```
+
 
 
 
@@ -254,13 +265,14 @@ Task<RequestsMapResponse> GetRequestsMapByRequestIdAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string requestId = "request_id";
 
 RequestsMapResponse result = await requests.GetRequestsMapByRequestIdAsync(requestId);
 
 ```
+
 
 
 
@@ -282,13 +294,14 @@ Task<RequestsResponse> GetRequestsByRequestIdAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string requestId = "request_id";
 
 RequestsResponse result = await requests.GetRequestsByRequestIdAsync(requestId);
 
 ```
+
 
 
 
@@ -310,13 +323,14 @@ Task DeleteRequestsByRequestIdAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string requestId = "request_id";
 
 await requests.DeleteRequestsByRequestIdAsync(requestId);
 
 ```
+
 
 
 
@@ -349,17 +363,18 @@ Task<RequestsEstimateResponse> CreateRequestsEstimateAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string productId = "product_id";
-int startLatitude = 102;
-int startLongitude = 102;
-int? endLatitude = 102;
-int? endLongitude = 102;
+int startLatitude = 218;
+int startLongitude = 218;
+int? endLatitude = 218;
+int? endLongitude = 218;
 
 RequestsEstimateResponse result = await requests.CreateRequestsEstimateAsync(productId, startLatitude, startLongitude, endLatitude, endLongitude);
 
 ```
+
 
 
 
@@ -391,7 +406,7 @@ Task<RequestsResponse> CreateRequestsAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string endLatitude = "end_latitude";
 string endLongitude = "end_longitude";
@@ -403,6 +418,7 @@ string surgeConfirmationId = "surge_confirmation_id";
 RequestsResponse result = await requests.CreateRequestsAsync(endLatitude, endLongitude, productId, startLatitude, startLongitude, surgeConfirmationId);
 
 ```
+
 
 
 #### Errors: 
@@ -419,6 +435,7 @@ RequestsResponse result = await requests.CreateRequestsAsync(endLatitude, endLon
 #### Get singleton instance
 The singleton instance of the ``` ProductsByProductIdController ``` class can be accessed from the API Client.
 ```csharp
+
 UberClient client = new UberClient();
 IProductsByProductIdController productsByProductId = client.ProductsByProductId;
 ```
@@ -442,13 +459,14 @@ Task GetProductsByProductIdAsync(
 
 
 
-#### Usage:
+#### Example Usage:
 ```csharp
 string productId = "product_id";
 
 productsByProductId.DataArrivalEvent += ProductsByProductId_DataArrivalEvent;
 productsByProductId.StreamClosedEvent += ProductsByProductId_StreamClosedEvent;
 ProductsResponse result = await productsByProductId.GetProductsByProductIdAsync(productId);
+
 ```
 
 Stream events can be hooked as follows.
@@ -473,8 +491,8 @@ private void ProductsByProductId_StreamClosedEvent(Uber.PCL.Controllers.BaseStre
     // TODO: Add implememtation here
     throw new NotImplementedException();
 }
-
 ```
+
 
 
 
