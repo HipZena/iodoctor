@@ -1,5 +1,13 @@
 ## Build Instructions
-
+The generated code uses a few NuGet Packages e.g., Newtonsoft.Json, UniRest,
+and Microsoft Base Class Library. The reference to these packages is already
+added as in the packages.config file. If the automatic NuGet package restore
+is enabled, these dependencies will be installed automatically. Therefore,
+you will need internet access for build.
+     
+    1. Open the solution (*.sln) file.
+    2. Invoke the build process using `F6` key or using the `Build` menu as shown below.
+    
 ![Building SDK using Visual Studio](http://apidocs.io/Illustration/CS?step=BuildSDK&workspaceName=TwitterStreamingAPI&projectName=TwitterStreamingAPI.PCL)
 
 ## Initialization
