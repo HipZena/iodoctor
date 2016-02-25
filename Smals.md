@@ -1,4 +1,4 @@
-## Initialization
+## Build Instructions
 
 The generated code uses a few NuGet Packages e.g., Newtonsoft.Json, UniRest,
 and Microsoft Base Class Library. The reference to these packages is already
@@ -78,8 +78,3 @@ private void SampleStatuses_StreamClosedEvent(Twitter.PCL.Controllers.BaseStream
     throw new NotImplementedException();
 }
 ```
-
-
-
-
-
