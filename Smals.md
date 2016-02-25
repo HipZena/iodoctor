@@ -6,7 +6,7 @@ is enabled, these dependencies will be installed automatically. Therefore,
 you will need internet access for build.
      
     1. Open the solution (*.sln) file.
-    2. Invoke the build process using ``` F6 ``` key or using the ``` Build ``` menu as shown below.
+    2. Invoke the build process using "F6" key or using the "Build" menu as shown below.
     
 ![Building SDK using Visual Studio](http://apidocs.io/Illustration/CS?step=BuildSDK&workspaceName=TwitterStreamingAPI&projectName=TwitterStreamingAPI.PCL)
 
