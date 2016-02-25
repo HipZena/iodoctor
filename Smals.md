@@ -1,14 +1,15 @@
-## Build Instructions
+## Initialization
+
 The generated code uses a few NuGet Packages e.g., Newtonsoft.Json, UniRest,
 and Microsoft Base Class Library. The reference to these packages is already
 added as in the packages.config file. If the automatic NuGet package restore
 is enabled, these dependencies will be installed automatically. Therefore,
 you will need internet access for build.
      
-    1. Open the solution (*.sln) file.
-    2. Invoke the build process using "F6" key or using the "Build" menu as shown below.
-    
-![Building SDK using Visual Studio](http://apidocs.io/Illustration/CS?step=BuildSDK&workspaceName=TwitterStreamingAPI&projectName=TwitterStreamingAPI.PCL)
+    1. Open the solution (Twitter.sln) file.
+    2. Invoke the build process using `F6` key or using the `Build` menu as shown below.
+
+![Building SDK using Visual Studio](http://apidocs.io/illustration/cs?step=buildSDK&workspaceName=Twitter&projectName=Twitter.PCL)
 
 ## Initialization
 
@@ -46,13 +47,15 @@ Task GetSampleStatusesAsync()
 #### Example Usage:
 ```csharp
 
+// Hook events before opening the stream
 sampleStatuses.DataArrivalEvent += SampleStatuses_DataArrivalEvent;
 sampleStatuses.StreamClosedEvent += SampleStatuses_StreamClosedEvent;
+
 await sampleStatuses.GetSampleStatusesAsync();
 
 ```
 
-Stream events can be hooked as follows.
+Stream event handlers can be implemented as follows.
 ```csharp
 /// <summary>
 /// Data arrival event handler
