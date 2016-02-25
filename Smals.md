@@ -1,3 +1,9 @@
+## Build Instructions
+
+[![Building SDK using Visual Studio](http://apidocs.io/Illustration/CS?step=BuildSDK&workspaceName=TwitterStreamingAPI&projectName=TwitterStreamingAPI.PCL)](http://apidocs.io/Illustration/CS?step=BuildSDK&workspaceName=TwitterStreamingAPI&projectName=TwitterStreamingAPI.PCL)
+
+[http://apidocs.io/Illustration/CS?step=BuildSDK&workspaceName=TwitterStreamingAPI&projectName=TwitterStreamingAPI.PCL]
+
 ## Initialization
 
 #### Initialize API Client
