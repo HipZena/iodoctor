@@ -54,9 +54,9 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| baseUrl |  |
-| User-Timezone |  |
-| Authorization |  |
+| baseUrl | TODO: add a description |
+| userTimezone | TODO: add a description |
+| authorization | TODO: add a description |
 
 
 
@@ -457,7 +457,7 @@ Task<Task> TaskAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 
 Task result = await tasks.TaskAsync(taskID);
 
@@ -489,7 +489,7 @@ Task<Task> UpdateTaskFullAsync(
 #### Example Usage:
 ```csharp
 var task = new TaskRequest();
-int taskID = 66;
+int taskID = 211;
 
 Task result = await tasks.UpdateTaskFullAsync(task, taskID);
 
@@ -521,7 +521,7 @@ Task<Task> TaskUpdatePartialAsync(
 #### Example Usage:
 ```csharp
 var task = new TaskRequest();
-int taskID = 66;
+int taskID = 211;
 
 Task result = await tasks.TaskUpdatePartialAsync(task, taskID);
 
@@ -550,7 +550,7 @@ Task<Task> DeleteTaskAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 
 Task result = await tasks.DeleteTaskAsync(taskID);
 
@@ -587,7 +587,7 @@ Task<Tasker> TaskApplyAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 
 Tasker result = await workflow.TaskApplyAsync(taskID);
 
@@ -618,7 +618,7 @@ Task<Tasker> TaskApproveAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 object userParams = new object();
 
 Tasker result = await workflow.TaskApproveAsync(taskID, userParams);
@@ -648,7 +648,7 @@ Task<Task> TaskDoneAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 
 Task result = await workflow.TaskDoneAsync(taskID);
 
@@ -677,7 +677,7 @@ Task<Task> TaskCompleteAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 
 Task result = await workflow.TaskCompleteAsync(taskID);
 
@@ -709,7 +709,7 @@ Task<Task> TaskDisputeAsync(
 #### Example Usage:
 ```csharp
 object disputeParams = new object();
-int taskID = 66;
+int taskID = 211;
 
 Task result = await workflow.TaskDisputeAsync(disputeParams, taskID);
 
@@ -740,7 +740,7 @@ Task<ViolationModel> TaskViolationAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 var violation = new ViolationModel();
 
 ViolationModel result = await workflow.TaskViolationAsync(taskID, violation);
@@ -773,7 +773,7 @@ Task<dynamic> TaskReopenAsync(
 #### Example Usage:
 ```csharp
 object descriptionParams = new object();
-int taskID = 66;
+int taskID = 211;
 
 dynamic result = await workflow.TaskReopenAsync(descriptionParams, taskID);
 
@@ -802,7 +802,7 @@ Task<string> TaskWithdrawAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 
 string result = await workflow.TaskWithdrawAsync(taskID);
 
@@ -944,7 +944,7 @@ Task<User> UserAsync(
 
 #### Example Usage:
 ```csharp
-int userID = 66;
+int userID = 211;
 
 User result = await users.UserAsync(userID);
 
@@ -983,7 +983,7 @@ Task<ImagesResponse> ImagesAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1017,7 +1017,7 @@ Task<ImageCreated> AddImageAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 66;
+int taskID = 211;
 FileStreamInfo upload = null;
 
 ImageCreated result = await images.AddImageAsync(taskID, upload);
@@ -1049,8 +1049,8 @@ Task<string> DeleteImageAsync(
 
 #### Example Usage:
 ```csharp
-int imageID = 66;
-int taskID = 66;
+int imageID = 211;
+int taskID = 211;
 
 string result = await images.DeleteImageAsync(imageID, taskID);
 
