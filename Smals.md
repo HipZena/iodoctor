@@ -47,18 +47,15 @@ Here, you can add code to initialize the client library and acquire the instance
 
 ![Add a reference to the TestConsoleProject](http://apidocs.io/illustration/cs?step=addCode&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPI.PCL)
 
-## Authentication
-
-The SaritasaBMEAPI library uses Custom Header authentication type. In order to setup authentication, you need the following information.
-
-| Parameter | Description |
-|-----------|-------------|
-| Authorization | Value sent as an http header value || User-Timezone | Value sent as an http header value |
-
 ## Initialization
 
-#### Initialize API Client
-The API client can be initialized as follows.
+#### Authentication and Initialization
+In order to setup authentication and initialization of the API client, you need the following information.
+| Parameter | Description |
+|-----------|-------------|
+| baseUrl |  || User-Timezone |  || Authorization |  |
+
+API client can be initialized as following.
 
 ```csharp
 // Configuration parameters and credentials
@@ -455,7 +452,7 @@ Task<Task> TaskAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 
 Task result = await tasks.TaskAsync(taskID);
 
@@ -487,7 +484,7 @@ Task<Task> UpdateTaskFullAsync(
 #### Example Usage:
 ```csharp
 var task = new TaskRequest();
-int taskID = 18;
+int taskID = 44;
 
 Task result = await tasks.UpdateTaskFullAsync(task, taskID);
 
@@ -519,7 +516,7 @@ Task<Task> TaskUpdatePartialAsync(
 #### Example Usage:
 ```csharp
 var task = new TaskRequest();
-int taskID = 18;
+int taskID = 44;
 
 Task result = await tasks.TaskUpdatePartialAsync(task, taskID);
 
@@ -548,7 +545,7 @@ Task<Task> DeleteTaskAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 
 Task result = await tasks.DeleteTaskAsync(taskID);
 
@@ -585,7 +582,7 @@ Task<Tasker> TaskApplyAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 
 Tasker result = await workflow.TaskApplyAsync(taskID);
 
@@ -616,7 +613,7 @@ Task<Tasker> TaskApproveAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 object userParams = new object();
 
 Tasker result = await workflow.TaskApproveAsync(taskID, userParams);
@@ -646,7 +643,7 @@ Task<Task> TaskDoneAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 
 Task result = await workflow.TaskDoneAsync(taskID);
 
@@ -675,7 +672,7 @@ Task<Task> TaskCompleteAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 
 Task result = await workflow.TaskCompleteAsync(taskID);
 
@@ -707,7 +704,7 @@ Task<Task> TaskDisputeAsync(
 #### Example Usage:
 ```csharp
 object disputeParams = new object();
-int taskID = 18;
+int taskID = 44;
 
 Task result = await workflow.TaskDisputeAsync(disputeParams, taskID);
 
@@ -738,7 +735,7 @@ Task<ViolationModel> TaskViolationAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 var violation = new ViolationModel();
 
 ViolationModel result = await workflow.TaskViolationAsync(taskID, violation);
@@ -771,7 +768,7 @@ Task<dynamic> TaskReopenAsync(
 #### Example Usage:
 ```csharp
 object descriptionParams = new object();
-int taskID = 18;
+int taskID = 44;
 
 dynamic result = await workflow.TaskReopenAsync(descriptionParams, taskID);
 
@@ -800,7 +797,7 @@ Task<string> TaskWithdrawAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 
 string result = await workflow.TaskWithdrawAsync(taskID);
 
@@ -942,7 +939,7 @@ Task<User> UserAsync(
 
 #### Example Usage:
 ```csharp
-int userID = 18;
+int userID = 44;
 
 User result = await users.UserAsync(userID);
 
@@ -981,7 +978,7 @@ Task<ImagesResponse> ImagesAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1015,7 +1012,7 @@ Task<ImageCreated> AddImageAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 18;
+int taskID = 44;
 FileStreamInfo upload = null;
 
 ImageCreated result = await images.AddImageAsync(taskID, upload);
@@ -1047,8 +1044,8 @@ Task<string> DeleteImageAsync(
 
 #### Example Usage:
 ```csharp
-int imageID = 18;
-int taskID = 18;
+int imageID = 44;
+int taskID = 44;
 
 string result = await images.DeleteImageAsync(imageID, taskID);
 
