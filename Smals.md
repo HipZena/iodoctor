@@ -71,9 +71,17 @@ string authorization = "authorization";
 SaritasaBMEAPIClient client = new SaritasaBMEAPIClient(baseUrl, userTimezone, authorization);
 ```
 
-## 
+## Class Reference
 
-## <a name="authentication_controller"></a>AuthenticationController
+(AuthenticationController)[#authentication_controller]
+(TasksController)[#tasks_controller]
+(WorkflowController)[#workflow_controller]
+(CategoriesController)[#categories_controller]
+(UsersController)[#users_controller]
+(ImagesController)[#images_controller]
+(DevicesController)[#devices_controller]
+
+### <a name="authentication_controller"></a>AuthenticationController
 
 #### Get singleton instance
 The singleton instance of the ``` AuthenticationController ``` class can be accessed from the API Client.
@@ -81,7 +89,7 @@ The singleton instance of the ``` AuthenticationController ``` class can be acce
 IAuthenticationController authentication = client.Authentication;
 ```
 
-### <a name="login_async"></a>LoginAsync
+#### <a name="login_async"></a>LoginAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -115,7 +123,7 @@ User result = await authentication.LoginAsync(email, password);
 
 
 
-### <a name="profile_update_full_async"></a>ProfileUpdateFullAsync
+#### <a name="profile_update_full_async"></a>ProfileUpdateFullAsync
 
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
@@ -144,7 +152,7 @@ User result = await authentication.ProfileUpdateFullAsync(user);
 
 
 
-### <a name="profile_update_partial_async"></a>ProfileUpdatePartialAsync
+#### <a name="profile_update_partial_async"></a>ProfileUpdatePartialAsync
 
 > This endpoints is responsible f or partial update of prof ile of the logged in user. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead. You can supply here only f ields that got changed instead of FULL body of the entity (as in PUT method)
 
@@ -173,7 +181,7 @@ User result = await authentication.ProfileUpdatePartialAsync(user);
 
 
 
-### <a name="register_async"></a>RegisterAsync
+#### <a name="register_async"></a>RegisterAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -204,7 +212,7 @@ User result = await authentication.RegisterAsync(user);
 
 
 
-### <a name="profile_async"></a>ProfileAsync
+#### <a name="profile_async"></a>ProfileAsync
 
 > This endpoints is responsible f or detailed prof ile inf ormation of the logged in user
 
@@ -223,7 +231,7 @@ User result = await authentication.ProfileAsync();
 
 
 
-### <a name="change_email_async"></a>ChangeEmailAsync
+#### <a name="change_email_async"></a>ChangeEmailAsync
 
 > This endpoints is responsible f or changing email of the user
 
@@ -255,7 +263,7 @@ string result = await authentication.ChangeEmailAsync(currentPassword, newEmail)
 
 
 
-### <a name="change_password_async"></a>ChangePasswordAsync
+#### <a name="change_password_async"></a>ChangePasswordAsync
 
 > This endpoints is responsible for changing user's password
 
@@ -287,7 +295,7 @@ string result = await authentication.ChangePasswordAsync(currentPassword, newPas
 
 
 
-### <a name="reset_password_async"></a>ResetPasswordAsync
+#### <a name="reset_password_async"></a>ResetPasswordAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -318,7 +326,7 @@ string result = await authentication.ResetPasswordAsync(email);
 
 
 
-### <a name="logout_async"></a>LogoutAsync
+#### <a name="logout_async"></a>LogoutAsync
 
 > This endpoints is responsible to logout action of the app.
 
@@ -337,7 +345,7 @@ string result = await authentication.LogoutAsync();
 
 
 
-## <a name="tasks_controller"></a>TasksController
+### <a name="tasks_controller"></a>TasksController
 
 #### Get singleton instance
 The singleton instance of the ``` TasksController ``` class can be accessed from the API Client.
@@ -345,7 +353,7 @@ The singleton instance of the ``` TasksController ``` class can be accessed from
 ITasksController tasks = client.Tasks;
 ```
 
-### <a name="search_tasks_async"></a>SearchTasksAsync
+#### <a name="search_tasks_async"></a>SearchTasksAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -378,7 +386,7 @@ TasksResponse result = await tasks.SearchTasksAsync(queryParams);
 
 
 
-### <a name="my_tasks_async"></a>MyTasksAsync
+#### <a name="my_tasks_async"></a>MyTasksAsync
 
 > TODO: Add a method description
 
@@ -409,7 +417,7 @@ TasksResponse result = await tasks.MyTasksAsync(queryParams);
 
 
 
-### <a name="create_task_async"></a>CreateTaskAsync
+#### <a name="create_task_async"></a>CreateTaskAsync
 
 > This endpoints is responsible f or adding a new task to the system
 
@@ -438,7 +446,7 @@ Task result = await tasks.CreateTaskAsync(task);
 
 
 
-### <a name="task_async"></a>TaskAsync
+#### <a name="task_async"></a>TaskAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -459,7 +467,7 @@ Task<Task> TaskAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 
 Task result = await tasks.TaskAsync(taskID);
 
@@ -469,7 +477,7 @@ Task result = await tasks.TaskAsync(taskID);
 
 
 
-### <a name="update_task_full_async"></a>UpdateTaskFullAsync
+#### <a name="update_task_full_async"></a>UpdateTaskFullAsync
 
 > This endpoints is responsible for updating task details. Only admin or poster of the task can call this method
 
@@ -491,7 +499,7 @@ Task<Task> UpdateTaskFullAsync(
 #### Example Usage:
 ```csharp
 var task = new TaskRequest();
-int taskID = 208;
+int taskID = 31;
 
 Task result = await tasks.UpdateTaskFullAsync(task, taskID);
 
@@ -501,7 +509,7 @@ Task result = await tasks.UpdateTaskFullAsync(task, taskID);
 
 
 
-### <a name="task_update_partial_async"></a>TaskUpdatePartialAsync
+#### <a name="task_update_partial_async"></a>TaskUpdatePartialAsync
 
 > This endpoints is responsible for partial update of task resource
 
@@ -523,7 +531,7 @@ Task<Task> TaskUpdatePartialAsync(
 #### Example Usage:
 ```csharp
 var task = new TaskRequest();
-int taskID = 208;
+int taskID = 31;
 
 Task result = await tasks.TaskUpdatePartialAsync(task, taskID);
 
@@ -533,7 +541,7 @@ Task result = await tasks.TaskUpdatePartialAsync(task, taskID);
 
 
 
-### <a name="delete_task_async"></a>DeleteTaskAsync
+#### <a name="delete_task_async"></a>DeleteTaskAsync
 
 > This endpoints is responsible for deleting the resource, use it to cancel the task. The record will not be physically deleted, but will be marked in db with status=X
 
@@ -552,7 +560,7 @@ Task<Task> DeleteTaskAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 
 Task result = await tasks.DeleteTaskAsync(taskID);
 
@@ -562,7 +570,7 @@ Task result = await tasks.DeleteTaskAsync(taskID);
 
 
 
-## <a name="workflow_controller"></a>WorkflowController
+### <a name="workflow_controller"></a>WorkflowController
 
 #### Get singleton instance
 The singleton instance of the ``` WorkflowController ``` class can be accessed from the API Client.
@@ -570,7 +578,7 @@ The singleton instance of the ``` WorkflowController ``` class can be accessed f
 IWorkflowController workflow = client.Workflow;
 ```
 
-### <a name="task_apply_async"></a>TaskApplyAsync
+#### <a name="task_apply_async"></a>TaskApplyAsync
 
 > This endpoints is responsible f or the user to apply to the task. Poster can’t apply to his own task. Only 3 taskers are allowed per task.
 
@@ -589,7 +597,7 @@ Task<Tasker> TaskApplyAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 
 Tasker result = await workflow.TaskApplyAsync(taskID);
 
@@ -599,7 +607,7 @@ Tasker result = await workflow.TaskApplyAsync(taskID);
 
 
 
-### <a name="task_approve_async"></a>TaskApproveAsync
+#### <a name="task_approve_async"></a>TaskApproveAsync
 
 > This endpoints is responsible f or approving one of available taskers and assigning the task to that user.
 
@@ -620,7 +628,7 @@ Task<Tasker> TaskApproveAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 object userParams = new object();
 
 Tasker result = await workflow.TaskApproveAsync(taskID, userParams);
@@ -631,7 +639,7 @@ Tasker result = await workflow.TaskApproveAsync(taskID, userParams);
 
 
 
-### <a name="task_done_async"></a>TaskDoneAsync
+#### <a name="task_done_async"></a>TaskDoneAsync
 
 > This endpoints is responsible f or submitting task to Done status, this endpoint should be called by assigned tasker of the Task
 
@@ -650,7 +658,7 @@ Task<Task> TaskDoneAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 
 Task result = await workflow.TaskDoneAsync(taskID);
 
@@ -660,7 +668,7 @@ Task result = await workflow.TaskDoneAsync(taskID);
 
 
 
-### <a name="task_complete_async"></a>TaskCompleteAsync
+#### <a name="task_complete_async"></a>TaskCompleteAsync
 
 > This endpoints is responsible f or sending task to Completed status and should be called by poster of the task
 
@@ -679,7 +687,7 @@ Task<Task> TaskCompleteAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 
 Task result = await workflow.TaskCompleteAsync(taskID);
 
@@ -689,7 +697,7 @@ Task result = await workflow.TaskCompleteAsync(taskID);
 
 
 
-### <a name="task_dispute_async"></a>TaskDisputeAsync
+#### <a name="task_dispute_async"></a>TaskDisputeAsync
 
 > This endpoints is responsible f or sending task to dispute status. It can be done by only poster or tasker of the task.
 
@@ -711,7 +719,7 @@ Task<Task> TaskDisputeAsync(
 #### Example Usage:
 ```csharp
 object disputeParams = new object();
-int taskID = 208;
+int taskID = 31;
 
 Task result = await workflow.TaskDisputeAsync(disputeParams, taskID);
 
@@ -721,7 +729,7 @@ Task result = await workflow.TaskDisputeAsync(disputeParams, taskID);
 
 
 
-### <a name="task_violation_async"></a>TaskViolationAsync
+#### <a name="task_violation_async"></a>TaskViolationAsync
 
 > This endpoints is responsible f or marking any task with violation f lag.
 
@@ -742,7 +750,7 @@ Task<ViolationModel> TaskViolationAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 var violation = new ViolationModel();
 
 ViolationModel result = await workflow.TaskViolationAsync(taskID, violation);
@@ -753,7 +761,7 @@ ViolationModel result = await workflow.TaskViolationAsync(taskID, violation);
 
 
 
-### <a name="task_reopen_async"></a>TaskReopenAsync
+#### <a name="task_reopen_async"></a>TaskReopenAsync
 
 > This endpoints is responsible f or reopening the task by Poster, once it got DONE status as a result of POST /tasks/ID/done call.
 
@@ -775,7 +783,7 @@ Task<dynamic> TaskReopenAsync(
 #### Example Usage:
 ```csharp
 object descriptionParams = new object();
-int taskID = 208;
+int taskID = 31;
 
 dynamic result = await workflow.TaskReopenAsync(descriptionParams, taskID);
 
@@ -785,7 +793,7 @@ dynamic result = await workflow.TaskReopenAsync(descriptionParams, taskID);
 
 
 
-### <a name="task_withdraw_async"></a>TaskWithdrawAsync
+#### <a name="task_withdraw_async"></a>TaskWithdrawAsync
 
 > This endpoints is responsible for quitting the task and should be called by assigned Tasker of the task If you're not approved (*but applied) - this will remove the user from applied list of taskers
 
@@ -804,7 +812,7 @@ Task<string> TaskWithdrawAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 208;
+int taskID = 31;
 
 string result = await workflow.TaskWithdrawAsync(taskID);
 
@@ -814,7 +822,7 @@ string result = await workflow.TaskWithdrawAsync(taskID);
 
 
 
-## <a name="categories_controller"></a>CategoriesController
+### <a name="categories_controller"></a>CategoriesController
 
 #### Get singleton instance
 The singleton instance of the ``` CategoriesController ``` class can be accessed from the API Client.
@@ -822,7 +830,7 @@ The singleton instance of the ``` CategoriesController ``` class can be accessed
 ICategoriesController categories = client.Categories;
 ```
 
-### <a name="categories_async"></a>CategoriesAsync
+#### <a name="categories_async"></a>CategoriesAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -855,7 +863,7 @@ CategoriesResponse result = await categories.CategoriesAsync(queryParams);
 
 
 
-### <a name="tags_async"></a>TagsAsync
+#### <a name="tags_async"></a>TagsAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -888,7 +896,7 @@ TagsResponse result = await categories.TagsAsync(queryParams);
 
 
 
-## <a name="users_controller"></a>UsersController
+### <a name="users_controller"></a>UsersController
 
 #### Get singleton instance
 The singleton instance of the ``` UsersController ``` class can be accessed from the API Client.
@@ -896,7 +904,7 @@ The singleton instance of the ``` UsersController ``` class can be accessed from
 IUsersController users = client.Users;
 ```
 
-### <a name="users_async"></a>UsersAsync
+#### <a name="users_async"></a>UsersAsync
 
 > 1. limit :=_int_ (pagination records per request)  2. offset :=_int_ (pagination skip records)  3. ordering := [date_joined] (fields to sort by results)  4. search :=_str_ (search by keyword through fields: skills, fist_name, last_name)  5. filter fields 	 6. gender := _str_ (filter by gender, F/M)
 
@@ -927,7 +935,7 @@ UsersResponse result = await users.UsersAsync(queryParams);
 
 
 
-### <a name="user_async"></a>UserAsync
+#### <a name="user_async"></a>UserAsync
 
 > This endpoints is responsible for profile's detailed information
 
@@ -946,7 +954,7 @@ Task<User> UserAsync(
 
 #### Example Usage:
 ```csharp
-int userID = 166;
+int userID = 31;
 
 User result = await users.UserAsync(userID);
 
@@ -956,7 +964,7 @@ User result = await users.UserAsync(userID);
 
 
 
-## <a name="images_controller"></a>ImagesController
+### <a name="images_controller"></a>ImagesController
 
 #### Get singleton instance
 The singleton instance of the ``` ImagesController ``` class can be accessed from the API Client.
@@ -964,7 +972,7 @@ The singleton instance of the ``` ImagesController ``` class can be accessed fro
 IImagesController images = client.Images;
 ```
 
-### <a name="images_async"></a>ImagesAsync
+#### <a name="images_async"></a>ImagesAsync
 
 > This endpoints is responsible for getting list of images for the task
 
@@ -985,7 +993,7 @@ Task<ImagesResponse> ImagesAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 166;
+int taskID = 31;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -998,7 +1006,7 @@ ImagesResponse result = await images.ImagesAsync(taskID, queryParams);
 
 
 
-### <a name="add_image_async"></a>AddImageAsync
+#### <a name="add_image_async"></a>AddImageAsync
 
 > This endpoints is responsible for adding images to the task, only poster or tasker of the task can add images. You can add images as soon as task is one of O/P/R [status](#statuses). If task is in different status (and therefore non updateable) the endpoint will generate error
 
@@ -1019,7 +1027,7 @@ Task<ImageCreated> AddImageAsync(
 
 #### Example Usage:
 ```csharp
-int taskID = 166;
+int taskID = 31;
 FileStreamInfo upload = null;
 
 ImageCreated result = await images.AddImageAsync(taskID, upload);
@@ -1030,7 +1038,7 @@ ImageCreated result = await images.AddImageAsync(taskID, upload);
 
 
 
-### <a name="delete_image_async"></a>DeleteImageAsync
+#### <a name="delete_image_async"></a>DeleteImageAsync
 
 > This endpoints is responsible for deleting given image (secondary ID) from the task
 
@@ -1051,8 +1059,8 @@ Task<string> DeleteImageAsync(
 
 #### Example Usage:
 ```csharp
-int imageID = 166;
-int taskID = 166;
+int imageID = 31;
+int taskID = 31;
 
 string result = await images.DeleteImageAsync(imageID, taskID);
 
@@ -1062,7 +1070,7 @@ string result = await images.DeleteImageAsync(imageID, taskID);
 
 
 
-## <a name="devices_controller"></a>DevicesController
+### <a name="devices_controller"></a>DevicesController
 
 #### Get singleton instance
 The singleton instance of the ``` DevicesController ``` class can be accessed from the API Client.
@@ -1070,7 +1078,7 @@ The singleton instance of the ``` DevicesController ``` class can be accessed fr
 IDevicesController devices = client.Devices;
 ```
 
-### <a name="register_device_async"></a>RegisterDeviceAsync
+#### <a name="register_device_async"></a>RegisterDeviceAsync
 
 > This endpoints is responsible for adding new mobile device token
 
