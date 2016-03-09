@@ -60,7 +60,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -103,7 +104,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -146,7 +148,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -191,7 +194,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -227,6 +231,7 @@ authentication.profileAsync(
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -273,7 +278,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -319,7 +325,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -364,7 +371,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -400,6 +408,7 @@ authentication.logoutAsync(
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -452,6 +461,7 @@ tasks.searchTasksAsync(queryParams,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -493,6 +503,7 @@ tasks.myTasksAsync(queryParams,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -536,7 +547,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -564,7 +576,7 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 tasks.taskAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -577,6 +589,7 @@ tasks.taskAsync(taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -607,7 +620,7 @@ void updateTaskFullAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 25;
+    int taskID = 132;
     tasks.updateTaskFullAsync(task, taskID, 
             new APICallBack<Task>() {
         //success callback handler
@@ -623,7 +636,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -653,7 +667,7 @@ void taskUpdatePartialAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 25;
+    int taskID = 132;
     tasks.taskUpdatePartialAsync(task, taskID, 
             new APICallBack<Task>() {
         //success callback handler
@@ -669,7 +683,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -695,7 +710,7 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 tasks.deleteTaskAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -708,6 +723,7 @@ tasks.deleteTaskAsync(taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -743,7 +759,7 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 workflow.taskApplyAsync(taskID, 
         new APICallBack<Tasker>() {
     //success callback handler
@@ -756,6 +772,7 @@ workflow.taskApplyAsync(taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -785,7 +802,7 @@ void taskApproveAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 25;
+    int taskID = 132;
     Object userParams = new object();
     workflow.taskApproveAsync(taskID, userParams, 
             new APICallBack<Tasker>() {
@@ -802,7 +819,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -828,7 +846,7 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 workflow.taskDoneAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -841,6 +859,7 @@ workflow.taskDoneAsync(taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -867,7 +886,7 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 workflow.taskCompleteAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -880,6 +899,7 @@ workflow.taskCompleteAsync(taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -910,7 +930,7 @@ void taskDisputeAsync(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 25;
+    int taskID = 132;
     workflow.taskDisputeAsync(disputeParams, taskID, 
             new APICallBack<Task>() {
         //success callback handler
@@ -926,7 +946,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -955,7 +976,7 @@ void taskViolationAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 25;
+    int taskID = 132;
     ViolationModel violation = new ViolationModel();
     workflow.taskViolationAsync(taskID, violation, 
             new APICallBack<ViolationModel>() {
@@ -972,7 +993,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -1002,7 +1024,7 @@ void taskReopenAsync(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 25;
+    int taskID = 132;
     workflow.taskReopenAsync(descriptionParams, taskID, 
             new APICallBack<LinkedHashMap<String, Object>>() {
         //success callback handler
@@ -1018,7 +1040,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
@@ -1044,7 +1067,7 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 workflow.taskWithdrawAsync(taskID, 
         new APICallBack<String>() {
     //success callback handler
@@ -1057,6 +1080,7 @@ workflow.taskWithdrawAsync(taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1109,6 +1133,7 @@ categories.categoriesAsync(queryParams,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1152,6 +1177,7 @@ categories.tagsAsync(queryParams,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1202,6 +1228,7 @@ users.usersAsync(queryParams,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1228,7 +1255,7 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 25;
+int userID = 132;
 users.userAsync(userID, 
         new APICallBack<User>() {
     //success callback handler
@@ -1241,6 +1268,7 @@ users.userAsync(userID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1278,7 +1306,7 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1294,6 +1322,7 @@ images.imagesAsync(taskID, queryParams,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1322,7 +1351,7 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 25;
+int taskID = 132;
 File upload = null;
 images.addImageAsync(taskID, upload, 
         new APICallBack<ImageCreated>() {
@@ -1336,6 +1365,7 @@ images.addImageAsync(taskID, upload,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1364,8 +1394,8 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 25;
-int taskID = 25;
+int imageID = 132;
+int taskID = 132;
 images.deleteImageAsync(imageID, taskID, 
         new APICallBack<String>() {
     //success callback handler
@@ -1378,6 +1408,7 @@ images.deleteImageAsync(imageID, taskID,
         // TODO Auto-generated method stub
     }
 });
+
 ```
 
 
@@ -1430,7 +1461,8 @@ try {
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
-}```
+}
+```
 
 
 
