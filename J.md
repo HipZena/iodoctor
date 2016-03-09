@@ -45,8 +45,8 @@ void loginAsync(
 try {
     String email = "email";
     String password = "password";
-    authentication.loginAsync(email, password, 
-            new APICallBack<User>() {
+    authentication.loginAsync(email, password,             new APICallBack<User>() {
+
         public void onSuccess(HttpContext context, User response) {
             // TODO success callback handler
         }
@@ -87,8 +87,8 @@ void profileUpdateFullAsync(
 ```java
 try {
     User user = new User();
-    authentication.profileUpdateFullAsync(user, 
-            new APICallBack<User>() {
+    authentication.profileUpdateFullAsync(user,             new APICallBack<User>() {
+
         public void onSuccess(HttpContext context, User response) {
             // TODO success callback handler
         }
@@ -129,8 +129,8 @@ void profileUpdatePartialAsync(
 ```java
 try {
     User user = new User();
-    authentication.profileUpdatePartialAsync(user, 
-            new APICallBack<User>() {
+    authentication.profileUpdatePartialAsync(user,             new APICallBack<User>() {
+
         public void onSuccess(HttpContext context, User response) {
             // TODO success callback handler
         }
@@ -173,8 +173,8 @@ void registerAsync(
 ```java
 try {
     User user = new User();
-    authentication.registerAsync(user, 
-            new APICallBack<User>() {
+    authentication.registerAsync(user,             new APICallBack<User>() {
+
         public void onSuccess(HttpContext context, User response) {
             // TODO success callback handler
         }
@@ -211,8 +211,8 @@ void profileAsync(
 
 #### Example Usage:
 ```java
-authentication.profileAsync(
-        new APICallBack<User>() {
+authentication.profileAsync(        new APICallBack<User>() {
+
     public void onSuccess(HttpContext context, User response) {
         // TODO success callback handler
     }
@@ -253,8 +253,8 @@ void changeEmailAsync(
 try {
     String currentPassword = "current_password";
     String newEmail = "new_email";
-    authentication.changeEmailAsync(currentPassword, newEmail, 
-            new APICallBack<String>() {
+    authentication.changeEmailAsync(currentPassword, newEmail,             new APICallBack<String>() {
+
         public void onSuccess(HttpContext context, String response) {
             // TODO success callback handler
         }
@@ -298,8 +298,8 @@ void changePasswordAsync(
 try {
     String currentPassword = "current_password";
     String newPassword = "new_password";
-    authentication.changePasswordAsync(currentPassword, newPassword, 
-            new APICallBack<String>() {
+    authentication.changePasswordAsync(currentPassword, newPassword,             new APICallBack<String>() {
+
         public void onSuccess(HttpContext context, String response) {
             // TODO success callback handler
         }
@@ -342,8 +342,8 @@ void resetPasswordAsync(
 ```java
 try {
     Object email = new object();
-    authentication.resetPasswordAsync(email, 
-            new APICallBack<String>() {
+    authentication.resetPasswordAsync(email,             new APICallBack<String>() {
+
         public void onSuccess(HttpContext context, String response) {
             // TODO success callback handler
         }
@@ -380,8 +380,8 @@ void logoutAsync(
 
 #### Example Usage:
 ```java
-authentication.logoutAsync(
-        new APICallBack<String>() {
+authentication.logoutAsync(        new APICallBack<String>() {
+
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -431,8 +431,8 @@ void searchTasksAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-tasks.searchTasksAsync(queryParams, 
-        new APICallBack<TasksResponse>() {
+tasks.searchTasksAsync(queryParams,         new APICallBack<TasksResponse>() {
+
     public void onSuccess(HttpContext context, TasksResponse response) {
         // TODO success callback handler
     }
@@ -471,8 +471,8 @@ void myTasksAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-tasks.myTasksAsync(queryParams, 
-        new APICallBack<TasksResponse>() {
+tasks.myTasksAsync(queryParams,         new APICallBack<TasksResponse>() {
+
     public void onSuccess(HttpContext context, TasksResponse response) {
         // TODO success callback handler
     }
@@ -510,8 +510,8 @@ void createTaskAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    tasks.createTaskAsync(task, 
-            new APICallBack<Task>() {
+    tasks.createTaskAsync(task,             new APICallBack<Task>() {
+
         public void onSuccess(HttpContext context, Task response) {
             // TODO success callback handler
         }
@@ -552,9 +552,9 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
-tasks.taskAsync(taskID, 
-        new APICallBack<Task>() {
+int taskID = 126;
+tasks.taskAsync(taskID,         new APICallBack<Task>() {
+
     public void onSuccess(HttpContext context, Task response) {
         // TODO success callback handler
     }
@@ -594,9 +594,9 @@ void updateTaskFullAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 123;
-    tasks.updateTaskFullAsync(task, taskID, 
-            new APICallBack<Task>() {
+    int taskID = 126;
+    tasks.updateTaskFullAsync(task, taskID,             new APICallBack<Task>() {
+
         public void onSuccess(HttpContext context, Task response) {
             // TODO success callback handler
         }
@@ -639,9 +639,9 @@ void taskUpdatePartialAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 123;
-    tasks.taskUpdatePartialAsync(task, taskID, 
-            new APICallBack<Task>() {
+    int taskID = 126;
+    tasks.taskUpdatePartialAsync(task, taskID,             new APICallBack<Task>() {
+
         public void onSuccess(HttpContext context, Task response) {
             // TODO success callback handler
         }
@@ -680,9 +680,9 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
-tasks.deleteTaskAsync(taskID, 
-        new APICallBack<Task>() {
+int taskID = 126;
+tasks.deleteTaskAsync(taskID,         new APICallBack<Task>() {
+
     public void onSuccess(HttpContext context, Task response) {
         // TODO success callback handler
     }
@@ -727,9 +727,9 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
-workflow.taskApplyAsync(taskID, 
-        new APICallBack<Tasker>() {
+int taskID = 126;
+workflow.taskApplyAsync(taskID,         new APICallBack<Tasker>() {
+
     public void onSuccess(HttpContext context, Tasker response) {
         // TODO success callback handler
     }
@@ -768,10 +768,10 @@ void taskApproveAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 123;
+    int taskID = 126;
     Object userParams = new object();
-    workflow.taskApproveAsync(taskID, userParams, 
-            new APICallBack<Tasker>() {
+    workflow.taskApproveAsync(taskID, userParams,             new APICallBack<Tasker>() {
+
         public void onSuccess(HttpContext context, Tasker response) {
             // TODO success callback handler
         }
@@ -810,9 +810,9 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
-workflow.taskDoneAsync(taskID, 
-        new APICallBack<Task>() {
+int taskID = 126;
+workflow.taskDoneAsync(taskID,         new APICallBack<Task>() {
+
     public void onSuccess(HttpContext context, Task response) {
         // TODO success callback handler
     }
@@ -848,9 +848,9 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
-workflow.taskCompleteAsync(taskID, 
-        new APICallBack<Task>() {
+int taskID = 126;
+workflow.taskCompleteAsync(taskID,         new APICallBack<Task>() {
+
     public void onSuccess(HttpContext context, Task response) {
         // TODO success callback handler
     }
@@ -890,9 +890,9 @@ void taskDisputeAsync(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 123;
-    workflow.taskDisputeAsync(disputeParams, taskID, 
-            new APICallBack<Task>() {
+    int taskID = 126;
+    workflow.taskDisputeAsync(disputeParams, taskID,             new APICallBack<Task>() {
+
         public void onSuccess(HttpContext context, Task response) {
             // TODO success callback handler
         }
@@ -934,10 +934,10 @@ void taskViolationAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 123;
+    int taskID = 126;
     ViolationModel violation = new ViolationModel();
-    workflow.taskViolationAsync(taskID, violation, 
-            new APICallBack<ViolationModel>() {
+    workflow.taskViolationAsync(taskID, violation,             new APICallBack<ViolationModel>() {
+
         public void onSuccess(HttpContext context, ViolationModel response) {
             // TODO success callback handler
         }
@@ -980,9 +980,9 @@ void taskReopenAsync(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 123;
-    workflow.taskReopenAsync(descriptionParams, taskID, 
-            new APICallBack<LinkedHashMap<String, Object>>() {
+    int taskID = 126;
+    workflow.taskReopenAsync(descriptionParams, taskID,             new APICallBack<LinkedHashMap<String, Object>>() {
+
         public void onSuccess(HttpContext context, LinkedHashMap<String, Object> response) {
             // TODO success callback handler
         }
@@ -1021,9 +1021,9 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
-workflow.taskWithdrawAsync(taskID, 
-        new APICallBack<String>() {
+int taskID = 126;
+workflow.taskWithdrawAsync(taskID,         new APICallBack<String>() {
+
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -1073,8 +1073,8 @@ void categoriesAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-categories.categoriesAsync(queryParams, 
-        new APICallBack<CategoriesResponse>() {
+categories.categoriesAsync(queryParams,         new APICallBack<CategoriesResponse>() {
+
     public void onSuccess(HttpContext context, CategoriesResponse response) {
         // TODO success callback handler
     }
@@ -1115,8 +1115,8 @@ void tagsAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-categories.tagsAsync(queryParams, 
-        new APICallBack<TagsResponse>() {
+categories.tagsAsync(queryParams,         new APICallBack<TagsResponse>() {
+
     public void onSuccess(HttpContext context, TagsResponse response) {
         // TODO success callback handler
     }
@@ -1164,8 +1164,8 @@ void usersAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-users.usersAsync(queryParams, 
-        new APICallBack<UsersResponse>() {
+users.usersAsync(queryParams,         new APICallBack<UsersResponse>() {
+
     public void onSuccess(HttpContext context, UsersResponse response) {
         // TODO success callback handler
     }
@@ -1201,9 +1201,9 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 123;
-users.userAsync(userID, 
-        new APICallBack<User>() {
+int userID = 126;
+users.userAsync(userID,         new APICallBack<User>() {
+
     public void onSuccess(HttpContext context, User response) {
         // TODO success callback handler
     }
@@ -1250,12 +1250,12 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
+int taskID = 126;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-images.imagesAsync(taskID, queryParams, 
-        new APICallBack<ImagesResponse>() {
+images.imagesAsync(taskID, queryParams,         new APICallBack<ImagesResponse>() {
+
     public void onSuccess(HttpContext context, ImagesResponse response) {
         // TODO success callback handler
     }
@@ -1293,10 +1293,10 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 123;
+int taskID = 126;
 File upload = null;
-images.addImageAsync(taskID, upload, 
-        new APICallBack<ImageCreated>() {
+images.addImageAsync(taskID, upload,         new APICallBack<ImageCreated>() {
+
     public void onSuccess(HttpContext context, ImageCreated response) {
         // TODO success callback handler
     }
@@ -1334,10 +1334,10 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 123;
-int taskID = 123;
-images.deleteImageAsync(imageID, taskID, 
-        new APICallBack<String>() {
+int imageID = 126;
+int taskID = 126;
+images.deleteImageAsync(imageID, taskID,         new APICallBack<String>() {
+
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -1384,8 +1384,8 @@ void registerDeviceAsync(
 ```java
 try {
     APNSDevice info = new APNSDevice();
-    devices.registerDeviceAsync(info, 
-            new APICallBack<APNSDevice>() {
+    devices.registerDeviceAsync(info,             new APICallBack<APNSDevice>() {
+
         public void onSuccess(HttpContext context, APNSDevice response) {
             // TODO success callback handler
         }
