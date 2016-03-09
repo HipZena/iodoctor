@@ -42,7 +42,8 @@ void loginAsync(
 
 #### Example Usage:
 ```java
-try {    String email = "email";
+try {
+    String email = "email";
     String password = "password";
     authentication.loginAsync(email, password, 
             new APICallBack<User>() {
@@ -101,7 +102,8 @@ void profileUpdateFullAsync(
 
 #### Example Usage:
 ```java
-try {    User user = new User();
+try {
+    User user = new User();
     authentication.profileUpdateFullAsync(user, 
             new APICallBack<User>() {
         //success callback handler
@@ -158,7 +160,8 @@ void profileUpdatePartialAsync(
 
 #### Example Usage:
 ```java
-try {    User user = new User();
+try {
+    User user = new User();
     authentication.profileUpdatePartialAsync(user, 
             new APICallBack<User>() {
         //success callback handler
@@ -217,7 +220,8 @@ void registerAsync(
 
 #### Example Usage:
 ```java
-try {    User user = new User();
+try {
+    User user = new User();
     authentication.registerAsync(user, 
             new APICallBack<User>() {
         //success callback handler
@@ -326,7 +330,8 @@ void changeEmailAsync(
 
 #### Example Usage:
 ```java
-try {    String currentPassword = "current_password";
+try {
+    String currentPassword = "current_password";
     String newEmail = "new_email";
     authentication.changeEmailAsync(currentPassword, newEmail, 
             new APICallBack<String>() {
@@ -387,7 +392,8 @@ void changePasswordAsync(
 
 #### Example Usage:
 ```java
-try {    String currentPassword = "current_password";
+try {
+    String currentPassword = "current_password";
     String newPassword = "new_password";
     authentication.changePasswordAsync(currentPassword, newPassword, 
             new APICallBack<String>() {
@@ -448,7 +454,8 @@ void resetPasswordAsync(
 
 #### Example Usage:
 ```java
-try {    Object email = new object();
+try {
+    Object email = new object();
     authentication.resetPasswordAsync(email, 
             new APICallBack<String>() {
         //success callback handler
@@ -682,7 +689,8 @@ void createTaskAsync(
 
 #### Example Usage:
 ```java
-try {    TaskRequest task = new TaskRequest();
+try {
+    TaskRequest task = new TaskRequest();
     tasks.createTaskAsync(task, 
             new APICallBack<Task>() {
         //success callback handler
@@ -741,7 +749,7 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 tasks.taskAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -754,7 +762,7 @@ tasks.taskAsync(taskID,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 
 tasks.taskAsync(taskID, 
         new APICallBack<Task>() {
@@ -797,8 +805,9 @@ void updateTaskFullAsync(
 
 #### Example Usage:
 ```java
-try {    TaskRequest task = new TaskRequest();
-    int taskID = 226;
+try {
+    TaskRequest task = new TaskRequest();
+    int taskID = 44;
     tasks.updateTaskFullAsync(task, taskID, 
             new APICallBack<Task>() {
         //success callback handler
@@ -815,7 +824,7 @@ try {    TaskRequest task = new TaskRequest();
             // TODO Auto-generated catch block
             e.printStackTrace();
 }    TaskRequest task = new TaskRequest();
-    int taskID = 226;
+    int taskID = 44;
 
     tasks.updateTaskFullAsync(task, taskID, 
             new APICallBack<Task>() {
@@ -858,8 +867,9 @@ void taskUpdatePartialAsync(
 
 #### Example Usage:
 ```java
-try {    TaskRequest task = new TaskRequest();
-    int taskID = 226;
+try {
+    TaskRequest task = new TaskRequest();
+    int taskID = 44;
     tasks.taskUpdatePartialAsync(task, taskID, 
             new APICallBack<Task>() {
         //success callback handler
@@ -876,7 +886,7 @@ try {    TaskRequest task = new TaskRequest();
             // TODO Auto-generated catch block
             e.printStackTrace();
 }    TaskRequest task = new TaskRequest();
-    int taskID = 226;
+    int taskID = 44;
 
     tasks.taskUpdatePartialAsync(task, taskID, 
             new APICallBack<Task>() {
@@ -917,7 +927,7 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 tasks.deleteTaskAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -930,7 +940,7 @@ tasks.deleteTaskAsync(taskID,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 
 tasks.deleteTaskAsync(taskID, 
         new APICallBack<Task>() {
@@ -980,7 +990,7 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 workflow.taskApplyAsync(taskID, 
         new APICallBack<Tasker>() {
     //success callback handler
@@ -993,7 +1003,7 @@ workflow.taskApplyAsync(taskID,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 
 workflow.taskApplyAsync(taskID, 
         new APICallBack<Tasker>() {
@@ -1036,7 +1046,8 @@ void taskApproveAsync(
 
 #### Example Usage:
 ```java
-try {    int taskID = 226;
+try {
+    int taskID = 44;
     Object userParams = new object();
     workflow.taskApproveAsync(taskID, userParams, 
             new APICallBack<Tasker>() {
@@ -1053,7 +1064,7 @@ try {    int taskID = 226;
 } catch({0} e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-}    int taskID = 226;
+}    int taskID = 44;
     Object userParams = new object();
 
     workflow.taskApproveAsync(taskID, userParams, 
@@ -1095,7 +1106,7 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 workflow.taskDoneAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -1108,7 +1119,7 @@ workflow.taskDoneAsync(taskID,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 
 workflow.taskDoneAsync(taskID, 
         new APICallBack<Task>() {
@@ -1149,7 +1160,7 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 workflow.taskCompleteAsync(taskID, 
         new APICallBack<Task>() {
     //success callback handler
@@ -1162,7 +1173,7 @@ workflow.taskCompleteAsync(taskID,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 
 workflow.taskCompleteAsync(taskID, 
         new APICallBack<Task>() {
@@ -1205,8 +1216,9 @@ void taskDisputeAsync(
 
 #### Example Usage:
 ```java
-try {    Object disputeParams = new object();
-    int taskID = 226;
+try {
+    Object disputeParams = new object();
+    int taskID = 44;
     workflow.taskDisputeAsync(disputeParams, taskID, 
             new APICallBack<Task>() {
         //success callback handler
@@ -1223,7 +1235,7 @@ try {    Object disputeParams = new object();
             // TODO Auto-generated catch block
             e.printStackTrace();
 }    Object disputeParams = new object();
-    int taskID = 226;
+    int taskID = 44;
 
     workflow.taskDisputeAsync(disputeParams, taskID, 
             new APICallBack<Task>() {
@@ -1266,7 +1278,8 @@ void taskViolationAsync(
 
 #### Example Usage:
 ```java
-try {    int taskID = 226;
+try {
+    int taskID = 44;
     ViolationModel violation = new ViolationModel();
     workflow.taskViolationAsync(taskID, violation, 
             new APICallBack<ViolationModel>() {
@@ -1283,7 +1296,7 @@ try {    int taskID = 226;
 } catch({0} e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-}    int taskID = 226;
+}    int taskID = 44;
     ViolationModel violation = new ViolationModel();
 
     workflow.taskViolationAsync(taskID, violation, 
@@ -1327,8 +1340,9 @@ void taskReopenAsync(
 
 #### Example Usage:
 ```java
-try {    Object descriptionParams = new object();
-    int taskID = 226;
+try {
+    Object descriptionParams = new object();
+    int taskID = 44;
     workflow.taskReopenAsync(descriptionParams, taskID, 
             new APICallBack<LinkedHashMap<String, Object>>() {
         //success callback handler
@@ -1345,7 +1359,7 @@ try {    Object descriptionParams = new object();
             // TODO Auto-generated catch block
             e.printStackTrace();
 }    Object descriptionParams = new object();
-    int taskID = 226;
+    int taskID = 44;
 
     workflow.taskReopenAsync(descriptionParams, taskID, 
             new APICallBack<LinkedHashMap<String, Object>>() {
@@ -1386,7 +1400,7 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 workflow.taskWithdrawAsync(taskID, 
         new APICallBack<String>() {
     //success callback handler
@@ -1399,7 +1413,7 @@ workflow.taskWithdrawAsync(taskID,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 
 workflow.taskWithdrawAsync(taskID, 
         new APICallBack<String>() {
@@ -1636,7 +1650,7 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 226;
+int userID = 44;
 users.userAsync(userID, 
         new APICallBack<User>() {
     //success callback handler
@@ -1649,7 +1663,7 @@ users.userAsync(userID,
     // TODO Auto-generated method stub
     }
 });
-int userID = 226;
+int userID = 44;
 
 users.userAsync(userID, 
         new APICallBack<User>() {
@@ -1701,7 +1715,7 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1717,7 +1731,7 @@ images.imagesAsync(taskID, queryParams,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1763,7 +1777,7 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 226;
+int taskID = 44;
 File upload = null;
 images.addImageAsync(taskID, upload, 
         new APICallBack<ImageCreated>() {
@@ -1777,7 +1791,7 @@ images.addImageAsync(taskID, upload,
     // TODO Auto-generated method stub
     }
 });
-int taskID = 226;
+int taskID = 44;
 File upload = null;
 
 images.addImageAsync(taskID, upload, 
@@ -1821,8 +1835,8 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 226;
-int taskID = 226;
+int imageID = 44;
+int taskID = 44;
 images.deleteImageAsync(imageID, taskID, 
         new APICallBack<String>() {
     //success callback handler
@@ -1835,8 +1849,8 @@ images.deleteImageAsync(imageID, taskID,
     // TODO Auto-generated method stub
     }
 });
-int imageID = 226;
-int taskID = 226;
+int imageID = 44;
+int taskID = 44;
 
 images.deleteImageAsync(imageID, taskID, 
         new APICallBack<String>() {
@@ -1886,7 +1900,8 @@ void registerDeviceAsync(
 
 #### Example Usage:
 ```java
-try {    APNSDevice info = new APNSDevice();
+try {
+    APNSDevice info = new APNSDevice();
     devices.registerDeviceAsync(info, 
             new APICallBack<APNSDevice>() {
         //success callback handler
