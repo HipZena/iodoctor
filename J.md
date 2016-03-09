@@ -45,7 +45,7 @@ void loginAsync(
 String email = "email";
 String password = "password";
 
-User result = await authentication.loginAsync(email, password);
+User result = authentication.loginAsync(email, password);
 
 ```
 
@@ -73,9 +73,9 @@ void profileUpdateFullAsync(
 
 #### Example Usage:
 ```java
-var user = new User();
+User user = new User();
 
-User result = await authentication.profileUpdateFullAsync(user);
+User result = authentication.profileUpdateFullAsync(user);
 
 ```
 
@@ -103,9 +103,9 @@ void profileUpdatePartialAsync(
 
 #### Example Usage:
 ```java
-var user = new User();
+User user = new User();
 
-User result = await authentication.profileUpdatePartialAsync(user);
+User result = authentication.profileUpdatePartialAsync(user);
 
 ```
 
@@ -135,9 +135,9 @@ void registerAsync(
 
 #### Example Usage:
 ```java
-var user = new User();
+User user = new User();
 
-User result = await authentication.registerAsync(user);
+User result = authentication.registerAsync(user);
 
 ```
 
@@ -164,7 +164,7 @@ void profileAsync(
 #### Example Usage:
 ```java
 
-User result = await authentication.profileAsync();
+User result = authentication.profileAsync();
 
 ```
 
@@ -197,7 +197,7 @@ void changeEmailAsync(
 String currentPassword = "current_password";
 String newEmail = "new_email";
 
-String result = await authentication.changeEmailAsync(currentPassword, newEmail);
+String result = authentication.changeEmailAsync(currentPassword, newEmail);
 
 ```
 
@@ -230,7 +230,7 @@ void changePasswordAsync(
 String currentPassword = "current_password";
 String newPassword = "new_password";
 
-String result = await authentication.changePasswordAsync(currentPassword, newPassword);
+String result = authentication.changePasswordAsync(currentPassword, newPassword);
 
 ```
 
@@ -262,7 +262,7 @@ void resetPasswordAsync(
 ```java
 Object email = new object();
 
-String result = await authentication.resetPasswordAsync(email);
+String result = authentication.resetPasswordAsync(email);
 
 ```
 
@@ -289,7 +289,7 @@ void logoutAsync(
 #### Example Usage:
 ```java
 
-String result = await authentication.logoutAsync();
+String result = authentication.logoutAsync();
 
 ```
 
@@ -332,7 +332,7 @@ void searchTasksAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-TasksResponse result = await tasks.searchTasksAsync(queryParams);
+TasksResponse result = tasks.searchTasksAsync(queryParams);
 
 ```
 
@@ -364,7 +364,7 @@ void myTasksAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-TasksResponse result = await tasks.myTasksAsync(queryParams);
+TasksResponse result = tasks.myTasksAsync(queryParams);
 
 ```
 
@@ -392,9 +392,9 @@ void createTaskAsync(
 
 #### Example Usage:
 ```java
-var task = new TaskRequest();
+TaskRequest task = new TaskRequest();
 
-Task result = await tasks.createTaskAsync(task);
+Task result = tasks.createTaskAsync(task);
 
 ```
 
@@ -424,9 +424,9 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 
-Task result = await tasks.taskAsync(taskID);
+Task result = tasks.taskAsync(taskID);
 
 ```
 
@@ -456,10 +456,10 @@ void updateTaskFullAsync(
 
 #### Example Usage:
 ```java
-var task = new TaskRequest();
-int taskID = 130;
+TaskRequest task = new TaskRequest();
+int taskID = 28;
 
-Task result = await tasks.updateTaskFullAsync(task, taskID);
+Task result = tasks.updateTaskFullAsync(task, taskID);
 
 ```
 
@@ -489,10 +489,10 @@ void taskUpdatePartialAsync(
 
 #### Example Usage:
 ```java
-var task = new TaskRequest();
-int taskID = 130;
+TaskRequest task = new TaskRequest();
+int taskID = 28;
 
-Task result = await tasks.taskUpdatePartialAsync(task, taskID);
+Task result = tasks.taskUpdatePartialAsync(task, taskID);
 
 ```
 
@@ -520,9 +520,9 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 
-Task result = await tasks.deleteTaskAsync(taskID);
+Task result = tasks.deleteTaskAsync(taskID);
 
 ```
 
@@ -559,9 +559,9 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 
-Tasker result = await workflow.taskApplyAsync(taskID);
+Tasker result = workflow.taskApplyAsync(taskID);
 
 ```
 
@@ -591,10 +591,10 @@ void taskApproveAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 Object userParams = new object();
 
-Tasker result = await workflow.taskApproveAsync(taskID, userParams);
+Tasker result = workflow.taskApproveAsync(taskID, userParams);
 
 ```
 
@@ -622,9 +622,9 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 
-Task result = await workflow.taskDoneAsync(taskID);
+Task result = workflow.taskDoneAsync(taskID);
 
 ```
 
@@ -652,9 +652,9 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 
-Task result = await workflow.taskCompleteAsync(taskID);
+Task result = workflow.taskCompleteAsync(taskID);
 
 ```
 
@@ -685,9 +685,9 @@ void taskDisputeAsync(
 #### Example Usage:
 ```java
 Object disputeParams = new object();
-int taskID = 130;
+int taskID = 28;
 
-Task result = await workflow.taskDisputeAsync(disputeParams, taskID);
+Task result = workflow.taskDisputeAsync(disputeParams, taskID);
 
 ```
 
@@ -717,10 +717,10 @@ void taskViolationAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
-var violation = new ViolationModel();
+int taskID = 28;
+ViolationModel violation = new ViolationModel();
 
-ViolationModel result = await workflow.taskViolationAsync(taskID, violation);
+ViolationModel result = workflow.taskViolationAsync(taskID, violation);
 
 ```
 
@@ -751,9 +751,9 @@ void taskReopenAsync(
 #### Example Usage:
 ```java
 Object descriptionParams = new object();
-int taskID = 130;
+int taskID = 28;
 
-LinkedHashMap<String, Object> result = await workflow.taskReopenAsync(descriptionParams, taskID);
+LinkedHashMap<String, Object> result = workflow.taskReopenAsync(descriptionParams, taskID);
 
 ```
 
@@ -781,9 +781,9 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 
-String result = await workflow.taskWithdrawAsync(taskID);
+String result = workflow.taskWithdrawAsync(taskID);
 
 ```
 
@@ -826,7 +826,7 @@ void categoriesAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-CategoriesResponse result = await categories.categoriesAsync(queryParams);
+CategoriesResponse result = categories.categoriesAsync(queryParams);
 
 ```
 
@@ -860,7 +860,7 @@ void tagsAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-TagsResponse result = await categories.tagsAsync(queryParams);
+TagsResponse result = categories.tagsAsync(queryParams);
 
 ```
 
@@ -901,7 +901,7 @@ void usersAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-UsersResponse result = await users.usersAsync(queryParams);
+UsersResponse result = users.usersAsync(queryParams);
 
 ```
 
@@ -929,9 +929,9 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 130;
+int userID = 28;
 
-User result = await users.userAsync(userID);
+User result = users.userAsync(userID);
 
 ```
 
@@ -970,12 +970,12 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
 
-ImagesResponse result = await images.imagesAsync(taskID, queryParams);
+ImagesResponse result = images.imagesAsync(taskID, queryParams);
 
 ```
 
@@ -1005,10 +1005,10 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 130;
+int taskID = 28;
 File upload = null;
 
-ImageCreated result = await images.addImageAsync(taskID, upload);
+ImageCreated result = images.addImageAsync(taskID, upload);
 
 ```
 
@@ -1038,10 +1038,10 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 130;
-int taskID = 130;
+int imageID = 28;
+int taskID = 28;
 
-String result = await images.deleteImageAsync(imageID, taskID);
+String result = images.deleteImageAsync(imageID, taskID);
 
 ```
 
@@ -1078,9 +1078,9 @@ void registerDeviceAsync(
 
 #### Example Usage:
 ```java
-var info = new APNSDevice();
+APNSDevice info = new APNSDevice();
 
-APNSDevice result = await devices.registerDeviceAsync(info);
+APNSDevice result = devices.registerDeviceAsync(info);
 
 ```
 
