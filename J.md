@@ -45,13 +45,10 @@ void loginAsync(
 try {
     String email = "email";
     String password = "password";
-
     authentication.loginAsync(email, password, new APICallBack<User>() {
-
         public void onSuccess(HttpContext context, User response) {
             // TODO success callback handler
         }
-
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
