@@ -45,7 +45,7 @@ void loginAsync(
 String email = "email";
 String password = "password";
 
-User result = authentication.loginAsync(email, password);
+authentication.loginAsync(email, password);
 
 ```
 
@@ -75,7 +75,7 @@ void profileUpdateFullAsync(
 ```java
 User user = new User();
 
-User result = authentication.profileUpdateFullAsync(user);
+authentication.profileUpdateFullAsync(user);
 
 ```
 
@@ -105,7 +105,7 @@ void profileUpdatePartialAsync(
 ```java
 User user = new User();
 
-User result = authentication.profileUpdatePartialAsync(user);
+authentication.profileUpdatePartialAsync(user);
 
 ```
 
@@ -137,7 +137,7 @@ void registerAsync(
 ```java
 User user = new User();
 
-User result = authentication.registerAsync(user);
+authentication.registerAsync(user);
 
 ```
 
@@ -164,7 +164,7 @@ void profileAsync(
 #### Example Usage:
 ```java
 
-User result = authentication.profileAsync();
+authentication.profileAsync();
 
 ```
 
@@ -197,7 +197,7 @@ void changeEmailAsync(
 String currentPassword = "current_password";
 String newEmail = "new_email";
 
-String result = authentication.changeEmailAsync(currentPassword, newEmail);
+authentication.changeEmailAsync(currentPassword, newEmail);
 
 ```
 
@@ -230,7 +230,7 @@ void changePasswordAsync(
 String currentPassword = "current_password";
 String newPassword = "new_password";
 
-String result = authentication.changePasswordAsync(currentPassword, newPassword);
+authentication.changePasswordAsync(currentPassword, newPassword);
 
 ```
 
@@ -262,7 +262,7 @@ void resetPasswordAsync(
 ```java
 Object email = new object();
 
-String result = authentication.resetPasswordAsync(email);
+authentication.resetPasswordAsync(email);
 
 ```
 
@@ -289,7 +289,7 @@ void logoutAsync(
 #### Example Usage:
 ```java
 
-String result = authentication.logoutAsync();
+authentication.logoutAsync();
 
 ```
 
@@ -332,7 +332,7 @@ void searchTasksAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-TasksResponse result = tasks.searchTasksAsync(queryParams);
+tasks.searchTasksAsync(queryParams);
 
 ```
 
@@ -364,7 +364,7 @@ void myTasksAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-TasksResponse result = tasks.myTasksAsync(queryParams);
+tasks.myTasksAsync(queryParams);
 
 ```
 
@@ -394,7 +394,7 @@ void createTaskAsync(
 ```java
 TaskRequest task = new TaskRequest();
 
-Task result = tasks.createTaskAsync(task);
+tasks.createTaskAsync(task);
 
 ```
 
@@ -424,9 +424,9 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 
-Task result = tasks.taskAsync(taskID);
+tasks.taskAsync(taskID);
 
 ```
 
@@ -457,9 +457,9 @@ void updateTaskFullAsync(
 #### Example Usage:
 ```java
 TaskRequest task = new TaskRequest();
-int taskID = 28;
+int taskID = 202;
 
-Task result = tasks.updateTaskFullAsync(task, taskID);
+tasks.updateTaskFullAsync(task, taskID);
 
 ```
 
@@ -490,9 +490,9 @@ void taskUpdatePartialAsync(
 #### Example Usage:
 ```java
 TaskRequest task = new TaskRequest();
-int taskID = 28;
+int taskID = 202;
 
-Task result = tasks.taskUpdatePartialAsync(task, taskID);
+tasks.taskUpdatePartialAsync(task, taskID);
 
 ```
 
@@ -520,9 +520,9 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 
-Task result = tasks.deleteTaskAsync(taskID);
+tasks.deleteTaskAsync(taskID);
 
 ```
 
@@ -559,9 +559,9 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 
-Tasker result = workflow.taskApplyAsync(taskID);
+workflow.taskApplyAsync(taskID);
 
 ```
 
@@ -591,10 +591,10 @@ void taskApproveAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 Object userParams = new object();
 
-Tasker result = workflow.taskApproveAsync(taskID, userParams);
+workflow.taskApproveAsync(taskID, userParams);
 
 ```
 
@@ -622,9 +622,9 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 
-Task result = workflow.taskDoneAsync(taskID);
+workflow.taskDoneAsync(taskID);
 
 ```
 
@@ -652,9 +652,9 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 
-Task result = workflow.taskCompleteAsync(taskID);
+workflow.taskCompleteAsync(taskID);
 
 ```
 
@@ -685,9 +685,9 @@ void taskDisputeAsync(
 #### Example Usage:
 ```java
 Object disputeParams = new object();
-int taskID = 28;
+int taskID = 202;
 
-Task result = workflow.taskDisputeAsync(disputeParams, taskID);
+workflow.taskDisputeAsync(disputeParams, taskID);
 
 ```
 
@@ -717,10 +717,10 @@ void taskViolationAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 ViolationModel violation = new ViolationModel();
 
-ViolationModel result = workflow.taskViolationAsync(taskID, violation);
+workflow.taskViolationAsync(taskID, violation);
 
 ```
 
@@ -751,9 +751,9 @@ void taskReopenAsync(
 #### Example Usage:
 ```java
 Object descriptionParams = new object();
-int taskID = 28;
+int taskID = 202;
 
-LinkedHashMap<String, Object> result = workflow.taskReopenAsync(descriptionParams, taskID);
+workflow.taskReopenAsync(descriptionParams, taskID);
 
 ```
 
@@ -781,9 +781,9 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 
-String result = workflow.taskWithdrawAsync(taskID);
+workflow.taskWithdrawAsync(taskID);
 
 ```
 
@@ -826,7 +826,7 @@ void categoriesAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-CategoriesResponse result = categories.categoriesAsync(queryParams);
+categories.categoriesAsync(queryParams);
 
 ```
 
@@ -860,7 +860,7 @@ void tagsAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-TagsResponse result = categories.tagsAsync(queryParams);
+categories.tagsAsync(queryParams);
 
 ```
 
@@ -901,7 +901,7 @@ void usersAsync(
 var queryParams = new Dictionary<string, object>();
 
 
-UsersResponse result = users.usersAsync(queryParams);
+users.usersAsync(queryParams);
 
 ```
 
@@ -929,9 +929,9 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 28;
+int userID = 202;
 
-User result = users.userAsync(userID);
+users.userAsync(userID);
 
 ```
 
@@ -970,12 +970,12 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
 
-ImagesResponse result = images.imagesAsync(taskID, queryParams);
+images.imagesAsync(taskID, queryParams);
 
 ```
 
@@ -1005,10 +1005,10 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 28;
+int taskID = 202;
 File upload = null;
 
-ImageCreated result = images.addImageAsync(taskID, upload);
+images.addImageAsync(taskID, upload);
 
 ```
 
@@ -1038,10 +1038,10 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 28;
-int taskID = 28;
+int imageID = 202;
+int taskID = 202;
 
-String result = images.deleteImageAsync(imageID, taskID);
+images.deleteImageAsync(imageID, taskID);
 
 ```
 
@@ -1080,7 +1080,7 @@ void registerDeviceAsync(
 ```java
 APNSDevice info = new APNSDevice();
 
-APNSDevice result = devices.registerDeviceAsync(info);
+devices.registerDeviceAsync(info);
 
 ```
 
