@@ -422,7 +422,6 @@ void searchTasksAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-
 tasks.searchTasksAsync(queryParams, new APICallBack<TasksResponse>() {
     public void onSuccess(HttpContext context, TasksResponse response) {
         // TODO success callback handler
@@ -460,7 +459,6 @@ void myTasksAsync(
 ```java
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
-
 
 tasks.myTasksAsync(queryParams, new APICallBack<TasksResponse>() {
     public void onSuccess(HttpContext context, TasksResponse response) {
@@ -540,7 +538,7 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 
 tasks.taskAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -581,7 +579,7 @@ void updateTaskFullAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 148;
+    int taskID = 141;
 
     tasks.updateTaskFullAsync(task, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -625,7 +623,7 @@ void taskUpdatePartialAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 148;
+    int taskID = 141;
 
     tasks.taskUpdatePartialAsync(task, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -665,7 +663,7 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 
 tasks.deleteTaskAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -711,7 +709,7 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 
 workflow.taskApplyAsync(taskID, new APICallBack<Tasker>() {
     public void onSuccess(HttpContext context, Tasker response) {
@@ -751,7 +749,7 @@ void taskApproveAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 148;
+    int taskID = 141;
     Object userParams = new object();
 
     workflow.taskApproveAsync(taskID, userParams, new APICallBack<Tasker>() {
@@ -792,7 +790,7 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 
 workflow.taskDoneAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -829,7 +827,7 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 
 workflow.taskCompleteAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -870,7 +868,7 @@ void taskDisputeAsync(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 148;
+    int taskID = 141;
 
     workflow.taskDisputeAsync(disputeParams, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -913,7 +911,7 @@ void taskViolationAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 148;
+    int taskID = 141;
     ViolationModel violation = new ViolationModel();
 
     workflow.taskViolationAsync(taskID, violation, new APICallBack<ViolationModel>() {
@@ -958,7 +956,7 @@ void taskReopenAsync(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 148;
+    int taskID = 141;
 
     workflow.taskReopenAsync(descriptionParams, taskID, new APICallBack<LinkedHashMap<String, Object>>() {
         public void onSuccess(HttpContext context, LinkedHashMap<String, Object> response) {
@@ -998,7 +996,7 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 
 workflow.taskWithdrawAsync(taskID, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
@@ -1049,7 +1047,6 @@ void categoriesAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-
 categories.categoriesAsync(queryParams, new APICallBack<CategoriesResponse>() {
     public void onSuccess(HttpContext context, CategoriesResponse response) {
         // TODO success callback handler
@@ -1089,7 +1086,6 @@ void tagsAsync(
 ```java
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
-
 
 categories.tagsAsync(queryParams, new APICallBack<TagsResponse>() {
     public void onSuccess(HttpContext context, TagsResponse response) {
@@ -1138,7 +1134,6 @@ void usersAsync(
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
-
 users.usersAsync(queryParams, new APICallBack<UsersResponse>() {
     public void onSuccess(HttpContext context, UsersResponse response) {
         // TODO success callback handler
@@ -1174,7 +1169,7 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 148;
+int userID = 141;
 
 users.userAsync(userID, new APICallBack<User>() {
     public void onSuccess(HttpContext context, User response) {
@@ -1222,10 +1217,9 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
-
 
 images.imagesAsync(taskID, queryParams, new APICallBack<ImagesResponse>() {
     public void onSuccess(HttpContext context, ImagesResponse response) {
@@ -1264,7 +1258,7 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 148;
+int taskID = 141;
 File upload = null;
 
 images.addImageAsync(taskID, upload, new APICallBack<ImageCreated>() {
@@ -1304,8 +1298,8 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 148;
-int taskID = 148;
+int imageID = 141;
+int taskID = 141;
 
 images.deleteImageAsync(imageID, taskID, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
