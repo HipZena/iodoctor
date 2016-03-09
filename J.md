@@ -47,14 +47,12 @@ try {
     String password = "password";
     authentication.loginAsync(email, password, 
             new APICallBack<User>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -91,14 +89,12 @@ try {
     User user = new User();
     authentication.profileUpdateFullAsync(user, 
             new APICallBack<User>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -135,14 +131,12 @@ try {
     User user = new User();
     authentication.profileUpdatePartialAsync(user, 
             new APICallBack<User>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -181,14 +175,12 @@ try {
     User user = new User();
     authentication.registerAsync(user, 
             new APICallBack<User>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -221,14 +213,12 @@ void profileAsync(
 ```java
 authentication.profileAsync(
         new APICallBack<User>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, User response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -265,14 +255,12 @@ try {
     String newEmail = "new_email";
     authentication.changeEmailAsync(currentPassword, newEmail, 
             new APICallBack<String>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, String response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -312,14 +300,12 @@ try {
     String newPassword = "new_password";
     authentication.changePasswordAsync(currentPassword, newPassword, 
             new APICallBack<String>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, String response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -358,14 +344,12 @@ try {
     Object email = new object();
     authentication.resetPasswordAsync(email, 
             new APICallBack<String>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, String response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -398,14 +382,12 @@ void logoutAsync(
 ```java
 authentication.logoutAsync(
         new APICallBack<String>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -451,14 +433,12 @@ var queryParams = new Dictionary<string, object>();
 
 tasks.searchTasksAsync(queryParams, 
         new APICallBack<TasksResponse>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, TasksResponse response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -493,14 +473,12 @@ var queryParams = new Dictionary<string, object>();
 
 tasks.myTasksAsync(queryParams, 
         new APICallBack<TasksResponse>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, TasksResponse response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -534,14 +512,12 @@ try {
     TaskRequest task = new TaskRequest();
     tasks.createTaskAsync(task, 
             new APICallBack<Task>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -576,17 +552,15 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 tasks.taskAsync(taskID, 
         new APICallBack<Task>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -620,17 +594,15 @@ void updateTaskFullAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 132;
+    int taskID = 123;
     tasks.updateTaskFullAsync(task, taskID, 
             new APICallBack<Task>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -667,17 +639,15 @@ void taskUpdatePartialAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 132;
+    int taskID = 123;
     tasks.taskUpdatePartialAsync(task, taskID, 
             new APICallBack<Task>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -710,17 +680,15 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 tasks.deleteTaskAsync(taskID, 
         new APICallBack<Task>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -759,17 +727,15 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 workflow.taskApplyAsync(taskID, 
         new APICallBack<Tasker>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, Tasker response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -802,18 +768,16 @@ void taskApproveAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 132;
+    int taskID = 123;
     Object userParams = new object();
     workflow.taskApproveAsync(taskID, userParams, 
             new APICallBack<Tasker>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, Tasker response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -846,17 +810,15 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 workflow.taskDoneAsync(taskID, 
         new APICallBack<Task>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -886,17 +848,15 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 workflow.taskCompleteAsync(taskID, 
         new APICallBack<Task>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -930,17 +890,15 @@ void taskDisputeAsync(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 132;
+    int taskID = 123;
     workflow.taskDisputeAsync(disputeParams, taskID, 
             new APICallBack<Task>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -976,18 +934,16 @@ void taskViolationAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 132;
+    int taskID = 123;
     ViolationModel violation = new ViolationModel();
     workflow.taskViolationAsync(taskID, violation, 
             new APICallBack<ViolationModel>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, ViolationModel response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -1024,17 +980,15 @@ void taskReopenAsync(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 132;
+    int taskID = 123;
     workflow.taskReopenAsync(descriptionParams, taskID, 
             new APICallBack<LinkedHashMap<String, Object>>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, LinkedHashMap<String, Object> response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
@@ -1067,17 +1021,15 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 workflow.taskWithdrawAsync(taskID, 
         new APICallBack<String>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1123,14 +1075,12 @@ var queryParams = new Dictionary<string, object>();
 
 categories.categoriesAsync(queryParams, 
         new APICallBack<CategoriesResponse>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, CategoriesResponse response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1167,14 +1117,12 @@ var queryParams = new Dictionary<string, object>();
 
 categories.tagsAsync(queryParams, 
         new APICallBack<TagsResponse>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, TagsResponse response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1218,14 +1166,12 @@ var queryParams = new Dictionary<string, object>();
 
 users.usersAsync(queryParams, 
         new APICallBack<UsersResponse>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, UsersResponse response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1255,17 +1201,15 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 132;
+int userID = 123;
 users.userAsync(userID, 
         new APICallBack<User>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, User response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1306,20 +1250,18 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
 images.imagesAsync(taskID, queryParams, 
         new APICallBack<ImagesResponse>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, ImagesResponse response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1351,18 +1293,16 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 123;
 File upload = null;
 images.addImageAsync(taskID, upload, 
         new APICallBack<ImageCreated>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, ImageCreated response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1394,18 +1334,16 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 132;
-int taskID = 132;
+int imageID = 123;
+int taskID = 123;
 images.deleteImageAsync(imageID, taskID, 
         new APICallBack<String>() {
-    //success callback handler
-    public void onSuccess(HttpContext context,  response) {
-        // TODO Auto-generated method stub
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
     }
 
-    //failure callback handler
     public void onFailure(HttpContext context, Throwable error) {
-        // TODO Auto-generated method stub
+        // TODO failure callback handler
     }
 });
 
@@ -1448,14 +1386,12 @@ try {
     APNSDevice info = new APNSDevice();
     devices.registerDeviceAsync(info, 
             new APICallBack<APNSDevice>() {
-        //success callback handler
-        public void onSuccess(HttpContext context,      response) {
-            // TODO Auto-generated method stub
+        public void onSuccess(HttpContext context, APNSDevice response) {
+            // TODO success callback handler
         }
 
-        //failure callback handler
         public void onFailure(HttpContext context, Throwable error) {
-            // TODO Auto-generated method stub
+            // TODO failure callback handler
         }
     });
 } catch(JsonProcessingException e) {
