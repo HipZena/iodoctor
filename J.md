@@ -138,7 +138,7 @@ try {
 
 
 
-### <a name="register"></a>register
+### <a name="register"></a>![Method: ](http://apidocs.io/img/java/method.png) register
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -288,7 +288,7 @@ try {
 
 
 
-### <a name="reset_password"></a>resetPassword
+### <a name="reset_password"></a>![Method: ](http://apidocs.io/img/java/method.png) resetPassword
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -328,7 +328,7 @@ try {
 
 
 
-### <a name="logout"></a>logout
+### <a name="logout"></a>![Method: ](http://apidocs.io/img/java/method.png) logout
 
 > This endpoints is responsible to logout action of the app.
 
@@ -355,7 +355,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="tasks_controller"></a>TasksController
+## <a name="tasks_controller"></a>![Class: ](http://apidocs.io/img/java/class.png) TasksController
 
 #### Get controller instance
 The instance of the ``` TasksController ``` class can be created using the constructor.
