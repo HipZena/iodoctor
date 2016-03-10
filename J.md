@@ -25,8 +25,9 @@ AuthenticationController authentication = new AuthenticationController();
 > This endpoints is responsible f or login user by providing username and password paylow
 
 ```java
-User login(final String email,
-           final String password)
+User login(
+        final String email,
+        final String password)
 ```
 
 #### Parameters: 
@@ -66,7 +67,8 @@ try {
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
 ```java
-User profileUpdateFull(final User user)
+User profileUpdateFull(
+        final User user)
 ```
 
 #### Parameters: 
@@ -104,7 +106,8 @@ try {
 > This endpoints is responsible f or partial update of prof ile of the logged in user. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead. You can supply here only f ields that got changed instead of FULL body of the entity (as in PUT method)
 
 ```java
-User profileUpdatePartial(final User user)
+User profileUpdatePartial(
+        final User user)
 ```
 
 #### Parameters: 
@@ -144,7 +147,8 @@ try {
 > This endpoints is responsible f or registering a new account
 
 ```java
-User register(final User user)
+User register(
+        final User user)
 ```
 
 #### Parameters: 
@@ -208,8 +212,9 @@ try {
 > This endpoints is responsible f or changing email of the user
 
 ```java
-String changeEmail(final String currentPassword,
-                   final String newEmail)
+String changeEmail(
+        final String currentPassword,
+        final String newEmail)
 ```
 
 #### Parameters: 
@@ -249,8 +254,9 @@ try {
 > This endpoints is responsible for changing user's password
 
 ```java
-String changePassword(final String currentPassword,
-                      final String newPassword)
+String changePassword(
+        final String currentPassword,
+        final String newPassword)
 ```
 
 #### Parameters: 
@@ -292,7 +298,8 @@ try {
 > This endpoints is responsible f or sending email with unique link to reset the password. Should be used on forgot password screen of the app
 
 ```java
-String resetPassword(final Object email)
+String resetPassword(
+        final Object email)
 ```
 
 #### Parameters: 
@@ -367,7 +374,8 @@ TasksController tasks = new TasksController();
 > TODO: Add a method description
 
 ```java
-TasksResponse searchTasks(Map<String, Object> queryParameters)
+TasksResponse searchTasks(
+        Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -381,8 +389,7 @@ TasksResponse searchTasks(Map<String, Object> queryParameters)
 #### Example Usage:
 ```java
 try {
-// key-value map for optional query parameters
-var queryParams = new Dictionary<string, object>();
+    // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
 
     TasksResponse result = tasks.searchTasks(queryParams);
 } catch(IOException e) {
@@ -403,7 +410,8 @@ var queryParams = new Dictionary<string, object>();
 > TODO: Add a method description
 
 ```java
-TasksResponse myTasks(Map<String, Object> queryParameters)
+TasksResponse myTasks(
+        Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -417,8 +425,7 @@ TasksResponse myTasks(Map<String, Object> queryParameters)
 #### Example Usage:
 ```java
 try {
-// key-value map for optional query parameters
-var queryParams = new Dictionary<string, object>();
+    // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
 
     TasksResponse result = tasks.myTasks(queryParams);
 } catch(IOException e) {
@@ -439,7 +446,8 @@ var queryParams = new Dictionary<string, object>();
 > This endpoints is responsible f or adding a new task to the system
 
 ```java
-Task createTask(final TaskRequest task)
+Task createTask(
+        final TaskRequest task)
 ```
 
 #### Parameters: 
@@ -479,7 +487,8 @@ try {
 > This endpoints is responsible for getting details about given task
 
 ```java
-Task task(final int taskID)
+Task task(
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -493,7 +502,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -514,8 +523,9 @@ try {
 > This endpoints is responsible for updating task details. Only admin or poster of the task can call this method
 
 ```java
-Task updateTaskFull(final TaskRequest task,
-                    final int taskID)
+Task updateTaskFull(
+        final TaskRequest task,
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -531,7 +541,7 @@ Task updateTaskFull(final TaskRequest task,
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -555,8 +565,9 @@ try {
 > This endpoints is responsible for partial update of task resource
 
 ```java
-Task taskUpdatePartial(final TaskRequest task,
-                       final int taskID)
+Task taskUpdatePartial(
+        final TaskRequest task,
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -572,7 +583,7 @@ Task taskUpdatePartial(final TaskRequest task,
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -596,7 +607,8 @@ try {
 > This endpoints is responsible for deleting the resource, use it to cancel the task. The record will not be physically deleted, but will be marked in db with status=X
 
 ```java
-Task deleteTask(final int taskID)
+Task deleteTask(
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -610,7 +622,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -640,7 +652,8 @@ WorkflowController workflow = new WorkflowController();
 > This endpoints is responsible f or the user to apply to the task. Poster can’t apply to his own task. Only 3 taskers are allowed per task.
 
 ```java
-Tasker taskApply(final int taskID)
+Tasker taskApply(
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -654,7 +667,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
 
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -675,8 +688,9 @@ try {
 > This endpoints is responsible f or approving one of available taskers and assigning the task to that user.
 
 ```java
-Tasker taskApprove(final int taskID,
-                   final Object userParams)
+Tasker taskApprove(
+        final int taskID,
+        final Object userParams)
 ```
 
 #### Parameters: 
@@ -691,7 +705,7 @@ Tasker taskApprove(final int taskID,
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
     Object userParams = new object();
 
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -716,7 +730,8 @@ try {
 > This endpoints is responsible f or submitting task to Done status, this endpoint should be called by assigned tasker of the Task
 
 ```java
-Task taskDone(final int taskID)
+Task taskDone(
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -730,7 +745,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -751,7 +766,8 @@ try {
 > This endpoints is responsible f or sending task to Completed status and should be called by poster of the task
 
 ```java
-Task taskComplete(final int taskID)
+Task taskComplete(
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -765,7 +781,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -786,8 +802,9 @@ try {
 > This endpoints is responsible f or sending task to dispute status. It can be done by only poster or tasker of the task.
 
 ```java
-Task taskDispute(final Object disputeParams,
-                 final int taskID)
+Task taskDispute(
+        final Object disputeParams,
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -803,7 +820,7 @@ Task taskDispute(final Object disputeParams,
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 23;
+    int taskID = 86;
 
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -827,8 +844,9 @@ try {
 > This endpoints is responsible f or marking any task with violation f lag.
 
 ```java
-ViolationModel taskViolation(final int taskID,
-                             final ViolationModel violation)
+ViolationModel taskViolation(
+        final int taskID,
+        final ViolationModel violation)
 ```
 
 #### Parameters: 
@@ -843,7 +861,7 @@ ViolationModel taskViolation(final int taskID,
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
     ViolationModel violation = new ViolationModel();
 
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -868,8 +886,9 @@ try {
 > This endpoints is responsible f or reopening the task by Poster, once it got DONE status as a result of POST /tasks/ID/done call.
 
 ```java
-LinkedHashMap<String, Object> taskReopen(final Object descriptionParams,
-                                         final int taskID)
+LinkedHashMap<String, Object> taskReopen(
+        final Object descriptionParams,
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -885,7 +904,7 @@ LinkedHashMap<String, Object> taskReopen(final Object descriptionParams,
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 23;
+    int taskID = 86;
 
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -909,7 +928,8 @@ try {
 > This endpoints is responsible for quitting the task and should be called by assigned Tasker of the task If you're not approved (*but applied) - this will remove the user from applied list of taskers
 
 ```java
-String taskWithdraw(final int taskID)
+String taskWithdraw(
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -923,7 +943,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
 
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -955,7 +975,8 @@ CategoriesController categories = new CategoriesController();
 > This endpoints is responsible f or getting list of categories
 
 ```java
-CategoriesResponse categories(Map<String, Object> queryParameters)
+CategoriesResponse categories(
+        Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -969,8 +990,7 @@ CategoriesResponse categories(Map<String, Object> queryParameters)
 #### Example Usage:
 ```java
 try {
-// key-value map for optional query parameters
-var queryParams = new Dictionary<string, object>();
+    // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
 
     CategoriesResponse result = categories.categories(queryParams);
 } catch(IOException e) {
@@ -993,7 +1013,8 @@ var queryParams = new Dictionary<string, object>();
 > TODO: Add a method description
 
 ```java
-TagsResponse tags(Map<String, Object> queryParameters)
+TagsResponse tags(
+        Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1007,8 +1028,7 @@ TagsResponse tags(Map<String, Object> queryParameters)
 #### Example Usage:
 ```java
 try {
-// key-value map for optional query parameters
-var queryParams = new Dictionary<string, object>();
+    // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
 
     TagsResponse result = categories.tags(queryParams);
 } catch(IOException e) {
@@ -1038,7 +1058,8 @@ UsersController users = new UsersController();
 > 1. limit :=_int_ (pagination records per request)  2. offset :=_int_ (pagination skip records)  3. ordering := [date_joined] (fields to sort by results)  4. search :=_str_ (search by keyword through fields: skills, fist_name, last_name)  5. filter fields 	 6. gender := _str_ (filter by gender, F/M)
 
 ```java
-UsersResponse users(Map<String, Object> queryParameters)
+UsersResponse users(
+        Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1052,8 +1073,7 @@ UsersResponse users(Map<String, Object> queryParameters)
 #### Example Usage:
 ```java
 try {
-// key-value map for optional query parameters
-var queryParams = new Dictionary<string, object>();
+    // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
 
     UsersResponse result = users.users(queryParams);
 } catch(IOException e) {
@@ -1074,7 +1094,8 @@ var queryParams = new Dictionary<string, object>();
 > This endpoints is responsible for profile's detailed information
 
 ```java
-User user(final int userID)
+User user(
+        final int userID)
 ```
 
 #### Parameters: 
@@ -1088,7 +1109,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 23;
+    int userID = 86;
 
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1118,8 +1139,9 @@ ImagesController images = new ImagesController();
 > This endpoints is responsible for getting list of images for the task
 
 ```java
-ImagesResponse images(final int taskID,
-                      Map<String, Object> queryParameters)
+ImagesResponse images(
+        final int taskID,
+        Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1134,9 +1156,8 @@ ImagesResponse images(final int taskID,
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
-// key-value map for optional query parameters
-var queryParams = new Dictionary<string, object>();
+    int taskID = 86;
+    // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
 
     ImagesResponse result = images.images(taskID, queryParams);
 } catch(IOException e) {
@@ -1157,8 +1178,9 @@ var queryParams = new Dictionary<string, object>();
 > This endpoints is responsible for adding images to the task, only poster or tasker of the task can add images. You can add images as soon as task is one of O/P/R [status](#statuses). If task is in different status (and therefore non updateable) the endpoint will generate error
 
 ```java
-ImageCreated addImage(final int taskID,
-                      final File upload)
+ImageCreated addImage(
+        final int taskID,
+        final File upload)
 ```
 
 #### Parameters: 
@@ -1173,7 +1195,7 @@ ImageCreated addImage(final int taskID,
 #### Example Usage:
 ```java
 try {
-    int taskID = 23;
+    int taskID = 86;
     File upload = null;
 
     ImageCreated result = images.addImage(taskID, upload);
@@ -1195,8 +1217,9 @@ try {
 > This endpoints is responsible for deleting given image (secondary ID) from the task
 
 ```java
-String deleteImage(final int imageID,
-                   final int taskID)
+String deleteImage(
+        final int imageID,
+        final int taskID)
 ```
 
 #### Parameters: 
@@ -1211,8 +1234,8 @@ String deleteImage(final int imageID,
 #### Example Usage:
 ```java
 try {
-    int imageID = 23;
-    int taskID = 23;
+    int imageID = 86;
+    int taskID = 86;
 
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
@@ -1242,7 +1265,8 @@ DevicesController devices = new DevicesController();
 > This endpoints is responsible for adding new mobile device token
 
 ```java
-APNSDevice registerDevice(final APNSDevice info)
+APNSDevice registerDevice(
+        final APNSDevice info)
 ```
 
 #### Parameters: 
