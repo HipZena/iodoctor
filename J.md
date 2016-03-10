@@ -10,7 +10,7 @@
 * [ImagesController](#images_controller)
 * [DevicesController](#devices_controller)
 
-## <a name="authentication_controller"></a>AuthenticationController
+## <a name="authentication_controller"></a>[Class: ](http://apidocs.io/img/class.png)AuthenticationController
 
 #### Get controller instance
 The instance of the ``` AuthenticationController ``` class can be created using the constructor.
@@ -18,7 +18,7 @@ The instance of the ``` AuthenticationController ``` class can be created using 
 AuthenticationController authentication = new AuthenticationController();
 ```
 
-### <a name="login"></a>*Method:* login
+### <a name="login"></a>[Method: ](http://apidocs.io/img/method.png)login
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -62,7 +62,7 @@ try {
 
 
 
-### <a name="profile_update_full"></a>*Method:* profileUpdateFull
+### <a name="profile_update_full"></a>[Method: ](http://apidocs.io/img/method.png)profileUpdateFull
 
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
@@ -100,7 +100,7 @@ try {
 
 
 
-### <a name="profile_update_partial"></a>profileUpdatePartial
+### <a name="profile_update_partial"></a>[Method: ](http://apidocs.io/img/method.png)profileUpdatePartial
 
 > This endpoints is responsible f or partial update of prof ile of the logged in user. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead. You can supply here only f ields that got changed instead of FULL body of the entity (as in PUT method)
 
@@ -178,7 +178,7 @@ try {
 
 
 
-### <a name="profile"></a>profile
+### <a name="profile"></a>[Method: ](http://apidocs.io/img/method.png)profile
 
 > This endpoints is responsible f or detailed prof ile inf ormation of the logged in user
 
@@ -204,7 +204,7 @@ try {
 
 
 
-### <a name="change_email"></a>changeEmail
+### <a name="change_email"></a>[Method: ](http://apidocs.io/img/method.png)changeEmail
 
 > This endpoints is responsible f or changing email of the user
 
@@ -246,7 +246,7 @@ try {
 
 
 
-### <a name="change_password"></a>changePassword
+### <a name="change_password"></a>[Method: ](http://apidocs.io/img/method.png)changePassword
 
 > This endpoints is responsible for changing user's password
 
