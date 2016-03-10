@@ -504,7 +504,7 @@ Task task(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -543,7 +543,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -585,7 +585,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -624,7 +624,7 @@ Task deleteTask(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -669,7 +669,7 @@ Tasker taskApply(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -707,7 +707,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
     Object userParams = new object();
 
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -747,7 +747,7 @@ Task taskDone(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -783,7 +783,7 @@ Task taskComplete(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -822,7 +822,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 107;
+    int taskID = 136;
 
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -863,7 +863,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
     ViolationModel violation = new ViolationModel();
 
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -906,7 +906,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 107;
+    int taskID = 136;
 
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -945,7 +945,7 @@ String taskWithdraw(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1114,7 +1114,7 @@ User user(
 #### Example Usage:
 ```java
 try {
-    int userID = 107;
+    int userID = 136;
 
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1161,7 +1161,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1201,7 +1201,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 107;
+    int taskID = 136;
     File upload = null;
 
     ImageCreated result = images.addImage(taskID, upload);
@@ -1240,8 +1240,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 107;
-    int taskID = 107;
+    int imageID = 136;
+    int taskID = 136;
 
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
