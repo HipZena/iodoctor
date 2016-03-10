@@ -10,7 +10,7 @@
 * [ImagesController](#images_controller)
 * [DevicesController](#devices_controller)
 
-## <a name="authentication_controller"></a>![Class: ](http://apidocs.io/img/java/class.png) AuthenticationController
+## <a name="authentication_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.AuthenticationController") AuthenticationController
 
 #### Get controller instance
 The instance of the ``` AuthenticationController ``` class can be created using the constructor.
