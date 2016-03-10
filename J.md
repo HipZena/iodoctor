@@ -44,7 +44,7 @@ User login(
 try {
     String email = "email";
     String password = "password";
-
+    // Invoking the API call with sample inputs
     User result = authentication.login(email, password);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -83,7 +83,7 @@ User profileUpdateFull(
 ```java
 try {
     User user = new User();
-
+    // Invoking the API call with sample inputs
     User result = authentication.profileUpdateFull(user);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -122,7 +122,7 @@ User profileUpdatePartial(
 ```java
 try {
     User user = new User();
-
+    // Invoking the API call with sample inputs
     User result = authentication.profileUpdatePartial(user);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -163,7 +163,7 @@ User register(
 ```java
 try {
     User user = new User();
-
+    // Invoking the API call with sample inputs
     User result = authentication.register(user);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -192,7 +192,7 @@ User profile()
 #### Example Usage:
 ```java
 try {
-
+    // Invoking the API call with sample inputs
     User result = authentication.profile();
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -231,7 +231,7 @@ String changeEmail(
 try {
     String currentPassword = "current_password";
     String newEmail = "new_email";
-
+    // Invoking the API call with sample inputs
     String result = authentication.changeEmail(currentPassword, newEmail);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -273,7 +273,7 @@ String changePassword(
 try {
     String currentPassword = "current_password";
     String newPassword = "new_password";
-
+    // Invoking the API call with sample inputs
     String result = authentication.changePassword(currentPassword, newPassword);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -314,7 +314,7 @@ String resetPassword(
 ```java
 try {
     Object email = new object();
-
+    // Invoking the API call with sample inputs
     String result = authentication.resetPassword(email);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -343,7 +343,7 @@ String logout()
 #### Example Usage:
 ```java
 try {
-
+    // Invoking the API call with sample inputs
     String result = authentication.logout();
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -390,7 +390,7 @@ TasksResponse searchTasks(
 ```java
 try {
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
-
+    // Invoking the API call with sample inputs
     TasksResponse result = tasks.searchTasks(queryParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -426,7 +426,7 @@ TasksResponse myTasks(
 ```java
 try {
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
-
+    // Invoking the API call with sample inputs
     TasksResponse result = tasks.myTasks(queryParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -462,7 +462,7 @@ Task createTask(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-
+    // Invoking the API call with sample inputs
     Task result = tasks.createTask(task);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -502,8 +502,8 @@ Task task(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -541,8 +541,8 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -583,8 +583,8 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -622,8 +622,8 @@ Task deleteTask(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -667,8 +667,8 @@ Tasker taskApply(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -705,9 +705,9 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
+    int taskID = 159;
     Object userParams = new object();
-
+    // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -745,8 +745,8 @@ Task taskDone(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -781,8 +781,8 @@ Task taskComplete(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -820,8 +820,8 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -861,9 +861,9 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
+    int taskID = 159;
     ViolationModel violation = new ViolationModel();
-
+    // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -904,8 +904,8 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -943,8 +943,8 @@ String taskWithdraw(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
-
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -991,7 +991,7 @@ CategoriesResponse categories(
 ```java
 try {
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
-
+    // Invoking the API call with sample inputs
     CategoriesResponse result = categories.categories(queryParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1029,7 +1029,7 @@ TagsResponse tags(
 ```java
 try {
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
-
+    // Invoking the API call with sample inputs
     TagsResponse result = categories.tags(queryParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1074,7 +1074,7 @@ UsersResponse users(
 ```java
 try {
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
-
+    // Invoking the API call with sample inputs
     UsersResponse result = users.users(queryParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1109,8 +1109,8 @@ User user(
 #### Example Usage:
 ```java
 try {
-    int userID = 86;
-
+    int userID = 159;
+    // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1156,9 +1156,9 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
+    int taskID = 159;
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
-
+    // Invoking the API call with sample inputs
     ImagesResponse result = images.images(taskID, queryParams);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1195,9 +1195,9 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 86;
+    int taskID = 159;
     File upload = null;
-
+    // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1234,9 +1234,9 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 86;
-    int taskID = 86;
-
+    int imageID = 159;
+    int taskID = 159;
+    // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
     // TODO Auto-generated catch block
@@ -1281,7 +1281,7 @@ APNSDevice registerDevice(
 ```java
 try {
     APNSDevice info = new APNSDevice();
-
+    // Invoking the API call with sample inputs
     APNSDevice result = devices.registerDevice(info);
 } catch(IOException e) {
     // TODO Auto-generated catch block
