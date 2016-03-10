@@ -26,8 +26,8 @@ AuthenticationController authentication = new AuthenticationController();
 
 ```java
 User login(
-            final String email,
-            final String password)
+              final String email,
+              final String password)
 ```
 
 #### Parameters: 
@@ -68,7 +68,7 @@ try {
 
 ```java
 User profileUpdateFull(
-            final User user)
+                          final User user)
 ```
 
 #### Parameters: 
@@ -107,7 +107,7 @@ try {
 
 ```java
 User profileUpdatePartial(
-            final User user)
+                             final User user)
 ```
 
 #### Parameters: 
@@ -148,7 +148,7 @@ try {
 
 ```java
 User register(
-            final User user)
+                 final User user)
 ```
 
 #### Parameters: 
@@ -213,8 +213,8 @@ try {
 
 ```java
 String changeEmail(
-            final String currentPassword,
-            final String newEmail)
+                      final String currentPassword,
+                      final String newEmail)
 ```
 
 #### Parameters: 
@@ -255,8 +255,8 @@ try {
 
 ```java
 String changePassword(
-            final String currentPassword,
-            final String newPassword)
+                         final String currentPassword,
+                         final String newPassword)
 ```
 
 #### Parameters: 
@@ -299,7 +299,7 @@ try {
 
 ```java
 String resetPassword(
-            final Object email)
+                        final Object email)
 ```
 
 #### Parameters: 
@@ -375,7 +375,7 @@ TasksController tasks = new TasksController();
 
 ```java
 TasksResponse searchTasks(
-            Map<String, Object> queryParameters)
+                             Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -412,7 +412,7 @@ var queryParams = new Dictionary<string, object>();
 
 ```java
 TasksResponse myTasks(
-            Map<String, Object> queryParameters)
+                         Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -449,7 +449,7 @@ var queryParams = new Dictionary<string, object>();
 
 ```java
 Task createTask(
-            final TaskRequest task)
+                   final TaskRequest task)
 ```
 
 #### Parameters: 
@@ -490,7 +490,7 @@ try {
 
 ```java
 Task task(
-            final int taskID)
+             final int taskID)
 ```
 
 #### Parameters: 
@@ -504,7 +504,7 @@ Task task(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -526,8 +526,8 @@ try {
 
 ```java
 Task updateTaskFull(
-            final TaskRequest task,
-            final int taskID)
+                       final TaskRequest task,
+                       final int taskID)
 ```
 
 #### Parameters: 
@@ -543,7 +543,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -568,8 +568,8 @@ try {
 
 ```java
 Task taskUpdatePartial(
-            final TaskRequest task,
-            final int taskID)
+                          final TaskRequest task,
+                          final int taskID)
 ```
 
 #### Parameters: 
@@ -585,7 +585,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -610,7 +610,7 @@ try {
 
 ```java
 Task deleteTask(
-            final int taskID)
+                   final int taskID)
 ```
 
 #### Parameters: 
@@ -624,7 +624,7 @@ Task deleteTask(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -655,7 +655,7 @@ WorkflowController workflow = new WorkflowController();
 
 ```java
 Tasker taskApply(
-            final int taskID)
+                    final int taskID)
 ```
 
 #### Parameters: 
@@ -669,7 +669,7 @@ Tasker taskApply(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -691,8 +691,8 @@ try {
 
 ```java
 Tasker taskApprove(
-            final int taskID,
-            final Object userParams)
+                      final int taskID,
+                      final Object userParams)
 ```
 
 #### Parameters: 
@@ -707,7 +707,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
     Object userParams = new object();
 
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -733,7 +733,7 @@ try {
 
 ```java
 Task taskDone(
-            final int taskID)
+                 final int taskID)
 ```
 
 #### Parameters: 
@@ -747,7 +747,7 @@ Task taskDone(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -769,7 +769,7 @@ try {
 
 ```java
 Task taskComplete(
-            final int taskID)
+                     final int taskID)
 ```
 
 #### Parameters: 
@@ -783,7 +783,7 @@ Task taskComplete(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -805,8 +805,8 @@ try {
 
 ```java
 Task taskDispute(
-            final Object disputeParams,
-            final int taskID)
+                    final Object disputeParams,
+                    final int taskID)
 ```
 
 #### Parameters: 
@@ -822,7 +822,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 136;
+    int taskID = 4;
 
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -847,8 +847,8 @@ try {
 
 ```java
 ViolationModel taskViolation(
-            final int taskID,
-            final ViolationModel violation)
+                                final int taskID,
+                                final ViolationModel violation)
 ```
 
 #### Parameters: 
@@ -863,7 +863,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
     ViolationModel violation = new ViolationModel();
 
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -889,8 +889,8 @@ try {
 
 ```java
 LinkedHashMap<String, Object> taskReopen(
-            final Object descriptionParams,
-            final int taskID)
+                                            final Object descriptionParams,
+                                            final int taskID)
 ```
 
 #### Parameters: 
@@ -906,7 +906,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 136;
+    int taskID = 4;
 
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -931,7 +931,7 @@ try {
 
 ```java
 String taskWithdraw(
-            final int taskID)
+                       final int taskID)
 ```
 
 #### Parameters: 
@@ -945,7 +945,7 @@ String taskWithdraw(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -978,7 +978,7 @@ CategoriesController categories = new CategoriesController();
 
 ```java
 CategoriesResponse categories(
-            Map<String, Object> queryParameters)
+                                 Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1017,7 +1017,7 @@ var queryParams = new Dictionary<string, object>();
 
 ```java
 TagsResponse tags(
-            Map<String, Object> queryParameters)
+                     Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1063,7 +1063,7 @@ UsersController users = new UsersController();
 
 ```java
 UsersResponse users(
-            Map<String, Object> queryParameters)
+                       Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1100,7 +1100,7 @@ var queryParams = new Dictionary<string, object>();
 
 ```java
 User user(
-            final int userID)
+             final int userID)
 ```
 
 #### Parameters: 
@@ -1114,7 +1114,7 @@ User user(
 #### Example Usage:
 ```java
 try {
-    int userID = 136;
+    int userID = 4;
 
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1145,8 +1145,8 @@ ImagesController images = new ImagesController();
 
 ```java
 ImagesResponse images(
-            final int taskID,
-            Map<String, Object> queryParameters)
+                         final int taskID,
+                         Map<String, Object> queryParameters)
 ```
 
 #### Parameters: 
@@ -1161,7 +1161,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
@@ -1185,8 +1185,8 @@ var queryParams = new Dictionary<string, object>();
 
 ```java
 ImageCreated addImage(
-            final int taskID,
-            final File upload)
+                         final int taskID,
+                         final File upload)
 ```
 
 #### Parameters: 
@@ -1201,7 +1201,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 136;
+    int taskID = 4;
     File upload = null;
 
     ImageCreated result = images.addImage(taskID, upload);
@@ -1224,8 +1224,8 @@ try {
 
 ```java
 String deleteImage(
-            final int imageID,
-            final int taskID)
+                      final int imageID,
+                      final int taskID)
 ```
 
 #### Parameters: 
@@ -1240,8 +1240,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 136;
-    int taskID = 136;
+    int imageID = 4;
+    int taskID = 4;
 
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
@@ -1272,7 +1272,7 @@ DevicesController devices = new DevicesController();
 
 ```java
 APNSDevice registerDevice(
-            final APNSDevice info)
+                             final APNSDevice info)
 ```
 
 #### Parameters: 
