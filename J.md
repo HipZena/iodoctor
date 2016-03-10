@@ -67,8 +67,7 @@ try {
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
 ```java
-User profileUpdateFull(
-        final User user)
+User profileUpdateFull(final User user)
 ```
 
 #### Parameters: 
@@ -106,8 +105,7 @@ try {
 > This endpoints is responsible f or partial update of prof ile of the logged in user. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead. You can supply here only f ields that got changed instead of FULL body of the entity (as in PUT method)
 
 ```java
-User profileUpdatePartial(
-        final User user)
+User profileUpdatePartial(final User user)
 ```
 
 #### Parameters: 
@@ -147,8 +145,7 @@ try {
 > This endpoints is responsible f or registering a new account
 
 ```java
-User register(
-        final User user)
+User register(final User user)
 ```
 
 #### Parameters: 
@@ -298,8 +295,7 @@ try {
 > This endpoints is responsible f or sending email with unique link to reset the password. Should be used on forgot password screen of the app
 
 ```java
-String resetPassword(
-        final Object email)
+String resetPassword(final Object email)
 ```
 
 #### Parameters: 
@@ -446,8 +442,7 @@ try {
 > This endpoints is responsible f or adding a new task to the system
 
 ```java
-Task createTask(
-        final TaskRequest task)
+Task createTask(final TaskRequest task)
 ```
 
 #### Parameters: 
@@ -487,8 +482,7 @@ try {
 > This endpoints is responsible for getting details about given task
 
 ```java
-Task task(
-        final int taskID)
+Task task(final int taskID)
 ```
 
 #### Parameters: 
@@ -502,7 +496,7 @@ Task task(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -541,7 +535,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -583,7 +577,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -607,8 +601,7 @@ try {
 > This endpoints is responsible for deleting the resource, use it to cancel the task. The record will not be physically deleted, but will be marked in db with status=X
 
 ```java
-Task deleteTask(
-        final int taskID)
+Task deleteTask(final int taskID)
 ```
 
 #### Parameters: 
@@ -622,7 +615,7 @@ Task deleteTask(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -652,8 +645,7 @@ WorkflowController workflow = new WorkflowController();
 > This endpoints is responsible f or the user to apply to the task. Poster can’t apply to his own task. Only 3 taskers are allowed per task.
 
 ```java
-Tasker taskApply(
-        final int taskID)
+Tasker taskApply(final int taskID)
 ```
 
 #### Parameters: 
@@ -667,7 +659,7 @@ Tasker taskApply(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -705,7 +697,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -730,8 +722,7 @@ try {
 > This endpoints is responsible f or submitting task to Done status, this endpoint should be called by assigned tasker of the Task
 
 ```java
-Task taskDone(
-        final int taskID)
+Task taskDone(final int taskID)
 ```
 
 #### Parameters: 
@@ -745,7 +736,7 @@ Task taskDone(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -766,8 +757,7 @@ try {
 > This endpoints is responsible f or sending task to Completed status and should be called by poster of the task
 
 ```java
-Task taskComplete(
-        final int taskID)
+Task taskComplete(final int taskID)
 ```
 
 #### Parameters: 
@@ -781,7 +771,7 @@ Task taskComplete(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -820,7 +810,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -861,7 +851,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -904,7 +894,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -928,8 +918,7 @@ try {
 > This endpoints is responsible for quitting the task and should be called by assigned Tasker of the task If you're not approved (*but applied) - this will remove the user from applied list of taskers
 
 ```java
-String taskWithdraw(
-        final int taskID)
+String taskWithdraw(final int taskID)
 ```
 
 #### Parameters: 
@@ -943,7 +932,7 @@ String taskWithdraw(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1094,8 +1083,7 @@ try {
 > This endpoints is responsible for profile's detailed information
 
 ```java
-User user(
-        final int userID)
+User user(final int userID)
 ```
 
 #### Parameters: 
@@ -1109,7 +1097,7 @@ User user(
 #### Example Usage:
 ```java
 try {
-    int userID = 159;
+    int userID = 239;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1156,7 +1144,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
     ImagesResponse result = images.images(taskID, queryParams);
@@ -1195,7 +1183,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 159;
+    int taskID = 239;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1234,8 +1222,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 159;
-    int taskID = 159;
+    int imageID = 239;
+    int taskID = 239;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
@@ -1265,8 +1253,7 @@ DevicesController devices = new DevicesController();
 > This endpoints is responsible for adding new mobile device token
 
 ```java
-APNSDevice registerDevice(
-        final APNSDevice info)
+APNSDevice registerDevice(final APNSDevice info)
 ```
 
 #### Parameters: 
