@@ -18,7 +18,7 @@ The instance of the ``` AuthenticationController ``` class can be created using 
 AuthenticationController authentication = new AuthenticationController();
 ```
 
-### <a name="login"></a>**Method:** *login*
+### <a name="login"></a>*Method:* login
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -62,7 +62,7 @@ try {
 
 
 
-### <a name="profile_update_full"></a>profileUpdateFull
+### <a name="profile_update_full"></a>*Method:* profileUpdateFull
 
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
