@@ -18,7 +18,7 @@ The instance of the ``` AuthenticationController ``` class can be created using 
 AuthenticationController authentication = new AuthenticationController();
 ```
 
-### <a name="login"></a>Method: *login*
+### <a name="login"></a>**Method:** *login*
 
 > *Tags:*  ``` Skips Authentication ``` 
 
