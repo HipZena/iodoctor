@@ -18,7 +18,7 @@ The instance of the ``` AuthenticationController ``` class can be created using 
 AuthenticationController authentication = new AuthenticationController();
 ```
 
-### <a name="login"></a>![Method: ](http://apidocs.io/img/java/method.png) login
+### <a name="login"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") login
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -62,7 +62,7 @@ try {
 
 
 
-### <a name="profile_update_full"></a>![Method: ](http://apidocs.io/img/java/method.png) profileUpdateFull
+### <a name="profile_update_full"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") profileUpdateFull
 
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
@@ -100,7 +100,7 @@ try {
 
 
 
-### <a name="profile_update_partial"></a>![Method: ](http://apidocs.io/img/java/method.png) profileUpdatePartial
+### <a name="profile_update_partial"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") profileUpdatePartial
 
 > This endpoints is responsible f or partial update of prof ile of the logged in user. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead. You can supply here only f ields that got changed instead of FULL body of the entity (as in PUT method)
 
@@ -138,7 +138,7 @@ try {
 
 
 
-### <a name="register"></a>![Method: ](http://apidocs.io/img/java/method.png) register
+### <a name="register"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") register
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -178,7 +178,7 @@ try {
 
 
 
-### <a name="profile"></a>![Method: ](http://apidocs.io/img/java/method.png) profile
+### <a name="profile"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") profile
 
 > This endpoints is responsible f or detailed prof ile inf ormation of the logged in user
 
@@ -204,7 +204,7 @@ try {
 
 
 
-### <a name="change_email"></a>![Method: ](http://apidocs.io/img/method.png) changeEmail
+### <a name="change_email"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") changeEmail
 
 > This endpoints is responsible f or changing email of the user
 
@@ -246,7 +246,7 @@ try {
 
 
 
-### <a name="change_password"></a>![Method: ](http://apidocs.io/img/method.png) changePassword
+### <a name="change_password"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") changePassword
 
 > This endpoints is responsible for changing user's password
 
@@ -288,7 +288,7 @@ try {
 
 
 
-### <a name="reset_password"></a>![Method: ](http://apidocs.io/img/java/method.png) resetPassword
+### <a name="reset_password"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") resetPassword
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -328,7 +328,7 @@ try {
 
 
 
-### <a name="logout"></a>![Method: ](http://apidocs.io/img/java/method.png) logout
+### <a name="logout"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.AuthenticationController") logout
 
 > This endpoints is responsible to logout action of the app.
 
@@ -355,7 +355,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="tasks_controller"></a>![Class: ](http://apidocs.io/img/java/class.png) TasksController
+## <a name="tasks_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.TasksController") TasksController
 
 #### Get controller instance
 The instance of the ``` TasksController ``` class can be created using the constructor.
@@ -363,7 +363,7 @@ The instance of the ``` TasksController ``` class can be created using the const
 TasksController tasks = new TasksController();
 ```
 
-### <a name="search_tasks"></a>searchTasks
+### <a name="search_tasks"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") searchTasks
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -401,7 +401,7 @@ try {
 
 
 
-### <a name="my_tasks"></a>myTasks
+### <a name="my_tasks"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") myTasks
 
 > TODO: Add a method description
 
@@ -437,7 +437,7 @@ try {
 
 
 
-### <a name="create_task"></a>createTask
+### <a name="create_task"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") createTask
 
 > This endpoints is responsible f or adding a new task to the system
 
@@ -475,7 +475,7 @@ try {
 
 
 
-### <a name="task"></a>task
+### <a name="task"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") task
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -496,7 +496,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 143;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -512,7 +512,7 @@ try {
 
 
 
-### <a name="update_task_full"></a>updateTaskFull
+### <a name="update_task_full"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") updateTaskFull
 
 > This endpoints is responsible for updating task details. Only admin or poster of the task can call this method
 
@@ -535,7 +535,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -554,7 +554,7 @@ try {
 
 
 
-### <a name="task_update_partial"></a>taskUpdatePartial
+### <a name="task_update_partial"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") taskUpdatePartial
 
 > This endpoints is responsible for partial update of task resource
 
@@ -577,7 +577,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -596,7 +596,7 @@ try {
 
 
 
-### <a name="delete_task"></a>deleteTask
+### <a name="delete_task"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.TasksController") deleteTask
 
 > This endpoints is responsible for deleting the resource, use it to cancel the task. The record will not be physically deleted, but will be marked in db with status=X
 
@@ -615,7 +615,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -632,7 +632,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="workflow_controller"></a>WorkflowController
+## <a name="workflow_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.WorkflowController") WorkflowController
 
 #### Get controller instance
 The instance of the ``` WorkflowController ``` class can be created using the constructor.
@@ -640,7 +640,7 @@ The instance of the ``` WorkflowController ``` class can be created using the co
 WorkflowController workflow = new WorkflowController();
 ```
 
-### <a name="task_apply"></a>taskApply
+### <a name="task_apply"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskApply
 
 > This endpoints is responsible f or the user to apply to the task. Poster can’t apply to his own task. Only 3 taskers are allowed per task.
 
@@ -659,7 +659,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -675,7 +675,7 @@ try {
 
 
 
-### <a name="task_approve"></a>taskApprove
+### <a name="task_approve"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskApprove
 
 > This endpoints is responsible f or approving one of available taskers and assigning the task to that user.
 
@@ -697,7 +697,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -717,7 +717,7 @@ try {
 
 
 
-### <a name="task_done"></a>taskDone
+### <a name="task_done"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskDone
 
 > This endpoints is responsible f or submitting task to Done status, this endpoint should be called by assigned tasker of the Task
 
@@ -736,7 +736,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -752,7 +752,7 @@ try {
 
 
 
-### <a name="task_complete"></a>taskComplete
+### <a name="task_complete"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskComplete
 
 > This endpoints is responsible f or sending task to Completed status and should be called by poster of the task
 
@@ -771,7 +771,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -787,7 +787,7 @@ try {
 
 
 
-### <a name="task_dispute"></a>taskDispute
+### <a name="task_dispute"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskDispute
 
 > This endpoints is responsible f or sending task to dispute status. It can be done by only poster or tasker of the task.
 
@@ -810,7 +810,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -829,7 +829,7 @@ try {
 
 
 
-### <a name="task_violation"></a>taskViolation
+### <a name="task_violation"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskViolation
 
 > This endpoints is responsible f or marking any task with violation f lag.
 
@@ -851,7 +851,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -871,7 +871,7 @@ try {
 
 
 
-### <a name="task_reopen"></a>taskReopen
+### <a name="task_reopen"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskReopen
 
 > This endpoints is responsible f or reopening the task by Poster, once it got DONE status as a result of POST /tasks/ID/done call.
 
@@ -894,7 +894,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -913,7 +913,7 @@ try {
 
 
 
-### <a name="task_withdraw"></a>taskWithdraw
+### <a name="task_withdraw"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.WorkflowController") taskWithdraw
 
 > This endpoints is responsible for quitting the task and should be called by assigned Tasker of the task If you're not approved (*but applied) - this will remove the user from applied list of taskers
 
@@ -932,7 +932,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -949,7 +949,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="categories_controller"></a>CategoriesController
+## <a name="categories_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.CategoriesController") CategoriesController
 
 #### Get controller instance
 The instance of the ``` CategoriesController ``` class can be created using the constructor.
@@ -957,7 +957,7 @@ The instance of the ``` CategoriesController ``` class can be created using the 
 CategoriesController categories = new CategoriesController();
 ```
 
-### <a name="categories"></a>categories
+### <a name="categories"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.CategoriesController") categories
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -995,7 +995,7 @@ try {
 
 
 
-### <a name="tags"></a>tags
+### <a name="tags"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.CategoriesController") tags
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1034,7 +1034,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="users_controller"></a>UsersController
+## <a name="users_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.UsersController") UsersController
 
 #### Get controller instance
 The instance of the ``` UsersController ``` class can be created using the constructor.
@@ -1042,7 +1042,7 @@ The instance of the ``` UsersController ``` class can be created using the const
 UsersController users = new UsersController();
 ```
 
-### <a name="users"></a>users
+### <a name="users"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.UsersController") users
 
 > 1. limit :=_int_ (pagination records per request)  2. offset :=_int_ (pagination skip records)  3. ordering := [date_joined] (fields to sort by results)  4. search :=_str_ (search by keyword through fields: skills, fist_name, last_name)  5. filter fields 	 6. gender := _str_ (filter by gender, F/M)
 
@@ -1078,7 +1078,7 @@ try {
 
 
 
-### <a name="user"></a>user
+### <a name="user"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.UsersController") user
 
 > This endpoints is responsible for profile's detailed information
 
@@ -1097,7 +1097,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 239;
+    int userID = 102;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1114,7 +1114,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="images_controller"></a>ImagesController
+## <a name="images_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.ImagesController") ImagesController
 
 #### Get controller instance
 The instance of the ``` ImagesController ``` class can be created using the constructor.
@@ -1122,7 +1122,7 @@ The instance of the ``` ImagesController ``` class can be created using the cons
 ImagesController images = new ImagesController();
 ```
 
-### <a name="images"></a>images
+### <a name="images"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.ImagesController") images
 
 > This endpoints is responsible for getting list of images for the task
 
@@ -1144,7 +1144,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
     ImagesResponse result = images.images(taskID, queryParams);
@@ -1161,7 +1161,7 @@ try {
 
 
 
-### <a name="add_image"></a>addImage
+### <a name="add_image"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.ImagesController") addImage
 
 > This endpoints is responsible for adding images to the task, only poster or tasker of the task can add images. You can add images as soon as task is one of O/P/R [status](#statuses). If task is in different status (and therefore non updateable) the endpoint will generate error
 
@@ -1183,7 +1183,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 239;
+    int taskID = 102;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1200,7 +1200,7 @@ try {
 
 
 
-### <a name="delete_image"></a>deleteImage
+### <a name="delete_image"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.ImagesController") deleteImage
 
 > This endpoints is responsible for deleting given image (secondary ID) from the task
 
@@ -1222,8 +1222,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 239;
-    int taskID = 239;
+    int imageID = 102;
+    int taskID = 102;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
@@ -1240,7 +1240,7 @@ try {
 
 
 [Back to List of Controllers](#list_of_controllers)
-## <a name="devices_controller"></a>DevicesController
+## <a name="devices_controller"></a>![Class: ](http://apidocs.io/img/java/class.png "com.example.controllers.DevicesController") DevicesController
 
 #### Get controller instance
 The instance of the ``` DevicesController ``` class can be created using the constructor.
@@ -1248,7 +1248,7 @@ The instance of the ``` DevicesController ``` class can be created using the con
 DevicesController devices = new DevicesController();
 ```
 
-### <a name="register_device"></a>registerDevice
+### <a name="register_device"></a>![Method: ](http://apidocs.io/img/java/method.png "com.example.controllers.DevicesController") registerDevice
 
 > This endpoints is responsible for adding new mobile device token
 
