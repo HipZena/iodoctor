@@ -1,3 +1,20 @@
+# Getting Started
+## How to Build
+
+The generated code uses a few Maven dependencies e.g., Jackson, UniRest,
+and Apache HttpClient. The reference to these dependencies is already
+added in the pom.xml file will be installed automatically. Therefore,
+you will need internet access for successful build.
+     
+In order to open the client library in Eclipse click on ``` File -> Import ```.
+
+![Importing SDK into Eclipse - Step 1](http://apidocs.io/illustration/java?step=import0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+In the import dialog, select ``` Existing Java Project ``` and click ``` Next ```.
+
+![Importing SDK into Eclipse - Step 2](http://apidocs.io/illustration/java?step=import1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+# Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AuthenticationController](#authentication_controller)
@@ -494,7 +511,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -533,7 +550,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -575,7 +592,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -613,7 +630,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -657,7 +674,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -695,7 +712,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -734,7 +751,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -769,7 +786,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -808,7 +825,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -849,7 +866,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -892,7 +909,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -930,7 +947,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1095,7 +1112,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 125;
+    int userID = 23;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1142,7 +1159,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     // key-value map for optional query parameters    var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
     ImagesResponse result = images.images(taskID, queryParams);
@@ -1181,7 +1198,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 125;
+    int taskID = 23;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1220,8 +1237,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 125;
-    int taskID = 125;
+    int imageID = 23;
+    int taskID = 23;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
