@@ -1,4 +1,3 @@
-# Getting Started
 # Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
 
