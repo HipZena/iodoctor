@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started!
 ## How to Build
 
 The generated code uses a few Maven dependencies e.g., Jackson, UniRest,
