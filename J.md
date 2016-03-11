@@ -1,18 +1,26 @@
-# Getting Started!
+# Getting Started
 ## How to Build
 
 The generated code uses a few Maven dependencies e.g., Jackson, UniRest,
 and Apache HttpClient. The reference to these dependencies is already
 added in the pom.xml file will be installed automatically. Therefore,
 you will need internet access for successful build.
-     
-In order to open the client library in Eclipse click on ``` File -> Import ```.
+
+    * In order to open the client library in Eclipse click on ``` File -> Import ```.
 
 ![Importing SDK into Eclipse - Step 1](http://apidocs.io/illustration/java?step=import0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-In the import dialog, select ``` Existing Java Project ``` and click ``` Next ```.
+    * In the import dialog, select ``` Existing Java Project ``` and click ``` Next ```.
 
 ![Importing SDK into Eclipse - Step 2](http://apidocs.io/illustration/java?step=import1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+    * Browse to locate the folder containing the source code. Select the detect location of the project and click ``` Next ```.
+
+![Importing SDK into Eclipse - Step 3](http://apidocs.io/illustration/java?step=import2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+    * Upon successful import, the project will be automatically built by Eclipse after automatically resolving the dependencies.
+
+![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=import3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
 # Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
