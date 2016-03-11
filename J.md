@@ -24,15 +24,15 @@ you will need internet access for successful build.
 
 ------------------
 
-![Creating a Test App in Eclipse - Step 1](http://apidocs.io/illustration/java?step=createProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+![Creating a Test App in Eclipse - Step 1](http://apidocs.io/illustration/java?step=createNewProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-![Creating a Test App in Eclipse - Step 2](http://apidocs.io/illustration/java?step=createProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+![Creating a Test App in Eclipse - Step 2](http://apidocs.io/illustration/java?step=createNewProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-![Creating a Test App in Eclipse - Step 3](http://apidocs.io/illustration/java?step=createProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+![Creating a Test App in Eclipse - Step 3](http://apidocs.io/illustration/java?step=createNewProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-![Creating a Test App in Eclipse - Step 4](http://apidocs.io/illustration/java?step=createProject3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+![Creating a Test App in Eclipse - Step 4](http://apidocs.io/illustration/java?step=createNewProject3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-![Creating a Test App in Eclipse - Step 5](http://apidocs.io/illustration/java?step=createProject4&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+![Creating a Test App in Eclipse - Step 5](http://apidocs.io/illustration/java?step=createNewProject4&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
 -------------------
 
