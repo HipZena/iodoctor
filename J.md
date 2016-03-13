@@ -14,6 +14,18 @@ you will need internet access for successful build.
 
 4. Upon successful import, the project will be automatically built by Eclipse after automatically resolving the dependencies. ![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=import3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
+## How to Use
+
+![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=createNewProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=createNewProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=createNewProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=createNewProject3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=createNewProject4&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
 # Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
 
