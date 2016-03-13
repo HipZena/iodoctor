@@ -22,6 +22,48 @@ you will need internet access for successful build.
 
 ![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=import3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
+## How to Use
+
+The following section explains how to use the SaritasaBMEAPI library in a new console project.     
+    
+#### 1. Starting a new project
+For starting a new project, click the menu commands ``` New > Project ```.
+
+![Add a new project in Eclipse](http://apidocs.io/illustration/java?step=createNewProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib)&rootNamespace=com.example)
+
+Next, choose ``` Maven > Maven Project ```and click ``` Next ```.
+
+![Create a new Maven Project - Step 1](http://apidocs.io/illustration/java?step=createNewProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+Here, make sure to use the current workspace by choosing ``` Use default Workspace location	```, as shown in the picture below and click ``` Next ```.
+
+![Create a new Maven Project - Step 2](http://apidocs.io/illustration/java?step=createNewProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+Following this, select the * quick start * project type to create a simple project with an existing class and a ``` main ``` method. To do this, choose ``` maven-archetype-quickstart ``` item from the list and click ``` Next ```.
+
+![Create a new Maven Project - Step 3](http://apidocs.io/illustration/java?step=createNewProject3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+In the last step, provide a ``` Group Id ``` an ``` Artifact Id `` as shown in the picture below and click ``` Finish ```.
+
+![Create a new Maven Project - Step 4](http://apidocs.io/illustration/java?step=createNewProject4&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+
+#### 2. Add reference of the library project
+In order to use the SaritasaBMEAPI library in the new project, first we must add a projet reference to the ``` TestConsoleProject ```. First, right click on the ``` References ``` node in the *solution explorer* and click ``` Add Reference... ```.
+
+![Open references of the TestConsoleProject](http://apidocs.io/illustration/cs?step=addReference&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib)
+
+Next, a window will be displayed where we must set the ``` checkbox ``` on ``` SaritasaBMEAPILib ``` and click ``` OK ```. By doing this, we have added a reference of the ```SaritasaBMEAPILib``` project into the new ``` TestConsoleProject ```.
+
+![Add a reference to the TestConsoleProject](http://apidocs.io/illustration/cs?step=createReference&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib)
+
+
+#### 4. Write sample code
+Once the ``` TestConsoleProject ``` is created, a file named ``` Program.cs ``` will be visible in the *solution explorer* with an empty ``` Main ``` method. This is the entry point for the execution of the entire solution.
+Here, you can add code to initialize the client library and acquire the instance of a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
+
+![Add a reference to the TestConsoleProject](http://apidocs.io/illustration/cs?step=addCode&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib)
+
 # Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
 
@@ -521,7 +563,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -560,7 +602,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -602,7 +644,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -640,7 +682,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -684,7 +726,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -722,7 +764,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -761,7 +803,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -796,7 +838,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -835,7 +877,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -876,7 +918,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -919,7 +961,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -957,7 +999,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1125,7 +1167,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 215;
+    int userID = 199;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1172,7 +1214,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     // key-value map for optional query parameters
     var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
@@ -1212,7 +1254,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 215;
+    int taskID = 199;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1251,8 +1293,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 215;
-    int taskID = 215;
+    int imageID = 199;
+    int taskID = 199;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
