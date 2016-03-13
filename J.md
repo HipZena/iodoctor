@@ -61,7 +61,7 @@ Clicking the ``` Add ``` button will open a dialog where you need to specify Sar
 Once the ``` SimpleConsoleApp ``` is created, a file named ``` App.java ``` will be visible in the *Package Explorer* with an empty ``` main ``` method. This is the entry point for the execution of the created project.
 Here, you can add code to initialize the client library and instanciate a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
 
-![Adding dependency to the client library - Step 2](http://apidocs.io/illustration/jav?step=testProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+![Adding dependency to the client library - Step 2](http://apidocs.io/illustration/java?step=testProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
 # Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
@@ -562,7 +562,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -601,7 +601,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -643,7 +643,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -681,7 +681,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -725,7 +725,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -763,7 +763,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -802,7 +802,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -837,7 +837,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -876,7 +876,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -917,7 +917,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -960,7 +960,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -998,7 +998,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1166,7 +1166,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 194;
+    int userID = 131;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1213,7 +1213,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     // key-value map for optional query parameters
     var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
@@ -1253,7 +1253,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 194;
+    int taskID = 131;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1292,8 +1292,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 194;
-    int taskID = 194;
+    int imageID = 131;
+    int taskID = 131;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
