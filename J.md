@@ -6,19 +6,19 @@ and Apache HttpClient. The reference to these dependencies is already
 added in the pom.xml file will be installed automatically. Therefore,
 you will need internet access for successful build.
 
-    * In order to open the client library in Eclipse click on ``` File -> Import ```.
+* In order to open the client library in Eclipse click on ``` File -> Import ```.
 
 ![Importing SDK into Eclipse - Step 1](http://apidocs.io/illustration/java?step=import0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-    * In the import dialog, select ``` Existing Java Project ``` and click ``` Next ```.
+* In the import dialog, select ``` Existing Java Project ``` and click ``` Next ```.
 
 ![Importing SDK into Eclipse - Step 2](http://apidocs.io/illustration/java?step=import1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-    * Browse to locate the folder containing the source code. Select the detect location of the project and click ``` Next ```.
+* Browse to locate the folder containing the source code. Select the detect location of the project and click ``` Next ```.
 
 ![Importing SDK into Eclipse - Step 3](http://apidocs.io/illustration/java?step=import2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-    * Upon successful import, the project will be automatically built by Eclipse after automatically resolving the dependencies.
+* Upon successful import, the project will be automatically built by Eclipse after automatically resolving the dependencies.
 
 ![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=import3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
@@ -521,7 +521,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 0;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -560,7 +560,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 0;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -602,7 +602,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 0;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -640,7 +640,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -684,7 +684,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -722,7 +722,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -761,7 +761,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -796,7 +796,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -835,7 +835,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -876,7 +876,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -919,7 +919,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -957,7 +957,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1125,7 +1125,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 91;
+    int userID = 75;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1172,7 +1172,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     // key-value map for optional query parameters
     var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
@@ -1212,7 +1212,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 91;
+    int taskID = 75;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1251,8 +1251,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 91;
-    int taskID = 91;
+    int imageID = 75;
+    int taskID = 75;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
