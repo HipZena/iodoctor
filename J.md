@@ -22,6 +22,47 @@ you will need internet access for successful build.
 
 ![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=import3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
+## How to Use
+
+The following section explains how to use the SaritasaBMEAPI library in a new console project.     
+    
+#### 1. Starting a new project
+For starting a new project, click the menu command ``` File > New > Project ```.
+
+![Add a new project in Eclipse](http://apidocs.io/illustration/java?step=createNewProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+Next, choose ``` Maven > Maven Project ```and click ``` Next ```.
+
+![Create a new Maven Project - Step 1](http://apidocs.io/illustration/java?step=createNewProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+Here, make sure to use the current workspace by choosing ``` Use default Workspace location	```, as shown in the picture below and click ``` Next ```.
+
+![Create a new Maven Project - Step 2](http://apidocs.io/illustration/java?step=createNewProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+Following this, select the *quick start* project type to create a simple project with an existing class and a ``` main ``` method. To do this, choose ``` maven-archetype-quickstart ``` item from the list and click ``` Next ```.
+
+![Create a new Maven Project - Step 3](http://apidocs.io/illustration/java?step=createNewProject3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+In the last step, provide a ``` Group Id ``` and ``` Artifact Id ``` as shown in the picture below and click ``` Finish ```.
+
+![Create a new Maven Project - Step 4](http://apidocs.io/illustration/java?step=createNewProject4&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+
+#### 2. Add reference of the library project
+The created Maven project manages its dependencies using its ``` pom.xml ``` file. In order to add a dependency on the *SaritasaBMEAPILib* client library, double click on the ``` pom.xml ``` file in the ``` Package Explorer ```. Opening the ``` pom.xml ``` file will render a graphical view on the cavas. Here, switch to the ``` Dependencies ``` tab and click the ``` Add ``` button as shown in the picture below.
+
+![Adding dependency to the client library - Step 1](http://apidocs.io/illustration/java?step=testProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+Clicking the ``` Add ``` button will open a dialog where you need to specify SaritasaBMEAPI in ``` Group Id ``` and SaritasaBMEAPILib in the ``` Artifact Id ``` fields.
+
+![Adding dependency to the client library - Step 2](http://apidocs.io/illustration/java?step=testProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
+#### 3. Write sample code
+Once the ``` SimpleConsoleApp ``` is created, a file named ``` App.java ``` will be visible in the *Package Explorer* with an empty ``` main ``` method. This is the entry point for the execution of the created project.
+Here, you can add code to initialize the client library and instanciate a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
+
+![Adding dependency to the client library - Step 2](http://apidocs.io/illustration/java?step=testProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+
 ## Initialization
 
 #### Authentication and Initialization
@@ -553,7 +594,7 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // Invoking the API call with sample inputs
 tasks.taskAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -594,7 +635,7 @@ void updateTaskFullAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 141;
+    int taskID = 21;
     // Invoking the API call with sample inputs
     tasks.updateTaskFullAsync(task, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -638,7 +679,7 @@ void taskUpdatePartialAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 141;
+    int taskID = 21;
     // Invoking the API call with sample inputs
     tasks.taskUpdatePartialAsync(task, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -678,7 +719,7 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // Invoking the API call with sample inputs
 tasks.deleteTaskAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -724,7 +765,7 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // Invoking the API call with sample inputs
 workflow.taskApplyAsync(taskID, new APICallBack<Tasker>() {
     public void onSuccess(HttpContext context, Tasker response) {
@@ -764,7 +805,7 @@ void taskApproveAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 141;
+    int taskID = 21;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     workflow.taskApproveAsync(taskID, userParams, new APICallBack<Tasker>() {
@@ -805,7 +846,7 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // Invoking the API call with sample inputs
 workflow.taskDoneAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -842,7 +883,7 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // Invoking the API call with sample inputs
 workflow.taskCompleteAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -883,7 +924,7 @@ void taskDisputeAsync(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 141;
+    int taskID = 21;
     // Invoking the API call with sample inputs
     workflow.taskDisputeAsync(disputeParams, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -926,7 +967,7 @@ void taskViolationAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 141;
+    int taskID = 21;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     workflow.taskViolationAsync(taskID, violation, new APICallBack<ViolationModel>() {
@@ -971,7 +1012,7 @@ void taskReopenAsync(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 141;
+    int taskID = 21;
     // Invoking the API call with sample inputs
     workflow.taskReopenAsync(descriptionParams, taskID, new APICallBack<LinkedHashMap<String, Object>>() {
         public void onSuccess(HttpContext context, LinkedHashMap<String, Object> response) {
@@ -1011,7 +1052,7 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // Invoking the API call with sample inputs
 workflow.taskWithdrawAsync(taskID, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
@@ -1160,7 +1201,7 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 141;
+int userID = 21;
 // Invoking the API call with sample inputs
 users.userAsync(userID, new APICallBack<User>() {
     public void onSuccess(HttpContext context, User response) {
@@ -1208,7 +1249,7 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 // Invoking the API call with sample inputs
@@ -1249,7 +1290,7 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 141;
+int taskID = 21;
 File upload = null;
 // Invoking the API call with sample inputs
 images.addImageAsync(taskID, upload, new APICallBack<ImageCreated>() {
@@ -1289,8 +1330,8 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 141;
-int taskID = 141;
+int imageID = 21;
+int taskID = 21;
 // Invoking the API call with sample inputs
 images.deleteImageAsync(imageID, taskID, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
