@@ -65,16 +65,17 @@ The singleton instance of the ``` AuthenticationController ``` class can be acce
 AuthenticationController authentication = client.getAuthentication();
 ```
 
-### <a name="login"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.login") login
+### <a name="login_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.loginAsync") loginAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > This endpoints is responsible f or login user by providing username and password paylow
 
 ```java
-User login(
+void loginAsync(
         final String email,
-        final String password)
+        final String password,
+        final APICallBack<User> callBack)
 ```
 
 #### Parameters: 
@@ -92,13 +93,14 @@ try {
     String email = "email";
     String password = "password";
     // Invoking the API call with sample inputs
-    User result = authentication.login(email, password);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.loginAsync(email, password, new APICallBack<User>() {
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -109,12 +111,14 @@ try {
 
 
 
-### <a name="profile_update_full"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.profileUpdateFull") profileUpdateFull
+### <a name="profile_update_full_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.profileUpdateFullAsync") profileUpdateFullAsync
 
 > This endpoints is responsible f or FULL update of the user’s prof ile. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead
 
 ```java
-User profileUpdateFull(final User user)
+void profileUpdateFullAsync(
+        final User user,
+        final APICallBack<User> callBack)
 ```
 
 #### Parameters: 
@@ -130,13 +134,14 @@ User profileUpdateFull(final User user)
 try {
     User user = new User();
     // Invoking the API call with sample inputs
-    User result = authentication.profileUpdateFull(user);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.profileUpdateFullAsync(user, new APICallBack<User>() {
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -147,12 +152,14 @@ try {
 
 
 
-### <a name="profile_update_partial"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.profileUpdatePartial") profileUpdatePartial
+### <a name="profile_update_partial_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.profileUpdatePartialAsync") profileUpdatePartialAsync
 
 > This endpoints is responsible f or partial update of prof ile of the logged in user. One nuance - if you try to change email address through PUT or PATCH endpoint the system won’t change it, you need to do POST /auth/email/ endpoint instead. You can supply here only f ields that got changed instead of FULL body of the entity (as in PUT method)
 
 ```java
-User profileUpdatePartial(final User user)
+void profileUpdatePartialAsync(
+        final User user,
+        final APICallBack<User> callBack)
 ```
 
 #### Parameters: 
@@ -168,13 +175,14 @@ User profileUpdatePartial(final User user)
 try {
     User user = new User();
     // Invoking the API call with sample inputs
-    User result = authentication.profileUpdatePartial(user);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.profileUpdatePartialAsync(user, new APICallBack<User>() {
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -185,14 +193,16 @@ try {
 
 
 
-### <a name="register"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.register") register
+### <a name="register_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.registerAsync") registerAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > This endpoints is responsible f or registering a new account
 
 ```java
-User register(final User user)
+void registerAsync(
+        final User user,
+        final APICallBack<User> callBack)
 ```
 
 #### Parameters: 
@@ -208,13 +218,14 @@ User register(final User user)
 try {
     User user = new User();
     // Invoking the API call with sample inputs
-    User result = authentication.register(user);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.registerAsync(user, new APICallBack<User>() {
+        public void onSuccess(HttpContext context, User response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -225,40 +236,48 @@ try {
 
 
 
-### <a name="profile"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.profile") profile
+### <a name="profile_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.profileAsync") profileAsync
 
 > This endpoints is responsible f or detailed prof ile inf ormation of the logged in user
 
 ```java
-User profile()
+void profileAsync(final APICallBack<User> callBack)
 ```
+
+#### Parameters: 
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+
+
 
 #### Example Usage:
 ```java
-try {
-    // Invoking the API call with sample inputs
-    User result = authentication.profile();
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// Invoking the API call with sample inputs
+authentication.profileAsync(new APICallBack<User>() {
+    public void onSuccess(HttpContext context, User response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="change_email"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.changeEmail") changeEmail
+### <a name="change_email_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.changeEmailAsync") changeEmailAsync
 
 > This endpoints is responsible f or changing email of the user
 
 ```java
-String changeEmail(
+void changeEmailAsync(
         final String currentPassword,
-        final String newEmail)
+        final String newEmail,
+        final APICallBack<String> callBack)
 ```
 
 #### Parameters: 
@@ -276,13 +295,14 @@ try {
     String currentPassword = "current_password";
     String newEmail = "new_email";
     // Invoking the API call with sample inputs
-    String result = authentication.changeEmail(currentPassword, newEmail);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.changeEmailAsync(currentPassword, newEmail, new APICallBack<String>() {
+        public void onSuccess(HttpContext context, String response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -293,14 +313,15 @@ try {
 
 
 
-### <a name="change_password"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.changePassword") changePassword
+### <a name="change_password_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.changePasswordAsync") changePasswordAsync
 
 > This endpoints is responsible for changing user's password
 
 ```java
-String changePassword(
+void changePasswordAsync(
         final String currentPassword,
-        final String newPassword)
+        final String newPassword,
+        final APICallBack<String> callBack)
 ```
 
 #### Parameters: 
@@ -318,13 +339,14 @@ try {
     String currentPassword = "current_password";
     String newPassword = "new_password";
     // Invoking the API call with sample inputs
-    String result = authentication.changePassword(currentPassword, newPassword);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.changePasswordAsync(currentPassword, newPassword, new APICallBack<String>() {
+        public void onSuccess(HttpContext context, String response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -335,14 +357,16 @@ try {
 
 
 
-### <a name="reset_password"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.resetPassword") resetPassword
+### <a name="reset_password_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.resetPasswordAsync") resetPasswordAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > This endpoints is responsible f or sending email with unique link to reset the password. Should be used on forgot password screen of the app
 
 ```java
-String resetPassword(final Object email)
+void resetPasswordAsync(
+        final Object email,
+        final APICallBack<String> callBack)
 ```
 
 #### Parameters: 
@@ -358,13 +382,14 @@ String resetPassword(final Object email)
 try {
     Object email = new object();
     // Invoking the API call with sample inputs
-    String result = authentication.resetPassword(email);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    authentication.resetPasswordAsync(email, new APICallBack<String>() {
+        public void onSuccess(HttpContext context, String response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -375,26 +400,33 @@ try {
 
 
 
-### <a name="logout"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.logout") logout
+### <a name="logout_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.logoutAsync") logoutAsync
 
 > This endpoints is responsible to logout action of the app.
 
 ```java
-String logout()
+void logoutAsync(final APICallBack<String> callBack)
 ```
+
+#### Parameters: 
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+
+
 
 #### Example Usage:
 ```java
-try {
-    // Invoking the API call with sample inputs
-    String result = authentication.logout();
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// Invoking the API call with sample inputs
+authentication.logoutAsync(new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
@@ -410,15 +442,16 @@ The singleton instance of the ``` TasksController ``` class can be accessed from
 TasksController tasks = client.getTasks();
 ```
 
-### <a name="search_tasks"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.searchTasks") searchTasks
+### <a name="search_tasks_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.searchTasksAsync") searchTasksAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add a method description
 
 ```java
-TasksResponse searchTasks(
-        Map<String, Object> queryParameters)
+void searchTasksAsync(
+        Map<String, Object> queryParameters,
+        final APICallBack<TasksResponse> callBack)
 ```
 
 #### Parameters: 
@@ -431,31 +464,32 @@ TasksResponse searchTasks(
 
 #### Example Usage:
 ```java
-try {
-    // key-value map for optional query parameters
-    var queryParams = new Dictionary<string, object>();
-    // Invoking the API call with sample inputs
-    TasksResponse result = tasks.searchTasks(queryParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
+// Invoking the API call with sample inputs
+tasks.searchTasksAsync(queryParams, new APICallBack<TasksResponse>() {
+    public void onSuccess(HttpContext context, TasksResponse response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="my_tasks"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.myTasks") myTasks
+### <a name="my_tasks_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.myTasksAsync") myTasksAsync
 
 > TODO: Add a method description
 
 ```java
-TasksResponse myTasks(
-        Map<String, Object> queryParameters)
+void myTasksAsync(
+        Map<String, Object> queryParameters,
+        final APICallBack<TasksResponse> callBack)
 ```
 
 #### Parameters: 
@@ -468,30 +502,32 @@ TasksResponse myTasks(
 
 #### Example Usage:
 ```java
-try {
-    // key-value map for optional query parameters
-    var queryParams = new Dictionary<string, object>();
-    // Invoking the API call with sample inputs
-    TasksResponse result = tasks.myTasks(queryParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
+// Invoking the API call with sample inputs
+tasks.myTasksAsync(queryParams, new APICallBack<TasksResponse>() {
+    public void onSuccess(HttpContext context, TasksResponse response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="create_task"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.createTask") createTask
+### <a name="create_task_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.createTaskAsync") createTaskAsync
 
 > This endpoints is responsible f or adding a new task to the system
 
 ```java
-Task createTask(final TaskRequest task)
+void createTaskAsync(
+        final TaskRequest task,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -507,13 +543,14 @@ Task createTask(final TaskRequest task)
 try {
     TaskRequest task = new TaskRequest();
     // Invoking the API call with sample inputs
-    Task result = tasks.createTask(task);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    tasks.createTaskAsync(task, new APICallBack<Task>() {
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -524,14 +561,16 @@ try {
 
 
 
-### <a name="task"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.task") task
+### <a name="task_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.taskAsync") taskAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > This endpoints is responsible for getting details about given task
 
 ```java
-Task task(final int taskID)
+void taskAsync(
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -544,31 +583,32 @@ Task task(final int taskID)
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    Task result = tasks.task(taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// Invoking the API call with sample inputs
+tasks.taskAsync(taskID, new APICallBack<Task>() {
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="update_task_full"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.updateTaskFull") updateTaskFull
+### <a name="update_task_full_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.updateTaskFullAsync") updateTaskFullAsync
 
 > This endpoints is responsible for updating task details. Only admin or poster of the task can call this method
 
 ```java
-Task updateTaskFull(
+void updateTaskFullAsync(
         final TaskRequest task,
-        final int taskID)
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -584,15 +624,16 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 92;
+    int taskID = 132;
     // Invoking the API call with sample inputs
-    Task result = tasks.updateTaskFull(task, taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    tasks.updateTaskFullAsync(task, taskID, new APICallBack<Task>() {
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -603,14 +644,15 @@ try {
 
 
 
-### <a name="task_update_partial"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.taskUpdatePartial") taskUpdatePartial
+### <a name="task_update_partial_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.taskUpdatePartialAsync") taskUpdatePartialAsync
 
 > This endpoints is responsible for partial update of task resource
 
 ```java
-Task taskUpdatePartial(
+void taskUpdatePartialAsync(
         final TaskRequest task,
-        final int taskID)
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -626,15 +668,16 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 92;
+    int taskID = 132;
     // Invoking the API call with sample inputs
-    Task result = tasks.taskUpdatePartial(task, taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    tasks.taskUpdatePartialAsync(task, taskID, new APICallBack<Task>() {
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -645,12 +688,14 @@ try {
 
 
 
-### <a name="delete_task"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.deleteTask") deleteTask
+### <a name="delete_task_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.deleteTaskAsync") deleteTaskAsync
 
 > This endpoints is responsible for deleting the resource, use it to cancel the task. The record will not be physically deleted, but will be marked in db with status=X
 
 ```java
-Task deleteTask(final int taskID)
+void deleteTaskAsync(
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -663,17 +708,17 @@ Task deleteTask(final int taskID)
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    Task result = tasks.deleteTask(taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// Invoking the API call with sample inputs
+tasks.deleteTaskAsync(taskID, new APICallBack<Task>() {
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
@@ -689,12 +734,14 @@ The singleton instance of the ``` WorkflowController ``` class can be accessed f
 WorkflowController workflow = client.getWorkflow();
 ```
 
-### <a name="task_apply"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskApply") taskApply
+### <a name="task_apply_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskApplyAsync") taskApplyAsync
 
 > This endpoints is responsible f or the user to apply to the task. Poster can’t apply to his own task. Only 3 taskers are allowed per task.
 
 ```java
-Tasker taskApply(final int taskID)
+void taskApplyAsync(
+        final int taskID,
+        final APICallBack<Tasker> callBack)
 ```
 
 #### Parameters: 
@@ -707,31 +754,32 @@ Tasker taskApply(final int taskID)
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    Tasker result = workflow.taskApply(taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// Invoking the API call with sample inputs
+workflow.taskApplyAsync(taskID, new APICallBack<Tasker>() {
+    public void onSuccess(HttpContext context, Tasker response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="task_approve"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskApprove") taskApprove
+### <a name="task_approve_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskApproveAsync") taskApproveAsync
 
 > This endpoints is responsible f or approving one of available taskers and assigning the task to that user.
 
 ```java
-Tasker taskApprove(
+void taskApproveAsync(
         final int taskID,
-        final Object userParams)
+        final Object userParams,
+        final APICallBack<Tasker> callBack)
 ```
 
 #### Parameters: 
@@ -746,16 +794,17 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 92;
+    int taskID = 132;
     Object userParams = new object();
     // Invoking the API call with sample inputs
-    Tasker result = workflow.taskApprove(taskID, userParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    workflow.taskApproveAsync(taskID, userParams, new APICallBack<Tasker>() {
+        public void onSuccess(HttpContext context, Tasker response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -766,12 +815,14 @@ try {
 
 
 
-### <a name="task_done"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskDone") taskDone
+### <a name="task_done_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskDoneAsync") taskDoneAsync
 
 > This endpoints is responsible f or submitting task to Done status, this endpoint should be called by assigned tasker of the Task
 
 ```java
-Task taskDone(final int taskID)
+void taskDoneAsync(
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -784,29 +835,31 @@ Task taskDone(final int taskID)
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    Task result = workflow.taskDone(taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// Invoking the API call with sample inputs
+workflow.taskDoneAsync(taskID, new APICallBack<Task>() {
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="task_complete"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskComplete") taskComplete
+### <a name="task_complete_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskCompleteAsync") taskCompleteAsync
 
 > This endpoints is responsible f or sending task to Completed status and should be called by poster of the task
 
 ```java
-Task taskComplete(final int taskID)
+void taskCompleteAsync(
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -819,31 +872,32 @@ Task taskComplete(final int taskID)
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    Task result = workflow.taskComplete(taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// Invoking the API call with sample inputs
+workflow.taskCompleteAsync(taskID, new APICallBack<Task>() {
+    public void onSuccess(HttpContext context, Task response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="task_dispute"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskDispute") taskDispute
+### <a name="task_dispute_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskDisputeAsync") taskDisputeAsync
 
 > This endpoints is responsible f or sending task to dispute status. It can be done by only poster or tasker of the task.
 
 ```java
-Task taskDispute(
+void taskDisputeAsync(
         final Object disputeParams,
-        final int taskID)
+        final int taskID,
+        final APICallBack<Task> callBack)
 ```
 
 #### Parameters: 
@@ -859,15 +913,16 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 92;
+    int taskID = 132;
     // Invoking the API call with sample inputs
-    Task result = workflow.taskDispute(disputeParams, taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    workflow.taskDisputeAsync(disputeParams, taskID, new APICallBack<Task>() {
+        public void onSuccess(HttpContext context, Task response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -878,14 +933,15 @@ try {
 
 
 
-### <a name="task_violation"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskViolation") taskViolation
+### <a name="task_violation_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskViolationAsync") taskViolationAsync
 
 > This endpoints is responsible f or marking any task with violation f lag.
 
 ```java
-ViolationModel taskViolation(
+void taskViolationAsync(
         final int taskID,
-        final ViolationModel violation)
+        final ViolationModel violation,
+        final APICallBack<ViolationModel> callBack)
 ```
 
 #### Parameters: 
@@ -900,16 +956,17 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 92;
+    int taskID = 132;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
-    ViolationModel result = workflow.taskViolation(taskID, violation);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    workflow.taskViolationAsync(taskID, violation, new APICallBack<ViolationModel>() {
+        public void onSuccess(HttpContext context, ViolationModel response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -920,14 +977,15 @@ try {
 
 
 
-### <a name="task_reopen"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskReopen") taskReopen
+### <a name="task_reopen_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskReopenAsync") taskReopenAsync
 
 > This endpoints is responsible f or reopening the task by Poster, once it got DONE status as a result of POST /tasks/ID/done call.
 
 ```java
-LinkedHashMap<String, Object> taskReopen(
+void taskReopenAsync(
         final Object descriptionParams,
-        final int taskID)
+        final int taskID,
+        final APICallBack<LinkedHashMap<String, Object>> callBack)
 ```
 
 #### Parameters: 
@@ -943,15 +1001,16 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 92;
+    int taskID = 132;
     // Invoking the API call with sample inputs
-    LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    workflow.taskReopenAsync(descriptionParams, taskID, new APICallBack<LinkedHashMap<String, Object>>() {
+        public void onSuccess(HttpContext context, LinkedHashMap<String, Object> response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -962,12 +1021,14 @@ try {
 
 
 
-### <a name="task_withdraw"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskWithdraw") taskWithdraw
+### <a name="task_withdraw_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskWithdrawAsync") taskWithdrawAsync
 
 > This endpoints is responsible for quitting the task and should be called by assigned Tasker of the task If you're not approved (*but applied) - this will remove the user from applied list of taskers
 
 ```java
-String taskWithdraw(final int taskID)
+void taskWithdrawAsync(
+        final int taskID,
+        final APICallBack<String> callBack)
 ```
 
 #### Parameters: 
@@ -980,17 +1041,17 @@ String taskWithdraw(final int taskID)
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    String result = workflow.taskWithdraw(taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// Invoking the API call with sample inputs
+workflow.taskWithdrawAsync(taskID, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
@@ -1006,15 +1067,16 @@ The singleton instance of the ``` CategoriesController ``` class can be accessed
 CategoriesController categories = client.getCategories();
 ```
 
-### <a name="categories"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.CategoriesController.categories") categories
+### <a name="categories_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.CategoriesController.categoriesAsync") categoriesAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > This endpoints is responsible f or getting list of categories
 
 ```java
-CategoriesResponse categories(
-        Map<String, Object> queryParameters)
+void categoriesAsync(
+        Map<String, Object> queryParameters,
+        final APICallBack<CategoriesResponse> callBack)
 ```
 
 #### Parameters: 
@@ -1027,33 +1089,34 @@ CategoriesResponse categories(
 
 #### Example Usage:
 ```java
-try {
-    // key-value map for optional query parameters
-    var queryParams = new Dictionary<string, object>();
-    // Invoking the API call with sample inputs
-    CategoriesResponse result = categories.categories(queryParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
+// Invoking the API call with sample inputs
+categories.categoriesAsync(queryParams, new APICallBack<CategoriesResponse>() {
+    public void onSuccess(HttpContext context, CategoriesResponse response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="tags"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.CategoriesController.tags") tags
+### <a name="tags_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.CategoriesController.tagsAsync") tagsAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add a method description
 
 ```java
-TagsResponse tags(
-        Map<String, Object> queryParameters)
+void tagsAsync(
+        Map<String, Object> queryParameters,
+        final APICallBack<TagsResponse> callBack)
 ```
 
 #### Parameters: 
@@ -1066,18 +1129,18 @@ TagsResponse tags(
 
 #### Example Usage:
 ```java
-try {
-    // key-value map for optional query parameters
-    var queryParams = new Dictionary<string, object>();
-    // Invoking the API call with sample inputs
-    TagsResponse result = categories.tags(queryParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
+// Invoking the API call with sample inputs
+categories.tagsAsync(queryParams, new APICallBack<TagsResponse>() {
+    public void onSuccess(HttpContext context, TagsResponse response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
@@ -1093,13 +1156,14 @@ The singleton instance of the ``` UsersController ``` class can be accessed from
 UsersController users = client.getUsers();
 ```
 
-### <a name="users"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.UsersController.users") users
+### <a name="users_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.UsersController.usersAsync") usersAsync
 
 > 1. limit :=_int_ (pagination records per request)  2. offset :=_int_ (pagination skip records)  3. ordering := [date_joined] (fields to sort by results)  4. search :=_str_ (search by keyword through fields: skills, fist_name, last_name)  5. filter fields 	 6. gender := _str_ (filter by gender, F/M)
 
 ```java
-UsersResponse users(
-        Map<String, Object> queryParameters)
+void usersAsync(
+        Map<String, Object> queryParameters,
+        final APICallBack<UsersResponse> callBack)
 ```
 
 #### Parameters: 
@@ -1112,30 +1176,32 @@ UsersResponse users(
 
 #### Example Usage:
 ```java
-try {
-    // key-value map for optional query parameters
-    var queryParams = new Dictionary<string, object>();
-    // Invoking the API call with sample inputs
-    UsersResponse result = users.users(queryParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
+// Invoking the API call with sample inputs
+users.usersAsync(queryParams, new APICallBack<UsersResponse>() {
+    public void onSuccess(HttpContext context, UsersResponse response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="user"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.UsersController.user") user
+### <a name="user_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.UsersController.userAsync") userAsync
 
 > This endpoints is responsible for profile's detailed information
 
 ```java
-User user(final int userID)
+void userAsync(
+        final int userID,
+        final APICallBack<User> callBack)
 ```
 
 #### Parameters: 
@@ -1148,17 +1214,17 @@ User user(final int userID)
 
 #### Example Usage:
 ```java
-try {
-    int userID = 92;
-    // Invoking the API call with sample inputs
-    User result = users.user(userID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int userID = 132;
+// Invoking the API call with sample inputs
+users.userAsync(userID, new APICallBack<User>() {
+    public void onSuccess(HttpContext context, User response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
@@ -1174,14 +1240,15 @@ The singleton instance of the ``` ImagesController ``` class can be accessed fro
 ImagesController images = client.getImages();
 ```
 
-### <a name="images"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.images") images
+### <a name="images_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.imagesAsync") imagesAsync
 
 > This endpoints is responsible for getting list of images for the task
 
 ```java
-ImagesResponse images(
+void imagesAsync(
         final int taskID,
-        Map<String, Object> queryParameters)
+        Map<String, Object> queryParameters,
+        final APICallBack<ImagesResponse> callBack)
 ```
 
 #### Parameters: 
@@ -1195,33 +1262,34 @@ ImagesResponse images(
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    // key-value map for optional query parameters
-    var queryParams = new Dictionary<string, object>();
-    // Invoking the API call with sample inputs
-    ImagesResponse result = images.images(taskID, queryParams);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
+// Invoking the API call with sample inputs
+images.imagesAsync(taskID, queryParams, new APICallBack<ImagesResponse>() {
+    public void onSuccess(HttpContext context, ImagesResponse response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="add_image"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.addImage") addImage
+### <a name="add_image_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.addImageAsync") addImageAsync
 
 > This endpoints is responsible for adding images to the task, only poster or tasker of the task can add images. You can add images as soon as task is one of O/P/R [status](#statuses). If task is in different status (and therefore non updateable) the endpoint will generate error
 
 ```java
-ImageCreated addImage(
+void addImageAsync(
         final int taskID,
-        final File upload)
+        final File upload,
+        final APICallBack<ImageCreated> callBack)
 ```
 
 #### Parameters: 
@@ -1235,32 +1303,33 @@ ImageCreated addImage(
 
 #### Example Usage:
 ```java
-try {
-    int taskID = 92;
-    File upload = null;
-    // Invoking the API call with sample inputs
-    ImageCreated result = images.addImage(taskID, upload);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int taskID = 132;
+File upload = null;
+// Invoking the API call with sample inputs
+images.addImageAsync(taskID, upload, new APICallBack<ImageCreated>() {
+    public void onSuccess(HttpContext context, ImageCreated response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
 
 
 
-### <a name="delete_image"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.deleteImage") deleteImage
+### <a name="delete_image_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.deleteImageAsync") deleteImageAsync
 
 > This endpoints is responsible for deleting given image (secondary ID) from the task
 
 ```java
-String deleteImage(
+void deleteImageAsync(
         final int imageID,
-        final int taskID)
+        final int taskID,
+        final APICallBack<String> callBack)
 ```
 
 #### Parameters: 
@@ -1274,18 +1343,18 @@ String deleteImage(
 
 #### Example Usage:
 ```java
-try {
-    int imageID = 92;
-    int taskID = 92;
-    // Invoking the API call with sample inputs
-    String result = images.deleteImage(imageID, taskID);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
+int imageID = 132;
+int taskID = 132;
+// Invoking the API call with sample inputs
+images.deleteImageAsync(imageID, taskID, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
 ```
 
 
@@ -1301,12 +1370,14 @@ The singleton instance of the ``` DevicesController ``` class can be accessed fr
 DevicesController devices = client.getDevices();
 ```
 
-### <a name="register_device"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.DevicesController.registerDevice") registerDevice
+### <a name="register_device_async"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.DevicesController.registerDeviceAsync") registerDeviceAsync
 
 > This endpoints is responsible for adding new mobile device token
 
 ```java
-APNSDevice registerDevice(final APNSDevice info)
+void registerDeviceAsync(
+        final APNSDevice info,
+        final APICallBack<APNSDevice> callBack)
 ```
 
 #### Parameters: 
@@ -1322,13 +1393,14 @@ APNSDevice registerDevice(final APNSDevice info)
 try {
     APNSDevice info = new APNSDevice();
     // Invoking the API call with sample inputs
-    APNSDevice result = devices.registerDevice(info);
-} catch(IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-} catch(APIException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+    devices.registerDeviceAsync(info, new APICallBack<APNSDevice>() {
+        public void onSuccess(HttpContext context, APNSDevice response) {
+            // TODO success callback handler
+        }
+        public void onFailure(HttpContext context, Throwable error) {
+            // TODO failure callback handler
+        }
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
