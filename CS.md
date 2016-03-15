@@ -8,7 +8,9 @@ is enabled, these dependencies will be installed automatically. Therefore,
 you will need internet access for build.
      
 1. Open the solution (SaritasaBMEAPI.sln) file.
-2. Invoke the build process using `F6` key or using the `Build` menu as shown below. ![Building SDK using Visual Studio](http://apidocs.io/illustration/cs?step=buildSDK&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPI.PCL)
+2. Invoke the build process using `F6` key or using the `Build` menu as shown below.
+
+![Building SDK using Visual Studio](http://apidocs.io/illustration/cs?step=buildSDK&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPI.PCL)
 
 ## How to Use
 
