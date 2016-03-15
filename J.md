@@ -61,8 +61,8 @@ SaritasaBMEAPIClient client = new SaritasaBMEAPIClient(baseUrl, userTimezone, au
 
 #### Get singleton instance
 The singleton instance of the ``` AuthenticationController ``` class can be accessed from the API Client.
-```csharp
-AuthenticationController authentication = client.Authentication;
+```java
+AuthenticationController authentication = client.getAuthentication();
 ```
 
 ### <a name="login"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.login") login
@@ -406,8 +406,8 @@ try {
 
 #### Get singleton instance
 The singleton instance of the ``` TasksController ``` class can be accessed from the API Client.
-```csharp
-TasksController tasks = client.Tasks;
+```java
+TasksController tasks = client.getTasks();
 ```
 
 ### <a name="search_tasks"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.searchTasks") searchTasks
@@ -545,7 +545,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -584,7 +584,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -626,7 +626,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -664,7 +664,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -685,8 +685,8 @@ try {
 
 #### Get singleton instance
 The singleton instance of the ``` WorkflowController ``` class can be accessed from the API Client.
-```csharp
-WorkflowController workflow = client.Workflow;
+```java
+WorkflowController workflow = client.getWorkflow();
 ```
 
 ### <a name="task_apply"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskApply") taskApply
@@ -708,7 +708,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -746,7 +746,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 204;
+    int taskID = 92;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -785,7 +785,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -820,7 +820,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 204;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -859,7 +859,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 41;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -900,7 +900,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 41;
+    int taskID = 92;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -943,7 +943,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 41;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -981,7 +981,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 41;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1002,8 +1002,8 @@ try {
 
 #### Get singleton instance
 The singleton instance of the ``` CategoriesController ``` class can be accessed from the API Client.
-```csharp
-CategoriesController categories = client.Categories;
+```java
+CategoriesController categories = client.getCategories();
 ```
 
 ### <a name="categories"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.CategoriesController.categories") categories
@@ -1089,8 +1089,8 @@ try {
 
 #### Get singleton instance
 The singleton instance of the ``` UsersController ``` class can be accessed from the API Client.
-```csharp
-UsersController users = client.Users;
+```java
+UsersController users = client.getUsers();
 ```
 
 ### <a name="users"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.UsersController.users") users
@@ -1149,7 +1149,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 41;
+    int userID = 92;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1170,8 +1170,8 @@ try {
 
 #### Get singleton instance
 The singleton instance of the ``` ImagesController ``` class can be accessed from the API Client.
-```csharp
-ImagesController images = client.Images;
+```java
+ImagesController images = client.getImages();
 ```
 
 ### <a name="images"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.images") images
@@ -1196,7 +1196,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 41;
+    int taskID = 92;
     // key-value map for optional query parameters
     var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
@@ -1236,7 +1236,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 41;
+    int taskID = 92;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1275,8 +1275,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 41;
-    int taskID = 41;
+    int imageID = 92;
+    int taskID = 92;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
@@ -1297,8 +1297,8 @@ try {
 
 #### Get singleton instance
 The singleton instance of the ``` DevicesController ``` class can be accessed from the API Client.
-```csharp
-DevicesController devices = client.Devices;
+```java
+DevicesController devices = client.getDevices();
 ```
 
 ### <a name="register_device"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.DevicesController.registerDevice") registerDevice
