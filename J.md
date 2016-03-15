@@ -244,13 +244,6 @@ try {
 void profileAsync(final APICallBack<User> callBack)
 ```
 
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-
-
-
 #### Example Usage:
 ```java
 // Invoking the API call with sample inputs
@@ -408,13 +401,6 @@ try {
 void logoutAsync(final APICallBack<String> callBack)
 ```
 
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-
-
-
 #### Example Usage:
 ```java
 // Invoking the API call with sample inputs
@@ -454,14 +440,6 @@ void searchTasksAsync(
         final APICallBack<TasksResponse> callBack)
 ```
 
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
-
-
-
 #### Example Usage:
 ```java
 // key-value map for optional query parameters
@@ -491,14 +469,6 @@ void myTasksAsync(
         Map<String, Object> queryParameters,
         final APICallBack<TasksResponse> callBack)
 ```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
-
-
 
 #### Example Usage:
 ```java
@@ -583,7 +553,7 @@ void taskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // Invoking the API call with sample inputs
 tasks.taskAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -624,7 +594,7 @@ void updateTaskFullAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 132;
+    int taskID = 141;
     // Invoking the API call with sample inputs
     tasks.updateTaskFullAsync(task, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -668,7 +638,7 @@ void taskUpdatePartialAsync(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 132;
+    int taskID = 141;
     // Invoking the API call with sample inputs
     tasks.taskUpdatePartialAsync(task, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -708,7 +678,7 @@ void deleteTaskAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // Invoking the API call with sample inputs
 tasks.deleteTaskAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -754,7 +724,7 @@ void taskApplyAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // Invoking the API call with sample inputs
 workflow.taskApplyAsync(taskID, new APICallBack<Tasker>() {
     public void onSuccess(HttpContext context, Tasker response) {
@@ -794,7 +764,7 @@ void taskApproveAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 132;
+    int taskID = 141;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     workflow.taskApproveAsync(taskID, userParams, new APICallBack<Tasker>() {
@@ -835,7 +805,7 @@ void taskDoneAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // Invoking the API call with sample inputs
 workflow.taskDoneAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -872,7 +842,7 @@ void taskCompleteAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // Invoking the API call with sample inputs
 workflow.taskCompleteAsync(taskID, new APICallBack<Task>() {
     public void onSuccess(HttpContext context, Task response) {
@@ -913,7 +883,7 @@ void taskDisputeAsync(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 132;
+    int taskID = 141;
     // Invoking the API call with sample inputs
     workflow.taskDisputeAsync(disputeParams, taskID, new APICallBack<Task>() {
         public void onSuccess(HttpContext context, Task response) {
@@ -956,7 +926,7 @@ void taskViolationAsync(
 #### Example Usage:
 ```java
 try {
-    int taskID = 132;
+    int taskID = 141;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     workflow.taskViolationAsync(taskID, violation, new APICallBack<ViolationModel>() {
@@ -1001,7 +971,7 @@ void taskReopenAsync(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 132;
+    int taskID = 141;
     // Invoking the API call with sample inputs
     workflow.taskReopenAsync(descriptionParams, taskID, new APICallBack<LinkedHashMap<String, Object>>() {
         public void onSuccess(HttpContext context, LinkedHashMap<String, Object> response) {
@@ -1041,7 +1011,7 @@ void taskWithdrawAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // Invoking the API call with sample inputs
 workflow.taskWithdrawAsync(taskID, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
@@ -1079,14 +1049,6 @@ void categoriesAsync(
         final APICallBack<CategoriesResponse> callBack)
 ```
 
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
-
-
-
 #### Example Usage:
 ```java
 // key-value map for optional query parameters
@@ -1118,14 +1080,6 @@ void tagsAsync(
         Map<String, Object> queryParameters,
         final APICallBack<TagsResponse> callBack)
 ```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
-
-
 
 #### Example Usage:
 ```java
@@ -1165,14 +1119,6 @@ void usersAsync(
         Map<String, Object> queryParameters,
         final APICallBack<UsersResponse> callBack)
 ```
-
-#### Parameters: 
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
-
-
 
 #### Example Usage:
 ```java
@@ -1214,7 +1160,7 @@ void userAsync(
 
 #### Example Usage:
 ```java
-int userID = 132;
+int userID = 141;
 // Invoking the API call with sample inputs
 users.userAsync(userID, new APICallBack<User>() {
     public void onSuccess(HttpContext context, User response) {
@@ -1262,7 +1208,7 @@ void imagesAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 // Invoking the API call with sample inputs
@@ -1303,7 +1249,7 @@ void addImageAsync(
 
 #### Example Usage:
 ```java
-int taskID = 132;
+int taskID = 141;
 File upload = null;
 // Invoking the API call with sample inputs
 images.addImageAsync(taskID, upload, new APICallBack<ImageCreated>() {
@@ -1343,8 +1289,8 @@ void deleteImageAsync(
 
 #### Example Usage:
 ```java
-int imageID = 132;
-int taskID = 132;
+int imageID = 141;
+int taskID = 141;
 // Invoking the API call with sample inputs
 images.deleteImageAsync(imageID, taskID, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
