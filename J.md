@@ -22,46 +22,29 @@ you will need internet access for successful build.
 
 ![Importing SDK into Eclipse - Step 4](http://apidocs.io/illustration/java?step=import3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
 
-## How to Use
+## Initialization
 
-The following section explains how to use the SaritasaBMEAPI library in a new console project.     
-    
-#### 1. Starting a new project
-For starting a new project, click the menu command ``` File > New > Project ```.
+#### Authentication and Initialization
+In order to setup authentication and initialization of the API client, you need the following information.
 
-![Add a new project in Eclipse](http://apidocs.io/illustration/java?step=createNewProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
-
-Next, choose ``` Maven > Maven Project ```and click ``` Next ```.
-
-![Create a new Maven Project - Step 1](http://apidocs.io/illustration/java?step=createNewProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
-
-Here, make sure to use the current workspace by choosing ``` Use default Workspace location	```, as shown in the picture below and click ``` Next ```.
-
-![Create a new Maven Project - Step 2](http://apidocs.io/illustration/java?step=createNewProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
-
-Following this, select the *quick start* project type to create a simple project with an existing class and a ``` main ``` method. To do this, choose ``` maven-archetype-quickstart ``` item from the list and click ``` Next ```.
-
-![Create a new Maven Project - Step 3](http://apidocs.io/illustration/java?step=createNewProject3&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
-
-In the last step, provide a ``` Group Id ``` and ``` Artifact Id ``` as shown in the picture below and click ``` Finish ```.
-
-![Create a new Maven Project - Step 4](http://apidocs.io/illustration/java?step=createNewProject4&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+| Parameter | Description |
+|-----------|-------------|
+| baseUrl | TODO: add a description |
+| userTimezone | TODO: add a description |
+| authorization | TODO: add a description |
 
 
-#### 2. Add reference of the library project
-The created Maven project manages its dependencies using its ``` pom.xml ``` file. In order to add a dependency on the *SaritasaBMEAPILib* client library, double click on the ``` pom.xml ``` file in the ``` Package Explorer ```. Opening the ``` pom.xml ``` file will render a graphical view on the cavas. Here, switch to the ``` Dependencies ``` tab and click the ``` Add ``` button as shown in the picture below.
 
-![Adding dependency to the client library - Step 1](http://apidocs.io/illustration/java?step=testProject0&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+API client can be initialized as following.
 
-Clicking the ``` Add ``` button will open a dialog where you need to specify SaritasaBMEAPI in ``` Group Id ``` and SaritasaBMEAPILib in the ``` Artifact Id ``` fields.
+```java
+// Configuration parameters and credentials
+String baseUrl = "baseUrl";
+String userTimezone = "userTimezone";
+String authorization = "authorization";
 
-![Adding dependency to the client library - Step 2](http://apidocs.io/illustration/java?step=testProject1&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
-
-#### 3. Write sample code
-Once the ``` SimpleConsoleApp ``` is created, a file named ``` App.java ``` will be visible in the *Package Explorer* with an empty ``` main ``` method. This is the entry point for the execution of the created project.
-Here, you can add code to initialize the client library and instanciate a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
-
-![Adding dependency to the client library - Step 2](http://apidocs.io/illustration/java?step=testProject2&workspaceName=SaritasaBMEAPI&projectName=SaritasaBMEAPILib&rootNamespace=com.example)
+SaritasaBMEAPIClient client = new SaritasaBMEAPIClient(baseUrl, userTimezone, authorization);
+```
 
 # Class Reference
 ## <a name="list_of_controllers"></a>List of Controllers
@@ -76,10 +59,10 @@ Here, you can add code to initialize the client library and instanciate a *Contr
 
 ## <a name="authentication_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.AuthenticationController") AuthenticationController
 
-#### Get controller instance
-The instance of the ``` AuthenticationController ``` class can be created using the constructor.
-```java
-AuthenticationController authentication = new AuthenticationController();
+#### Get singleton instance
+The singleton instance of the ``` AuthenticationController ``` class can be accessed from the API Client.
+```csharp
+AuthenticationController authentication = client.Authentication;
 ```
 
 ### <a name="login"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.AuthenticationController.login") login
@@ -421,10 +404,10 @@ try {
 [Back to List of Controllers](#list_of_controllers)
 ## <a name="tasks_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.TasksController") TasksController
 
-#### Get controller instance
-The instance of the ``` TasksController ``` class can be created using the constructor.
-```java
-TasksController tasks = new TasksController();
+#### Get singleton instance
+The singleton instance of the ``` TasksController ``` class can be accessed from the API Client.
+```csharp
+TasksController tasks = client.Tasks;
 ```
 
 ### <a name="search_tasks"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.TasksController.searchTasks") searchTasks
@@ -562,7 +545,7 @@ Task task(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = tasks.task(taskID);
 } catch(IOException e) {
@@ -601,7 +584,7 @@ Task updateTaskFull(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = tasks.updateTaskFull(task, taskID);
 } catch(IOException e) {
@@ -643,7 +626,7 @@ Task taskUpdatePartial(
 ```java
 try {
     TaskRequest task = new TaskRequest();
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = tasks.taskUpdatePartial(task, taskID);
 } catch(IOException e) {
@@ -681,7 +664,7 @@ Task deleteTask(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = tasks.deleteTask(taskID);
 } catch(IOException e) {
@@ -700,10 +683,10 @@ try {
 [Back to List of Controllers](#list_of_controllers)
 ## <a name="workflow_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.WorkflowController") WorkflowController
 
-#### Get controller instance
-The instance of the ``` WorkflowController ``` class can be created using the constructor.
-```java
-WorkflowController workflow = new WorkflowController();
+#### Get singleton instance
+The singleton instance of the ``` WorkflowController ``` class can be accessed from the API Client.
+```csharp
+WorkflowController workflow = client.Workflow;
 ```
 
 ### <a name="task_apply"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.WorkflowController.taskApply") taskApply
@@ -725,7 +708,7 @@ Tasker taskApply(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApply(taskID);
 } catch(IOException e) {
@@ -763,7 +746,7 @@ Tasker taskApprove(
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     Object userParams = new object();
     // Invoking the API call with sample inputs
     Tasker result = workflow.taskApprove(taskID, userParams);
@@ -802,7 +785,7 @@ Task taskDone(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDone(taskID);
 } catch(IOException e) {
@@ -837,7 +820,7 @@ Task taskComplete(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = workflow.taskComplete(taskID);
 } catch(IOException e) {
@@ -876,7 +859,7 @@ Task taskDispute(
 ```java
 try {
     Object disputeParams = new object();
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     Task result = workflow.taskDispute(disputeParams, taskID);
 } catch(IOException e) {
@@ -917,7 +900,7 @@ ViolationModel taskViolation(
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     ViolationModel violation = new ViolationModel();
     // Invoking the API call with sample inputs
     ViolationModel result = workflow.taskViolation(taskID, violation);
@@ -960,7 +943,7 @@ LinkedHashMap<String, Object> taskReopen(
 ```java
 try {
     Object descriptionParams = new object();
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     LinkedHashMap<String, Object> result = workflow.taskReopen(descriptionParams, taskID);
 } catch(IOException e) {
@@ -998,7 +981,7 @@ String taskWithdraw(final int taskID)
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     String result = workflow.taskWithdraw(taskID);
 } catch(IOException e) {
@@ -1017,10 +1000,10 @@ try {
 [Back to List of Controllers](#list_of_controllers)
 ## <a name="categories_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.CategoriesController") CategoriesController
 
-#### Get controller instance
-The instance of the ``` CategoriesController ``` class can be created using the constructor.
-```java
-CategoriesController categories = new CategoriesController();
+#### Get singleton instance
+The singleton instance of the ``` CategoriesController ``` class can be accessed from the API Client.
+```csharp
+CategoriesController categories = client.Categories;
 ```
 
 ### <a name="categories"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.CategoriesController.categories") categories
@@ -1104,10 +1087,10 @@ try {
 [Back to List of Controllers](#list_of_controllers)
 ## <a name="users_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.UsersController") UsersController
 
-#### Get controller instance
-The instance of the ``` UsersController ``` class can be created using the constructor.
-```java
-UsersController users = new UsersController();
+#### Get singleton instance
+The singleton instance of the ``` UsersController ``` class can be accessed from the API Client.
+```csharp
+UsersController users = client.Users;
 ```
 
 ### <a name="users"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.UsersController.users") users
@@ -1166,7 +1149,7 @@ User user(final int userID)
 #### Example Usage:
 ```java
 try {
-    int userID = 131;
+    int userID = 96;
     // Invoking the API call with sample inputs
     User result = users.user(userID);
 } catch(IOException e) {
@@ -1185,10 +1168,10 @@ try {
 [Back to List of Controllers](#list_of_controllers)
 ## <a name="images_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.ImagesController") ImagesController
 
-#### Get controller instance
-The instance of the ``` ImagesController ``` class can be created using the constructor.
-```java
-ImagesController images = new ImagesController();
+#### Get singleton instance
+The singleton instance of the ``` ImagesController ``` class can be accessed from the API Client.
+```csharp
+ImagesController images = client.Images;
 ```
 
 ### <a name="images"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.ImagesController.images") images
@@ -1213,7 +1196,7 @@ ImagesResponse images(
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     // key-value map for optional query parameters
     var queryParams = new Dictionary<string, object>();
     // Invoking the API call with sample inputs
@@ -1253,7 +1236,7 @@ ImageCreated addImage(
 #### Example Usage:
 ```java
 try {
-    int taskID = 131;
+    int taskID = 96;
     File upload = null;
     // Invoking the API call with sample inputs
     ImageCreated result = images.addImage(taskID, upload);
@@ -1292,8 +1275,8 @@ String deleteImage(
 #### Example Usage:
 ```java
 try {
-    int imageID = 131;
-    int taskID = 131;
+    int imageID = 96;
+    int taskID = 96;
     // Invoking the API call with sample inputs
     String result = images.deleteImage(imageID, taskID);
 } catch(IOException e) {
@@ -1312,10 +1295,10 @@ try {
 [Back to List of Controllers](#list_of_controllers)
 ## <a name="devices_controller"></a>![Class: ](http://apidocs.io/img/class.png "com.example.controllers.DevicesController") DevicesController
 
-#### Get controller instance
-The instance of the ``` DevicesController ``` class can be created using the constructor.
-```java
-DevicesController devices = new DevicesController();
+#### Get singleton instance
+The singleton instance of the ``` DevicesController ``` class can be accessed from the API Client.
+```csharp
+DevicesController devices = client.Devices;
 ```
 
 ### <a name="register_device"></a>![Method: ](http://apidocs.io/img/method.png "com.example.controllers.DevicesController.registerDevice") registerDevice
